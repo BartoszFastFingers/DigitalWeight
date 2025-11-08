@@ -1,0 +1,237 @@
+\doxysection{Src/\+HX711\+\_\+pro.c File Reference}
+\hypertarget{_h_x711__pro_8c}{}\label{_h_x711__pro_8c}\index{Src/HX711\_pro.c@{Src/HX711\_pro.c}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}HX711\+\_\+pro.\+h"{}}\newline
+{\ttfamily \#include "{}tim.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_h_x711__pro_8c_a86d77fb74f02d3f93560fbafc018a046}{T1\+\_\+\+MIN}}~(1 )
+\begin{DoxyCompactList}\small\item\em Time betweeen. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_h_x711__pro_8c_afc1aa0891e335371d34a13388aa9b27d}{T2\+\_\+\+MAX}}~1
+\item 
+\#define \mbox{\hyperlink{_h_x711__pro_8c_a0ade05803cfd05618d5cd6f3289d9a34}{T3\+\_\+\+MIN}}~(2)
+\item 
+\#define \mbox{\hyperlink{_h_x711__pro_8c_a8a05917f675835420ee3d497ca6f3279}{T3\+\_\+\+TYP}}~(10 )
+\item 
+\#define \mbox{\hyperlink{_h_x711__pro_8c_a5268b0925fe6ccd0cd4e65efeb16b982}{T3\+\_\+\+MAX}}~(500 )
+\item 
+\#define \mbox{\hyperlink{_h_x711__pro_8c_afc40bee6f21643c25360563a1632cb83}{T4\+\_\+\+MIN}}~(2 )
+\item 
+\#define \mbox{\hyperlink{_h_x711__pro_8c_afbd601b63404478c128a6c53327faa8a}{T4\+\_\+\+TYP}}~(10 )
+\item 
+\#define \mbox{\hyperlink{_h_x711__pro_8c_a5b3fc134799e1187de4b314606210d1e}{IS\+\_\+\+NOT\+\_\+\+READY}}~-\/2147483645
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_h_x711__pro_8c_a5227bd7167500d865fb90125b0f0c1eb}{HX711\+\_\+default\+\_\+init}} (\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}hx711, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}clk\+\_\+port, uint16\+\_\+t clk\+\_\+pin, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}data\+\_\+port, uint16\+\_\+t data\+\_\+pin)
+\begin{DoxyCompactList}\small\item\em Initializes \doxylink{struct_h_x711}{HX711} with default settings. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_x711__pro_8c_aa1fd2584a37d780e0561b0acf1222298}{HX711\+\_\+full\+\_\+init}} (\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}hx711, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}clk\+\_\+port, uint16\+\_\+t clk\+\_\+pin, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}data\+\_\+port, uint16\+\_\+t data\+\_\+pin, long init\+\_\+offset\+\_\+val, uint32\+\_\+t init\+\_\+gain)
+\begin{DoxyCompactList}\small\item\em Initializes \doxylink{struct_h_x711}{HX711} with custom offset and gain. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_h_x711__pro_8c_a55b66fa8373246c0ba2887eaace89034}{is\+Ready}} (\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}hx711)
+\item 
+void \mbox{\hyperlink{_h_x711__pro_8c_a9dd9825fe6e6e8aedff536db6f279d9b}{wait\+For\+HX711}} (\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}hx711)
+\item 
+void \mbox{\hyperlink{_h_x711__pro_8c_a6a8f3b9124531175476ec70bbfb15ff1}{HX711\+\_\+set\+\_\+gain}} (\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}hx711, uint32\+\_\+t gain)
+\item 
+long \mbox{\hyperlink{_h_x711__pro_8c_a86db5068069c6ce61d9e41c2f535c9cf}{HX711\+\_\+read}} (\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}hx711)
+\begin{DoxyCompactList}\small\item\em Reads a single raw measurement from the \doxylink{struct_h_x711}{HX711} ADC. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_x711__pro_8c_a05aae5688bb3d6fd5262b800342c63a3}{Bubble\+Sort}} (long \texorpdfstring{$\ast$}{*}arr, int n)
+\item 
+long \mbox{\hyperlink{_h_x711__pro_8c_a3167e4ee7fde93097a39fb9c6bdddf33}{HX711\+\_\+estimation\+\_\+read}} (\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}hx711, uint8\+\_\+t Estimation\+\_\+samples)
+\item 
+void \mbox{\hyperlink{_h_x711__pro_8c_a5ee363684077c8aadba08b33df70ca38}{HX711\+\_\+tar}} (\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}hx711)
+\item 
+void \mbox{\hyperlink{_h_x711__pro_8c_a959d4b9e2e933081c907c0c9cbf850cc}{HX711\+\_\+estimation\+\_\+weight\+\_\+read}} (\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}hx711, uint8\+\_\+t samples)
+\item 
+void \mbox{\hyperlink{_h_x711__pro_8c_a1e40cd68ce557b2f95af224763bf3205}{HX711\+\_\+weight\+\_\+read\+\_\+fast}} (\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}hx711)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{_h_x711__pro_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_h_x711__pro_8c_a5b3fc134799e1187de4b314606210d1e}\index{HX711\_pro.c@{HX711\_pro.c}!IS\_NOT\_READY@{IS\_NOT\_READY}}
+\index{IS\_NOT\_READY@{IS\_NOT\_READY}!HX711\_pro.c@{HX711\_pro.c}}
+\doxysubsubsection{\texorpdfstring{IS\_NOT\_READY}{IS\_NOT\_READY}}
+{\footnotesize\ttfamily \label{_h_x711__pro_8c_a5b3fc134799e1187de4b314606210d1e} 
+\#define IS\+\_\+\+NOT\+\_\+\+READY~-\/2147483645}
+
+\Hypertarget{_h_x711__pro_8c_a86d77fb74f02d3f93560fbafc018a046}\index{HX711\_pro.c@{HX711\_pro.c}!T1\_MIN@{T1\_MIN}}
+\index{T1\_MIN@{T1\_MIN}!HX711\_pro.c@{HX711\_pro.c}}
+\doxysubsubsection{\texorpdfstring{T1\_MIN}{T1\_MIN}}
+{\footnotesize\ttfamily \label{_h_x711__pro_8c_a86d77fb74f02d3f93560fbafc018a046} 
+\#define T1\+\_\+\+MIN~(1 )}
+
+
+
+Time betweeen. 
+
+\Hypertarget{_h_x711__pro_8c_afc1aa0891e335371d34a13388aa9b27d}\index{HX711\_pro.c@{HX711\_pro.c}!T2\_MAX@{T2\_MAX}}
+\index{T2\_MAX@{T2\_MAX}!HX711\_pro.c@{HX711\_pro.c}}
+\doxysubsubsection{\texorpdfstring{T2\_MAX}{T2\_MAX}}
+{\footnotesize\ttfamily \label{_h_x711__pro_8c_afc1aa0891e335371d34a13388aa9b27d} 
+\#define T2\+\_\+\+MAX~1}
+
+\Hypertarget{_h_x711__pro_8c_a5268b0925fe6ccd0cd4e65efeb16b982}\index{HX711\_pro.c@{HX711\_pro.c}!T3\_MAX@{T3\_MAX}}
+\index{T3\_MAX@{T3\_MAX}!HX711\_pro.c@{HX711\_pro.c}}
+\doxysubsubsection{\texorpdfstring{T3\_MAX}{T3\_MAX}}
+{\footnotesize\ttfamily \label{_h_x711__pro_8c_a5268b0925fe6ccd0cd4e65efeb16b982} 
+\#define T3\+\_\+\+MAX~(500 )}
+
+\Hypertarget{_h_x711__pro_8c_a0ade05803cfd05618d5cd6f3289d9a34}\index{HX711\_pro.c@{HX711\_pro.c}!T3\_MIN@{T3\_MIN}}
+\index{T3\_MIN@{T3\_MIN}!HX711\_pro.c@{HX711\_pro.c}}
+\doxysubsubsection{\texorpdfstring{T3\_MIN}{T3\_MIN}}
+{\footnotesize\ttfamily \label{_h_x711__pro_8c_a0ade05803cfd05618d5cd6f3289d9a34} 
+\#define T3\+\_\+\+MIN~(2)}
+
+\Hypertarget{_h_x711__pro_8c_a8a05917f675835420ee3d497ca6f3279}\index{HX711\_pro.c@{HX711\_pro.c}!T3\_TYP@{T3\_TYP}}
+\index{T3\_TYP@{T3\_TYP}!HX711\_pro.c@{HX711\_pro.c}}
+\doxysubsubsection{\texorpdfstring{T3\_TYP}{T3\_TYP}}
+{\footnotesize\ttfamily \label{_h_x711__pro_8c_a8a05917f675835420ee3d497ca6f3279} 
+\#define T3\+\_\+\+TYP~(10 )}
+
+\Hypertarget{_h_x711__pro_8c_afc40bee6f21643c25360563a1632cb83}\index{HX711\_pro.c@{HX711\_pro.c}!T4\_MIN@{T4\_MIN}}
+\index{T4\_MIN@{T4\_MIN}!HX711\_pro.c@{HX711\_pro.c}}
+\doxysubsubsection{\texorpdfstring{T4\_MIN}{T4\_MIN}}
+{\footnotesize\ttfamily \label{_h_x711__pro_8c_afc40bee6f21643c25360563a1632cb83} 
+\#define T4\+\_\+\+MIN~(2 )}
+
+\Hypertarget{_h_x711__pro_8c_afbd601b63404478c128a6c53327faa8a}\index{HX711\_pro.c@{HX711\_pro.c}!T4\_TYP@{T4\_TYP}}
+\index{T4\_TYP@{T4\_TYP}!HX711\_pro.c@{HX711\_pro.c}}
+\doxysubsubsection{\texorpdfstring{T4\_TYP}{T4\_TYP}}
+{\footnotesize\ttfamily \label{_h_x711__pro_8c_afbd601b63404478c128a6c53327faa8a} 
+\#define T4\+\_\+\+TYP~(10 )}
+
+
+
+\label{doc-func-members}
+\Hypertarget{_h_x711__pro_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_h_x711__pro_8c_a05aae5688bb3d6fd5262b800342c63a3}\index{HX711\_pro.c@{HX711\_pro.c}!BubbleSort@{BubbleSort}}
+\index{BubbleSort@{BubbleSort}!HX711\_pro.c@{HX711\_pro.c}}
+\doxysubsubsection{\texorpdfstring{BubbleSort()}{BubbleSort()}}
+{\footnotesize\ttfamily \label{_h_x711__pro_8c_a05aae5688bb3d6fd5262b800342c63a3} 
+void Bubble\+Sort (\begin{DoxyParamCaption}\item[{long \texorpdfstring{$\ast$}{*}}]{arr}{, }\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_h_x711__pro_8c_a5227bd7167500d865fb90125b0f0c1eb}\index{HX711\_pro.c@{HX711\_pro.c}!HX711\_default\_init@{HX711\_default\_init}}
+\index{HX711\_default\_init@{HX711\_default\_init}!HX711\_pro.c@{HX711\_pro.c}}
+\doxysubsubsection{\texorpdfstring{HX711\_default\_init()}{HX711\_default\_init()}}
+{\footnotesize\ttfamily \label{_h_x711__pro_8c_a5227bd7167500d865fb90125b0f0c1eb} 
+void HX711\+\_\+default\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}}]{hx711}{, }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{clk\+\_\+port}{, }\item[{uint16\+\_\+t}]{clk\+\_\+pin}{, }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{data\+\_\+port}{, }\item[{uint16\+\_\+t}]{data\+\_\+pin}{}\end{DoxyParamCaption})}
+
+
+
+Initializes \doxylink{struct_h_x711}{HX711} with default settings. 
+
+Sets gain = 128 (highest sensitivity) and offset = 0. This function provides a quick way to start using \doxylink{struct_h_x711}{HX711} without advanced configuration.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hx711} & Pointer to \doxylink{struct_h_x711}{HX711} handle structure. \\
+\hline
+{\em clk\+\_\+port} & GPIO port for CLK pin. \\
+\hline
+{\em clk\+\_\+pin} & GPIO pin for CLK pin. \\
+\hline
+{\em data\+\_\+port} & GPIO port for DATA pin. \\
+\hline
+{\em data\+\_\+pin} & GPIO pin for DATA pin. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_h_x711__pro_8c_a3167e4ee7fde93097a39fb9c6bdddf33}\index{HX711\_pro.c@{HX711\_pro.c}!HX711\_estimation\_read@{HX711\_estimation\_read}}
+\index{HX711\_estimation\_read@{HX711\_estimation\_read}!HX711\_pro.c@{HX711\_pro.c}}
+\doxysubsubsection{\texorpdfstring{HX711\_estimation\_read()}{HX711\_estimation\_read()}}
+{\footnotesize\ttfamily \label{_h_x711__pro_8c_a3167e4ee7fde93097a39fb9c6bdddf33} 
+long HX711\+\_\+estimation\+\_\+read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}}]{hx711}{, }\item[{uint8\+\_\+t}]{Estimation\+\_\+samples}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_h_x711__pro_8c_a959d4b9e2e933081c907c0c9cbf850cc}\index{HX711\_pro.c@{HX711\_pro.c}!HX711\_estimation\_weight\_read@{HX711\_estimation\_weight\_read}}
+\index{HX711\_estimation\_weight\_read@{HX711\_estimation\_weight\_read}!HX711\_pro.c@{HX711\_pro.c}}
+\doxysubsubsection{\texorpdfstring{HX711\_estimation\_weight\_read()}{HX711\_estimation\_weight\_read()}}
+{\footnotesize\ttfamily \label{_h_x711__pro_8c_a959d4b9e2e933081c907c0c9cbf850cc} 
+void HX711\+\_\+estimation\+\_\+weight\+\_\+read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}}]{hx711}{, }\item[{uint8\+\_\+t}]{samples}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_h_x711__pro_8c_aa1fd2584a37d780e0561b0acf1222298}\index{HX711\_pro.c@{HX711\_pro.c}!HX711\_full\_init@{HX711\_full\_init}}
+\index{HX711\_full\_init@{HX711\_full\_init}!HX711\_pro.c@{HX711\_pro.c}}
+\doxysubsubsection{\texorpdfstring{HX711\_full\_init()}{HX711\_full\_init()}}
+{\footnotesize\ttfamily \label{_h_x711__pro_8c_aa1fd2584a37d780e0561b0acf1222298} 
+void HX711\+\_\+full\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}}]{hx711}{, }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{clk\+\_\+port}{, }\item[{uint16\+\_\+t}]{clk\+\_\+pin}{, }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{data\+\_\+port}{, }\item[{uint16\+\_\+t}]{data\+\_\+pin}{, }\item[{long}]{init\+\_\+offset\+\_\+val}{, }\item[{uint32\+\_\+t}]{init\+\_\+gain}{}\end{DoxyParamCaption})}
+
+
+
+Initializes \doxylink{struct_h_x711}{HX711} with custom offset and gain. 
+
+Unlike \doxylink{_h_x711__pro_8h_a5227bd7167500d865fb90125b0f0c1eb}{HX711\+\_\+default\+\_\+init()}, this function allows you to specify both the initial offset value and the gain setting. Useful when calibration values are already known or when more control over initialization is needed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hx711} & Pointer to \doxylink{struct_h_x711}{HX711} handle structure. \\
+\hline
+{\em clk\+\_\+port} & GPIO port for CLK pin. \\
+\hline
+{\em clk\+\_\+pin} & GPIO pin for CLK pin. \\
+\hline
+{\em data\+\_\+port} & GPIO port for DATA pin. \\
+\hline
+{\em data\+\_\+pin} & GPIO pin for DATA pin. \\
+\hline
+{\em init\+\_\+offset\+\_\+val} & Initial offset value (tare calibration). \\
+\hline
+{\em init\+\_\+gain} & Gain factor (valid values\+: 128, 64, 32). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_h_x711__pro_8c_a86db5068069c6ce61d9e41c2f535c9cf}\index{HX711\_pro.c@{HX711\_pro.c}!HX711\_read@{HX711\_read}}
+\index{HX711\_read@{HX711\_read}!HX711\_pro.c@{HX711\_pro.c}}
+\doxysubsubsection{\texorpdfstring{HX711\_read()}{HX711\_read()}}
+{\footnotesize\ttfamily \label{_h_x711__pro_8c_a86db5068069c6ce61d9e41c2f535c9cf} 
+long HX711\+\_\+read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}}]{hx711}{}\end{DoxyParamCaption})}
+
+
+
+Reads a single raw measurement from the \doxylink{struct_h_x711}{HX711} ADC. 
+
+This function performs a blocking read of the \doxylink{struct_h_x711}{HX711} data. It first checks if the \doxylink{struct_h_x711}{HX711} is ready using {\ttfamily \doxylink{_h_x711__pro_8c_a55b66fa8373246c0ba2887eaace89034}{is\+Ready()}}. If the device is not ready, it returns the special value {\ttfamily IS\+\_\+\+NOT\+\_\+\+READY}.
+
+The function reads 3 bytes from the \doxylink{struct_h_x711}{HX711}, applies the configured gain, and converts the 24-\/bit two\textquotesingle{}s complement value into a signed long.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hx711} & Pointer to \doxylink{struct_h_x711}{HX711} handle structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Signed 32-\/bit value representing the raw ADC measurement. Returns {\ttfamily IS\+\_\+\+NOT\+\_\+\+READY} if \doxylink{struct_h_x711}{HX711} is not ready. 
+\end{DoxyReturn}
+\Hypertarget{_h_x711__pro_8c_a6a8f3b9124531175476ec70bbfb15ff1}\index{HX711\_pro.c@{HX711\_pro.c}!HX711\_set\_gain@{HX711\_set\_gain}}
+\index{HX711\_set\_gain@{HX711\_set\_gain}!HX711\_pro.c@{HX711\_pro.c}}
+\doxysubsubsection{\texorpdfstring{HX711\_set\_gain()}{HX711\_set\_gain()}}
+{\footnotesize\ttfamily \label{_h_x711__pro_8c_a6a8f3b9124531175476ec70bbfb15ff1} 
+void HX711\+\_\+set\+\_\+gain (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}}]{hx711}{, }\item[{uint32\+\_\+t}]{gain}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_h_x711__pro_8c_a5ee363684077c8aadba08b33df70ca38}\index{HX711\_pro.c@{HX711\_pro.c}!HX711\_tar@{HX711\_tar}}
+\index{HX711\_tar@{HX711\_tar}!HX711\_pro.c@{HX711\_pro.c}}
+\doxysubsubsection{\texorpdfstring{HX711\_tar()}{HX711\_tar()}}
+{\footnotesize\ttfamily \label{_h_x711__pro_8c_a5ee363684077c8aadba08b33df70ca38} 
+void HX711\+\_\+tar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}}]{hx711}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_h_x711__pro_8c_a1e40cd68ce557b2f95af224763bf3205}\index{HX711\_pro.c@{HX711\_pro.c}!HX711\_weight\_read\_fast@{HX711\_weight\_read\_fast}}
+\index{HX711\_weight\_read\_fast@{HX711\_weight\_read\_fast}!HX711\_pro.c@{HX711\_pro.c}}
+\doxysubsubsection{\texorpdfstring{HX711\_weight\_read\_fast()}{HX711\_weight\_read\_fast()}}
+{\footnotesize\ttfamily \label{_h_x711__pro_8c_a1e40cd68ce557b2f95af224763bf3205} 
+void HX711\+\_\+weight\+\_\+read\+\_\+fast (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}}]{hx711}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_h_x711__pro_8c_a55b66fa8373246c0ba2887eaace89034}\index{HX711\_pro.c@{HX711\_pro.c}!isReady@{isReady}}
+\index{isReady@{isReady}!HX711\_pro.c@{HX711\_pro.c}}
+\doxysubsubsection{\texorpdfstring{isReady()}{isReady()}}
+{\footnotesize\ttfamily \label{_h_x711__pro_8c_a55b66fa8373246c0ba2887eaace89034} 
+bool is\+Ready (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}}]{hx711}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_h_x711__pro_8c_a9dd9825fe6e6e8aedff536db6f279d9b}\index{HX711\_pro.c@{HX711\_pro.c}!waitForHX711@{waitForHX711}}
+\index{waitForHX711@{waitForHX711}!HX711\_pro.c@{HX711\_pro.c}}
+\doxysubsubsection{\texorpdfstring{waitForHX711()}{waitForHX711()}}
+{\footnotesize\ttfamily \label{_h_x711__pro_8c_a9dd9825fe6e6e8aedff536db6f279d9b} 
+void wait\+For\+HX711 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}}]{hx711}{}\end{DoxyParamCaption})}
+

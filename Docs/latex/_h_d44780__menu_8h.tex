@@ -1,0 +1,192 @@
+\doxysection{HD44780\+\_\+menu.\+h File Reference}
+\hypertarget{_h_d44780__menu_8h}{}\label{_h_d44780__menu_8h}\index{HD44780\_menu.h@{HD44780\_menu.h}}
+
+
+Menu system functions for \doxylink{struct_h_d44780}{HD44780} LCD display.  
+
+
+{\ttfamily \#include "{}HD44780.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_h_d44780__menu_8h_a57ca3d489a847baeac0f9dcf6f07c661}{HD44780\+\_\+init\+\_\+menu}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780, \mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} \texorpdfstring{$\ast$}{*}root)
+\begin{DoxyCompactList}\small\item\em Initializes the menu system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_d44780__menu_8h_adc0eaa372b186abd9657b6dfc9abbeef}{HD44780\+\_\+next\+\_\+m}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780)
+\begin{DoxyCompactList}\small\item\em Navigate to the next menu item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_d44780__menu_8h_ade866fe3d42836c7642dedd925ad4e2a}{HD44780\+\_\+prev\+\_\+m}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780)
+\begin{DoxyCompactList}\small\item\em Navigate to the previous menu item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_d44780__menu_8h_a4b1ebf949839b35e3af64f806d43413d}{HD44780\+\_\+enter\+\_\+m}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780)
+\begin{DoxyCompactList}\small\item\em Enter the selected menu item (child menu). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_d44780__menu_8h_af0d031f15404c4cfbdef4a6c2b591fbb}{HD44780\+\_\+get\+\_\+back\+\_\+m}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780)
+\begin{DoxyCompactList}\small\item\em Go back to the parent menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_d44780__menu_8h_a9d6b68701d0ccc77ef4547aac162bf76}{HD44780\+\_\+on\+\_\+m}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780)
+\begin{DoxyCompactList}\small\item\em Activate the selected menu item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_d44780__menu_8h_a739b65605461a4835489c644cc93bf0a}{HD44780\+\_\+refresh\+\_\+m}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780)
+\begin{DoxyCompactList}\small\item\em Refresh the current menu display. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{_h_d44780__menu_8h_a4952c363792bdbc3142ec493915e22df}{HD44780\+\_\+get\+\_\+lvl\+\_\+m}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780)
+\begin{DoxyCompactList}\small\item\em Get the current menu level (depth). \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{_h_d44780__menu_8h_a595800d32d3fbd7bd5b2120a40795c55}{HD44780\+\_\+get\+\_\+index\+\_\+m}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780)
+\begin{DoxyCompactList}\small\item\em Get the index of the current menu item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Menu system functions for \doxylink{struct_h_d44780}{HD44780} LCD display. 
+
+Provides functions to initialize, navigate, and refresh hierarchical menus on the \doxylink{struct_h_d44780}{HD44780} LCD module. Supports next/previous item navigation, enter/back actions, and retrieving current menu level and index.
+
+This header defines the interface for menu management in STM32-\/based projects with \doxylink{struct_h_d44780}{HD44780} displays.
+
+\begin{DoxyAuthor}{Author}
+Bartosz Terlecki 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/08-\/20 
+\end{DoxyDate}
+
+
+\label{doc-func-members}
+\Hypertarget{_h_d44780__menu_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_h_d44780__menu_8h_a4b1ebf949839b35e3af64f806d43413d}\index{HD44780\_menu.h@{HD44780\_menu.h}!HD44780\_enter\_m@{HD44780\_enter\_m}}
+\index{HD44780\_enter\_m@{HD44780\_enter\_m}!HD44780\_menu.h@{HD44780\_menu.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_enter\_m()}{HD44780\_enter\_m()}}
+{\footnotesize\ttfamily \label{_h_d44780__menu_8h_a4b1ebf949839b35e3af64f806d43413d} 
+void HD44780\+\_\+enter\+\_\+m (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{}\end{DoxyParamCaption})}
+
+
+
+Enter the selected menu item (child menu). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hd44780} & Pointer to \doxylink{struct_h_d44780}{HD44780} structure. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_h_d44780__menu_8h_af0d031f15404c4cfbdef4a6c2b591fbb}\index{HD44780\_menu.h@{HD44780\_menu.h}!HD44780\_get\_back\_m@{HD44780\_get\_back\_m}}
+\index{HD44780\_get\_back\_m@{HD44780\_get\_back\_m}!HD44780\_menu.h@{HD44780\_menu.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_get\_back\_m()}{HD44780\_get\_back\_m()}}
+{\footnotesize\ttfamily \label{_h_d44780__menu_8h_af0d031f15404c4cfbdef4a6c2b591fbb} 
+void HD44780\+\_\+get\+\_\+back\+\_\+m (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{}\end{DoxyParamCaption})}
+
+
+
+Go back to the parent menu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hd44780} & Pointer to \doxylink{struct_h_d44780}{HD44780} structure. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_h_d44780__menu_8h_a595800d32d3fbd7bd5b2120a40795c55}\index{HD44780\_menu.h@{HD44780\_menu.h}!HD44780\_get\_index\_m@{HD44780\_get\_index\_m}}
+\index{HD44780\_get\_index\_m@{HD44780\_get\_index\_m}!HD44780\_menu.h@{HD44780\_menu.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_get\_index\_m()}{HD44780\_get\_index\_m()}}
+{\footnotesize\ttfamily \label{_h_d44780__menu_8h_a595800d32d3fbd7bd5b2120a40795c55} 
+uint8\+\_\+t HD44780\+\_\+get\+\_\+index\+\_\+m (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{}\end{DoxyParamCaption})}
+
+
+
+Get the index of the current menu item. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hd44780} & Pointer to \doxylink{struct_h_d44780}{HD44780} structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Index of the current menu item. 
+\end{DoxyReturn}
+\Hypertarget{_h_d44780__menu_8h_a4952c363792bdbc3142ec493915e22df}\index{HD44780\_menu.h@{HD44780\_menu.h}!HD44780\_get\_lvl\_m@{HD44780\_get\_lvl\_m}}
+\index{HD44780\_get\_lvl\_m@{HD44780\_get\_lvl\_m}!HD44780\_menu.h@{HD44780\_menu.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_get\_lvl\_m()}{HD44780\_get\_lvl\_m()}}
+{\footnotesize\ttfamily \label{_h_d44780__menu_8h_a4952c363792bdbc3142ec493915e22df} 
+uint8\+\_\+t HD44780\+\_\+get\+\_\+lvl\+\_\+m (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{}\end{DoxyParamCaption})}
+
+
+
+Get the current menu level (depth). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hd44780} & Pointer to \doxylink{struct_h_d44780}{HD44780} structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current menu level. 
+\end{DoxyReturn}
+\Hypertarget{_h_d44780__menu_8h_a57ca3d489a847baeac0f9dcf6f07c661}\index{HD44780\_menu.h@{HD44780\_menu.h}!HD44780\_init\_menu@{HD44780\_init\_menu}}
+\index{HD44780\_init\_menu@{HD44780\_init\_menu}!HD44780\_menu.h@{HD44780\_menu.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_init\_menu()}{HD44780\_init\_menu()}}
+{\footnotesize\ttfamily \label{_h_d44780__menu_8h_a57ca3d489a847baeac0f9dcf6f07c661} 
+void HD44780\+\_\+init\+\_\+menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{, }\item[{\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{root}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the menu system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hd44780} & Pointer to \doxylink{struct_h_d44780}{HD44780} structure. \\
+\hline
+{\em root} & Pointer to the root menu. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_h_d44780__menu_8h_adc0eaa372b186abd9657b6dfc9abbeef}\index{HD44780\_menu.h@{HD44780\_menu.h}!HD44780\_next\_m@{HD44780\_next\_m}}
+\index{HD44780\_next\_m@{HD44780\_next\_m}!HD44780\_menu.h@{HD44780\_menu.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_next\_m()}{HD44780\_next\_m()}}
+{\footnotesize\ttfamily \label{_h_d44780__menu_8h_adc0eaa372b186abd9657b6dfc9abbeef} 
+void HD44780\+\_\+next\+\_\+m (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{}\end{DoxyParamCaption})}
+
+
+
+Navigate to the next menu item. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hd44780} & Pointer to \doxylink{struct_h_d44780}{HD44780} structure. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_h_d44780__menu_8h_a9d6b68701d0ccc77ef4547aac162bf76}\index{HD44780\_menu.h@{HD44780\_menu.h}!HD44780\_on\_m@{HD44780\_on\_m}}
+\index{HD44780\_on\_m@{HD44780\_on\_m}!HD44780\_menu.h@{HD44780\_menu.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_on\_m()}{HD44780\_on\_m()}}
+{\footnotesize\ttfamily \label{_h_d44780__menu_8h_a9d6b68701d0ccc77ef4547aac162bf76} 
+void HD44780\+\_\+on\+\_\+m (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{}\end{DoxyParamCaption})}
+
+
+
+Activate the selected menu item. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hd44780} & Pointer to \doxylink{struct_h_d44780}{HD44780} structure. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_h_d44780__menu_8h_ade866fe3d42836c7642dedd925ad4e2a}\index{HD44780\_menu.h@{HD44780\_menu.h}!HD44780\_prev\_m@{HD44780\_prev\_m}}
+\index{HD44780\_prev\_m@{HD44780\_prev\_m}!HD44780\_menu.h@{HD44780\_menu.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_prev\_m()}{HD44780\_prev\_m()}}
+{\footnotesize\ttfamily \label{_h_d44780__menu_8h_ade866fe3d42836c7642dedd925ad4e2a} 
+void HD44780\+\_\+prev\+\_\+m (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{}\end{DoxyParamCaption})}
+
+
+
+Navigate to the previous menu item. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hd44780} & Pointer to \doxylink{struct_h_d44780}{HD44780} structure. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_h_d44780__menu_8h_a739b65605461a4835489c644cc93bf0a}\index{HD44780\_menu.h@{HD44780\_menu.h}!HD44780\_refresh\_m@{HD44780\_refresh\_m}}
+\index{HD44780\_refresh\_m@{HD44780\_refresh\_m}!HD44780\_menu.h@{HD44780\_menu.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_refresh\_m()}{HD44780\_refresh\_m()}}
+{\footnotesize\ttfamily \label{_h_d44780__menu_8h_a739b65605461a4835489c644cc93bf0a} 
+void HD44780\+\_\+refresh\+\_\+m (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{}\end{DoxyParamCaption})}
+
+
+
+Refresh the current menu display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hd44780} & Pointer to \doxylink{struct_h_d44780}{HD44780} structure. \\
+\hline
+\end{DoxyParams}

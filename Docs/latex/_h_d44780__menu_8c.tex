@@ -1,0 +1,110 @@
+\doxysection{Src/\+HD44780\+\_\+menu.c File Reference}
+\hypertarget{_h_d44780__menu_8c}{}\label{_h_d44780__menu_8c}\index{Src/HD44780\_menu.c@{Src/HD44780\_menu.c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}HD44780\+\_\+buf.\+h"{}}\newline
+{\ttfamily \#include "{}HD44780\+\_\+menu.\+h"{}}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_h_d44780__menu_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}~0
+\item 
+\#define \mbox{\hyperlink{_h_d44780__menu_8c_a0f25bcb0820c5526101086d10208210f}{BACK\+\_\+\+TO\+\_\+\+MENU}}~1
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_h_d44780__menu_8c_a57ca3d489a847baeac0f9dcf6f07c661}{HD44780\+\_\+init\+\_\+menu}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780, \mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} \texorpdfstring{$\ast$}{*}root)
+\item 
+void \mbox{\hyperlink{_h_d44780__menu_8c_adc0eaa372b186abd9657b6dfc9abbeef}{HD44780\+\_\+next\+\_\+m}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780)
+\item 
+void \mbox{\hyperlink{_h_d44780__menu_8c_ade866fe3d42836c7642dedd925ad4e2a}{HD44780\+\_\+prev\+\_\+m}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780)
+\item 
+void \mbox{\hyperlink{_h_d44780__menu_8c_a4b1ebf949839b35e3af64f806d43413d}{HD44780\+\_\+enter\+\_\+m}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780)
+\item 
+void \mbox{\hyperlink{_h_d44780__menu_8c_af0d031f15404c4cfbdef4a6c2b591fbb}{HD44780\+\_\+get\+\_\+back\+\_\+m}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780)
+\item 
+void \mbox{\hyperlink{_h_d44780__menu_8c_a9d6b68701d0ccc77ef4547aac162bf76}{HD44780\+\_\+on\+\_\+m}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_h_d44780__menu_8c_a595800d32d3fbd7bd5b2120a40795c55}{HD44780\+\_\+get\+\_\+index\+\_\+m}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_h_d44780__menu_8c_a4952c363792bdbc3142ec493915e22df}{HD44780\+\_\+get\+\_\+lvl\+\_\+m}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780)
+\item 
+void \mbox{\hyperlink{_h_d44780__menu_8c_a739b65605461a4835489c644cc93bf0a}{HD44780\+\_\+refresh\+\_\+m}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{_h_d44780__menu_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_h_d44780__menu_8c_a0f25bcb0820c5526101086d10208210f}\index{HD44780\_menu.c@{HD44780\_menu.c}!BACK\_TO\_MENU@{BACK\_TO\_MENU}}
+\index{BACK\_TO\_MENU@{BACK\_TO\_MENU}!HD44780\_menu.c@{HD44780\_menu.c}}
+\doxysubsubsection{\texorpdfstring{BACK\_TO\_MENU}{BACK\_TO\_MENU}}
+{\footnotesize\ttfamily \label{_h_d44780__menu_8c_a0f25bcb0820c5526101086d10208210f} 
+\#define BACK\+\_\+\+TO\+\_\+\+MENU~1}
+
+\Hypertarget{_h_d44780__menu_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}\index{HD44780\_menu.c@{HD44780\_menu.c}!NULL@{NULL}}
+\index{NULL@{NULL}!HD44780\_menu.c@{HD44780\_menu.c}}
+\doxysubsubsection{\texorpdfstring{NULL}{NULL}}
+{\footnotesize\ttfamily \label{_h_d44780__menu_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4} 
+\#define NULL~0}
+
+
+
+\label{doc-func-members}
+\Hypertarget{_h_d44780__menu_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_h_d44780__menu_8c_a4b1ebf949839b35e3af64f806d43413d}\index{HD44780\_menu.c@{HD44780\_menu.c}!HD44780\_enter\_m@{HD44780\_enter\_m}}
+\index{HD44780\_enter\_m@{HD44780\_enter\_m}!HD44780\_menu.c@{HD44780\_menu.c}}
+\doxysubsubsection{\texorpdfstring{HD44780\_enter\_m()}{HD44780\_enter\_m()}}
+{\footnotesize\ttfamily \label{_h_d44780__menu_8c_a4b1ebf949839b35e3af64f806d43413d} 
+void HD44780\+\_\+enter\+\_\+m (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_h_d44780__menu_8c_af0d031f15404c4cfbdef4a6c2b591fbb}\index{HD44780\_menu.c@{HD44780\_menu.c}!HD44780\_get\_back\_m@{HD44780\_get\_back\_m}}
+\index{HD44780\_get\_back\_m@{HD44780\_get\_back\_m}!HD44780\_menu.c@{HD44780\_menu.c}}
+\doxysubsubsection{\texorpdfstring{HD44780\_get\_back\_m()}{HD44780\_get\_back\_m()}}
+{\footnotesize\ttfamily \label{_h_d44780__menu_8c_af0d031f15404c4cfbdef4a6c2b591fbb} 
+void HD44780\+\_\+get\+\_\+back\+\_\+m (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_h_d44780__menu_8c_a595800d32d3fbd7bd5b2120a40795c55}\index{HD44780\_menu.c@{HD44780\_menu.c}!HD44780\_get\_index\_m@{HD44780\_get\_index\_m}}
+\index{HD44780\_get\_index\_m@{HD44780\_get\_index\_m}!HD44780\_menu.c@{HD44780\_menu.c}}
+\doxysubsubsection{\texorpdfstring{HD44780\_get\_index\_m()}{HD44780\_get\_index\_m()}}
+{\footnotesize\ttfamily \label{_h_d44780__menu_8c_a595800d32d3fbd7bd5b2120a40795c55} 
+uint8\+\_\+t HD44780\+\_\+get\+\_\+index\+\_\+m (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_h_d44780__menu_8c_a4952c363792bdbc3142ec493915e22df}\index{HD44780\_menu.c@{HD44780\_menu.c}!HD44780\_get\_lvl\_m@{HD44780\_get\_lvl\_m}}
+\index{HD44780\_get\_lvl\_m@{HD44780\_get\_lvl\_m}!HD44780\_menu.c@{HD44780\_menu.c}}
+\doxysubsubsection{\texorpdfstring{HD44780\_get\_lvl\_m()}{HD44780\_get\_lvl\_m()}}
+{\footnotesize\ttfamily \label{_h_d44780__menu_8c_a4952c363792bdbc3142ec493915e22df} 
+uint8\+\_\+t HD44780\+\_\+get\+\_\+lvl\+\_\+m (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_h_d44780__menu_8c_a57ca3d489a847baeac0f9dcf6f07c661}\index{HD44780\_menu.c@{HD44780\_menu.c}!HD44780\_init\_menu@{HD44780\_init\_menu}}
+\index{HD44780\_init\_menu@{HD44780\_init\_menu}!HD44780\_menu.c@{HD44780\_menu.c}}
+\doxysubsubsection{\texorpdfstring{HD44780\_init\_menu()}{HD44780\_init\_menu()}}
+{\footnotesize\ttfamily \label{_h_d44780__menu_8c_a57ca3d489a847baeac0f9dcf6f07c661} 
+void HD44780\+\_\+init\+\_\+menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{, }\item[{\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{root}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_h_d44780__menu_8c_adc0eaa372b186abd9657b6dfc9abbeef}\index{HD44780\_menu.c@{HD44780\_menu.c}!HD44780\_next\_m@{HD44780\_next\_m}}
+\index{HD44780\_next\_m@{HD44780\_next\_m}!HD44780\_menu.c@{HD44780\_menu.c}}
+\doxysubsubsection{\texorpdfstring{HD44780\_next\_m()}{HD44780\_next\_m()}}
+{\footnotesize\ttfamily \label{_h_d44780__menu_8c_adc0eaa372b186abd9657b6dfc9abbeef} 
+void HD44780\+\_\+next\+\_\+m (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_h_d44780__menu_8c_a9d6b68701d0ccc77ef4547aac162bf76}\index{HD44780\_menu.c@{HD44780\_menu.c}!HD44780\_on\_m@{HD44780\_on\_m}}
+\index{HD44780\_on\_m@{HD44780\_on\_m}!HD44780\_menu.c@{HD44780\_menu.c}}
+\doxysubsubsection{\texorpdfstring{HD44780\_on\_m()}{HD44780\_on\_m()}}
+{\footnotesize\ttfamily \label{_h_d44780__menu_8c_a9d6b68701d0ccc77ef4547aac162bf76} 
+void HD44780\+\_\+on\+\_\+m (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_h_d44780__menu_8c_ade866fe3d42836c7642dedd925ad4e2a}\index{HD44780\_menu.c@{HD44780\_menu.c}!HD44780\_prev\_m@{HD44780\_prev\_m}}
+\index{HD44780\_prev\_m@{HD44780\_prev\_m}!HD44780\_menu.c@{HD44780\_menu.c}}
+\doxysubsubsection{\texorpdfstring{HD44780\_prev\_m()}{HD44780\_prev\_m()}}
+{\footnotesize\ttfamily \label{_h_d44780__menu_8c_ade866fe3d42836c7642dedd925ad4e2a} 
+void HD44780\+\_\+prev\+\_\+m (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_h_d44780__menu_8c_a739b65605461a4835489c644cc93bf0a}\index{HD44780\_menu.c@{HD44780\_menu.c}!HD44780\_refresh\_m@{HD44780\_refresh\_m}}
+\index{HD44780\_refresh\_m@{HD44780\_refresh\_m}!HD44780\_menu.c@{HD44780\_menu.c}}
+\doxysubsubsection{\texorpdfstring{HD44780\_refresh\_m()}{HD44780\_refresh\_m()}}
+{\footnotesize\ttfamily \label{_h_d44780__menu_8c_a739b65605461a4835489c644cc93bf0a} 
+void HD44780\+\_\+refresh\+\_\+m (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{}\end{DoxyParamCaption})}
+

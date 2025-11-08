@@ -1,0 +1,70 @@
+\doxysection{pwm\+\_\+channel\+\_\+t Struct Reference}
+\hypertarget{structpwm__channel__t}{}\label{structpwm__channel__t}\index{pwm\_channel\_t@{pwm\_channel\_t}}
+
+
+Structure representing a PWM output channel.  
+
+
+
+
+{\ttfamily \#include $<$Gen\+\_\+libary.\+h$>$}
+
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+volatile uint32\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structpwm__channel__t_ae0811ab10ef1d0920af2d59353460c2e}{pwm\+\_\+ccr}}
+\begin{DoxyCompactList}\small\item\em Pointer to the timer\textquotesingle{}s CCR register for duty cycle control. \end{DoxyCompactList}\item 
+volatile uint32\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structpwm__channel__t_a41f9aae757e8352f9d29fdeb804ee63e}{pwm\+\_\+arr}}
+\begin{DoxyCompactList}\small\item\em Pointer to the timer\textquotesingle{}s ARR register for period control. \end{DoxyCompactList}\item 
+TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structpwm__channel__t_a5dc7d1c65997ccaed48a93a3f4ffc486}{htim}}
+\begin{DoxyCompactList}\small\item\em Handle to the STM32 timer peripheral. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structpwm__channel__t_a0c72dd5e18823aef187a34137983c9a6}{channel}}
+\begin{DoxyCompactList}\small\item\em Timer channel number (e.\+g., TIM\+\_\+\+CHANNEL\+\_\+1) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure representing a PWM output channel. 
+
+\label{doc-variable-members}
+\Hypertarget{structpwm__channel__t_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{structpwm__channel__t_a0c72dd5e18823aef187a34137983c9a6}\index{pwm\_channel\_t@{pwm\_channel\_t}!channel@{channel}}
+\index{channel@{channel}!pwm\_channel\_t@{pwm\_channel\_t}}
+\doxysubsubsection{\texorpdfstring{channel}{channel}}
+{\footnotesize\ttfamily \label{structpwm__channel__t_a0c72dd5e18823aef187a34137983c9a6} 
+uint32\+\_\+t channel}
+
+
+
+Timer channel number (e.\+g., TIM\+\_\+\+CHANNEL\+\_\+1) 
+
+\Hypertarget{structpwm__channel__t_a5dc7d1c65997ccaed48a93a3f4ffc486}\index{pwm\_channel\_t@{pwm\_channel\_t}!htim@{htim}}
+\index{htim@{htim}!pwm\_channel\_t@{pwm\_channel\_t}}
+\doxysubsubsection{\texorpdfstring{htim}{htim}}
+{\footnotesize\ttfamily \label{structpwm__channel__t_a5dc7d1c65997ccaed48a93a3f4ffc486} 
+TIM\+\_\+\+Handle\+Type\+Def\texorpdfstring{$\ast$}{*} htim}
+
+
+
+Handle to the STM32 timer peripheral. 
+
+\Hypertarget{structpwm__channel__t_a41f9aae757e8352f9d29fdeb804ee63e}\index{pwm\_channel\_t@{pwm\_channel\_t}!pwm\_arr@{pwm\_arr}}
+\index{pwm\_arr@{pwm\_arr}!pwm\_channel\_t@{pwm\_channel\_t}}
+\doxysubsubsection{\texorpdfstring{pwm\_arr}{pwm\_arr}}
+{\footnotesize\ttfamily \label{structpwm__channel__t_a41f9aae757e8352f9d29fdeb804ee63e} 
+volatile uint32\+\_\+t\texorpdfstring{$\ast$}{*} pwm\+\_\+arr}
+
+
+
+Pointer to the timer\textquotesingle{}s ARR register for period control. 
+
+\Hypertarget{structpwm__channel__t_ae0811ab10ef1d0920af2d59353460c2e}\index{pwm\_channel\_t@{pwm\_channel\_t}!pwm\_ccr@{pwm\_ccr}}
+\index{pwm\_ccr@{pwm\_ccr}!pwm\_channel\_t@{pwm\_channel\_t}}
+\doxysubsubsection{\texorpdfstring{pwm\_ccr}{pwm\_ccr}}
+{\footnotesize\ttfamily \label{structpwm__channel__t_ae0811ab10ef1d0920af2d59353460c2e} 
+volatile uint32\+\_\+t\texorpdfstring{$\ast$}{*} pwm\+\_\+ccr}
+
+
+
+Pointer to the timer\textquotesingle{}s CCR register for duty cycle control. 
+

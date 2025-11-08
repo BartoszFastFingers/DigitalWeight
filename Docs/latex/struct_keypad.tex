@@ -1,0 +1,142 @@
+\doxysection{Keypad Struct Reference}
+\hypertarget{struct_keypad}{}\label{struct_keypad}\index{Keypad@{Keypad}}
+
+
+Structure representing a matrix keypad.  
+
+
+
+
+{\ttfamily \#include $<$Keypad.\+h$>$}
+
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_keypad_adc5a7075d2ab6ed2208a2bf7280a6c54}{key\+\_\+map}}
+\begin{DoxyCompactList}\small\item\em Mapping of keys to characters. \end{DoxyCompactList}\item 
+bool \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_keypad_ae2b17ca937a10c35a44c3cd540c8478f}{read}}
+\begin{DoxyCompactList}\small\item\em Current raw key states. \end{DoxyCompactList}\item 
+bool \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_keypad_a830066adc6ef5017925132b015dd0199}{stable}}
+\begin{DoxyCompactList}\small\item\em Debounced key states. \end{DoxyCompactList}\item 
+bool \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_keypad_a76546e62c42814e70d0e3247d8afc288}{last\+\_\+read}}
+\begin{DoxyCompactList}\small\item\em Previous raw key states. \end{DoxyCompactList}\item 
+bool \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_keypad_aac6cb190c5e24bdf8f070d2c20f585b4}{pressed}}
+\begin{DoxyCompactList}\small\item\em Flags indicating which keys were pressed. \end{DoxyCompactList}\item 
+uint32\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_keypad_ab69ac56fb09f4635ba97661d30c56a44}{last\+\_\+debounce}}
+\begin{DoxyCompactList}\small\item\em Timestamp of last state change for debounce logic. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structpin__t}{pin\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_keypad_a6988a479d79bc69cadaff309fd6db934}{R}}
+\begin{DoxyCompactList}\small\item\em Array of row pins. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structpin__t}{pin\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_keypad_a9ca4f29b5a1265a6b325130b3a6ab205}{C}}
+\begin{DoxyCompactList}\small\item\em Array of column pins. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{struct_keypad_adaa1a9f8ec83339cdb661714f5bd2c97}{rows}}
+\begin{DoxyCompactList}\small\item\em Number of rows in the keypad. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{struct_keypad_a9bf6c19eefefcddca5f152099add491c}{columns}}
+\begin{DoxyCompactList}\small\item\em Number of columns in the keypad. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure representing a matrix keypad. 
+
+\label{doc-variable-members}
+\Hypertarget{struct_keypad_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{struct_keypad_a9ca4f29b5a1265a6b325130b3a6ab205}\index{Keypad@{Keypad}!C@{C}}
+\index{C@{C}!Keypad@{Keypad}}
+\doxysubsubsection{\texorpdfstring{C}{C}}
+{\footnotesize\ttfamily \label{struct_keypad_a9ca4f29b5a1265a6b325130b3a6ab205} 
+\mbox{\hyperlink{structpin__t}{pin\+\_\+t}}\texorpdfstring{$\ast$}{*} C}
+
+
+
+Array of column pins. 
+
+\Hypertarget{struct_keypad_a9bf6c19eefefcddca5f152099add491c}\index{Keypad@{Keypad}!columns@{columns}}
+\index{columns@{columns}!Keypad@{Keypad}}
+\doxysubsubsection{\texorpdfstring{columns}{columns}}
+{\footnotesize\ttfamily \label{struct_keypad_a9bf6c19eefefcddca5f152099add491c} 
+uint8\+\_\+t columns}
+
+
+
+Number of columns in the keypad. 
+
+\Hypertarget{struct_keypad_adc5a7075d2ab6ed2208a2bf7280a6c54}\index{Keypad@{Keypad}!key\_map@{key\_map}}
+\index{key\_map@{key\_map}!Keypad@{Keypad}}
+\doxysubsubsection{\texorpdfstring{key\_map}{key\_map}}
+{\footnotesize\ttfamily \label{struct_keypad_adc5a7075d2ab6ed2208a2bf7280a6c54} 
+char\texorpdfstring{$\ast$}{*} key\+\_\+map}
+
+
+
+Mapping of keys to characters. 
+
+\Hypertarget{struct_keypad_ab69ac56fb09f4635ba97661d30c56a44}\index{Keypad@{Keypad}!last\_debounce@{last\_debounce}}
+\index{last\_debounce@{last\_debounce}!Keypad@{Keypad}}
+\doxysubsubsection{\texorpdfstring{last\_debounce}{last\_debounce}}
+{\footnotesize\ttfamily \label{struct_keypad_ab69ac56fb09f4635ba97661d30c56a44} 
+uint32\+\_\+t\texorpdfstring{$\ast$}{*} last\+\_\+debounce}
+
+
+
+Timestamp of last state change for debounce logic. 
+
+\Hypertarget{struct_keypad_a76546e62c42814e70d0e3247d8afc288}\index{Keypad@{Keypad}!last\_read@{last\_read}}
+\index{last\_read@{last\_read}!Keypad@{Keypad}}
+\doxysubsubsection{\texorpdfstring{last\_read}{last\_read}}
+{\footnotesize\ttfamily \label{struct_keypad_a76546e62c42814e70d0e3247d8afc288} 
+bool\texorpdfstring{$\ast$}{*} last\+\_\+read}
+
+
+
+Previous raw key states. 
+
+\Hypertarget{struct_keypad_aac6cb190c5e24bdf8f070d2c20f585b4}\index{Keypad@{Keypad}!pressed@{pressed}}
+\index{pressed@{pressed}!Keypad@{Keypad}}
+\doxysubsubsection{\texorpdfstring{pressed}{pressed}}
+{\footnotesize\ttfamily \label{struct_keypad_aac6cb190c5e24bdf8f070d2c20f585b4} 
+bool\texorpdfstring{$\ast$}{*} pressed}
+
+
+
+Flags indicating which keys were pressed. 
+
+\Hypertarget{struct_keypad_a6988a479d79bc69cadaff309fd6db934}\index{Keypad@{Keypad}!R@{R}}
+\index{R@{R}!Keypad@{Keypad}}
+\doxysubsubsection{\texorpdfstring{R}{R}}
+{\footnotesize\ttfamily \label{struct_keypad_a6988a479d79bc69cadaff309fd6db934} 
+\mbox{\hyperlink{structpin__t}{pin\+\_\+t}}\texorpdfstring{$\ast$}{*} R}
+
+
+
+Array of row pins. 
+
+\Hypertarget{struct_keypad_ae2b17ca937a10c35a44c3cd540c8478f}\index{Keypad@{Keypad}!read@{read}}
+\index{read@{read}!Keypad@{Keypad}}
+\doxysubsubsection{\texorpdfstring{read}{read}}
+{\footnotesize\ttfamily \label{struct_keypad_ae2b17ca937a10c35a44c3cd540c8478f} 
+bool\texorpdfstring{$\ast$}{*} read}
+
+
+
+Current raw key states. 
+
+\Hypertarget{struct_keypad_adaa1a9f8ec83339cdb661714f5bd2c97}\index{Keypad@{Keypad}!rows@{rows}}
+\index{rows@{rows}!Keypad@{Keypad}}
+\doxysubsubsection{\texorpdfstring{rows}{rows}}
+{\footnotesize\ttfamily \label{struct_keypad_adaa1a9f8ec83339cdb661714f5bd2c97} 
+uint8\+\_\+t rows}
+
+
+
+Number of rows in the keypad. 
+
+\Hypertarget{struct_keypad_a830066adc6ef5017925132b015dd0199}\index{Keypad@{Keypad}!stable@{stable}}
+\index{stable@{stable}!Keypad@{Keypad}}
+\doxysubsubsection{\texorpdfstring{stable}{stable}}
+{\footnotesize\ttfamily \label{struct_keypad_a830066adc6ef5017925132b015dd0199} 
+bool\texorpdfstring{$\ast$}{*} stable}
+
+
+
+Debounced key states. 
+

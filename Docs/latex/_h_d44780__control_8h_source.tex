@@ -1,0 +1,32 @@
+\doxysection{HD44780\+\_\+control.\+h}
+\hypertarget{_h_d44780__control_8h_source}{}\label{_h_d44780__control_8h_source}\mbox{\hyperlink{_h_d44780__control_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#ifndef\ INC\_HD44780\_CONTROL\_H\_}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ INC\_HD44780\_CONTROL\_H\_}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_h_x711__pro_8h}{HX711\_pro.h}}"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_gen__libary_8h}{Gen\_libary.h}}"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_keypad_8h}{Keypad.h}}"{}}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{struct_keypad}{Keypad}}*\ \mbox{\hyperlink{struct_keypad__control_a8e2c74ec70f000275f18c93d33224193}{K}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_keypad__control_a69d735cc45374e9ce926f54645638d62}{K\_offset}};\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{struct_keypad__control_a2b4a6ab0993d3a398bbe079554611d75}{K\_str}};\ \ \ \ \ }
+\DoxyCodeLine{00036\ \}\ \mbox{\hyperlink{struct_keypad__control}{Keypad\_control}};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00048\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structlcd__control_a41780664dfbe4dab6288890ffdbe18f9}{menu\_state}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{structpwm__channel__t}{pwm\_channel\_t}}\ \mbox{\hyperlink{structlcd__control_ac9aee7c353050fbb6015fa213b750157}{brightness}};\ \ }
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{struct_h_x711}{HX711}}*\ \mbox{\hyperlink{structlcd__control_ad1d78bbcb1552df345fb3eaa47c890e3}{weight}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structlcd__control_a80e3cff0a585e333073cf74e4d8fbcd4}{probes}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{struct_keypad__control}{Keypad\_control}}*\ \mbox{\hyperlink{structlcd__control_adbf6847929ea8f45c4f93fb81797c8ff}{Keypad}};\ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structlcd__control_aa3461de3414b7cf2721bc5c49e17c644}{last\_debounce}};\ \ \ \ }
+\DoxyCodeLine{00054\ \}\ \mbox{\hyperlink{structlcd__control}{lcd\_control}};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_HD44780\_CONTROL\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,96 @@
+\doxysection{lcd\+\_\+control Struct Reference}
+\hypertarget{structlcd__control}{}\label{structlcd__control}\index{lcd\_control@{lcd\_control}}
+
+
+Structure for LCD control and menu interaction.  
+
+
+
+
+{\ttfamily \#include $<$HD44780\+\_\+control.\+h$>$}
+
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structlcd__control_a41780664dfbe4dab6288890ffdbe18f9}{menu\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em Current menu state/index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structpwm__channel__t}{pwm\+\_\+channel\+\_\+t}} \mbox{\hyperlink{structlcd__control_ac9aee7c353050fbb6015fa213b750157}{brightness}}
+\begin{DoxyCompactList}\small\item\em PWM channel for controlling backlight brightness. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structlcd__control_ad1d78bbcb1552df345fb3eaa47c890e3}{weight}}
+\begin{DoxyCompactList}\small\item\em Pointer to \doxylink{struct_h_x711}{HX711} handle for weight measurement. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structlcd__control_a80e3cff0a585e333073cf74e4d8fbcd4}{probes}}
+\begin{DoxyCompactList}\small\item\em Number of measurement samples to average. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_keypad__control}{Keypad\+\_\+control}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structlcd__control_adbf6847929ea8f45c4f93fb81797c8ff}{Keypad}}
+\begin{DoxyCompactList}\small\item\em Pointer to keypad control structure. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structlcd__control_aa3461de3414b7cf2721bc5c49e17c644}{last\+\_\+debounce}}
+\begin{DoxyCompactList}\small\item\em Timestamp of last keypad input for debounce. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure for LCD control and menu interaction. 
+
+This structure combines menu state, PWM backlight control, weight sensor reference, keypad input, and probe/sample configuration to manage the \doxylink{struct_h_d44780}{HD44780} display in STM32 projects. 
+
+\label{doc-variable-members}
+\Hypertarget{structlcd__control_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{structlcd__control_ac9aee7c353050fbb6015fa213b750157}\index{lcd\_control@{lcd\_control}!brightness@{brightness}}
+\index{brightness@{brightness}!lcd\_control@{lcd\_control}}
+\doxysubsubsection{\texorpdfstring{brightness}{brightness}}
+{\footnotesize\ttfamily \label{structlcd__control_ac9aee7c353050fbb6015fa213b750157} 
+\mbox{\hyperlink{structpwm__channel__t}{pwm\+\_\+channel\+\_\+t}} brightness}
+
+
+
+PWM channel for controlling backlight brightness. 
+
+\Hypertarget{structlcd__control_adbf6847929ea8f45c4f93fb81797c8ff}\index{lcd\_control@{lcd\_control}!Keypad@{Keypad}}
+\index{Keypad@{Keypad}!lcd\_control@{lcd\_control}}
+\doxysubsubsection{\texorpdfstring{Keypad}{Keypad}}
+{\footnotesize\ttfamily \label{structlcd__control_adbf6847929ea8f45c4f93fb81797c8ff} 
+\mbox{\hyperlink{struct_keypad__control}{Keypad\+\_\+control}}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_keypad}{Keypad}}}
+
+
+
+Pointer to keypad control structure. 
+
+\Hypertarget{structlcd__control_aa3461de3414b7cf2721bc5c49e17c644}\index{lcd\_control@{lcd\_control}!last\_debounce@{last\_debounce}}
+\index{last\_debounce@{last\_debounce}!lcd\_control@{lcd\_control}}
+\doxysubsubsection{\texorpdfstring{last\_debounce}{last\_debounce}}
+{\footnotesize\ttfamily \label{structlcd__control_aa3461de3414b7cf2721bc5c49e17c644} 
+uint32\+\_\+t last\+\_\+debounce}
+
+
+
+Timestamp of last keypad input for debounce. 
+
+\Hypertarget{structlcd__control_a41780664dfbe4dab6288890ffdbe18f9}\index{lcd\_control@{lcd\_control}!menu\_state@{menu\_state}}
+\index{menu\_state@{menu\_state}!lcd\_control@{lcd\_control}}
+\doxysubsubsection{\texorpdfstring{menu\_state}{menu\_state}}
+{\footnotesize\ttfamily \label{structlcd__control_a41780664dfbe4dab6288890ffdbe18f9} 
+uint8\+\_\+t menu\+\_\+state}
+
+
+
+Current menu state/index. 
+
+\Hypertarget{structlcd__control_a80e3cff0a585e333073cf74e4d8fbcd4}\index{lcd\_control@{lcd\_control}!probes@{probes}}
+\index{probes@{probes}!lcd\_control@{lcd\_control}}
+\doxysubsubsection{\texorpdfstring{probes}{probes}}
+{\footnotesize\ttfamily \label{structlcd__control_a80e3cff0a585e333073cf74e4d8fbcd4} 
+uint8\+\_\+t probes}
+
+
+
+Number of measurement samples to average. 
+
+\Hypertarget{structlcd__control_ad1d78bbcb1552df345fb3eaa47c890e3}\index{lcd\_control@{lcd\_control}!weight@{weight}}
+\index{weight@{weight}!lcd\_control@{lcd\_control}}
+\doxysubsubsection{\texorpdfstring{weight}{weight}}
+{\footnotesize\ttfamily \label{structlcd__control_ad1d78bbcb1552df345fb3eaa47c890e3} 
+\mbox{\hyperlink{struct_h_x711}{HX711}}\texorpdfstring{$\ast$}{*} weight}
+
+
+
+Pointer to \doxylink{struct_h_x711}{HX711} handle for weight measurement. 
+

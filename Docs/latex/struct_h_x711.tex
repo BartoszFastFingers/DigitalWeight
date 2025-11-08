@@ -1,0 +1,120 @@
+\doxysection{HX711 Struct Reference}
+\hypertarget{struct_h_x711}{}\label{struct_h_x711}\index{HX711@{HX711}}
+
+
+Structure representing an \doxylink{struct_h_x711}{HX711} load cell amplifier.  
+
+
+
+
+{\ttfamily \#include $<$HX711\+\_\+pro.\+h$>$}
+
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_h_x711_ac5ad4c67bf4b3142c480b4e0dbcc595a}{CLK\+\_\+\+GPIO\+\_\+\+PORT}}
+\begin{DoxyCompactList}\small\item\em GPIO port for clock pin. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{struct_h_x711_a4cc253c90abbb819de3125e1e0512f0c}{CLK\+\_\+\+GPIO\+\_\+\+PIN}}
+\begin{DoxyCompactList}\small\item\em GPIO pin number for clock. \end{DoxyCompactList}\item 
+GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_h_x711_a5d52aed3990521a3f31648b5cbb04374}{DATA\+\_\+\+GPIO\+\_\+\+PORT}}
+\begin{DoxyCompactList}\small\item\em GPIO port for data pin. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{struct_h_x711_aa1a2cdf182c1bc402f5daade9a39f2de}{DATA\+\_\+\+GPIO\+\_\+\+PIN}}
+\begin{DoxyCompactList}\small\item\em GPIO pin number for data. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{struct_h_x711_a1c27a085e431ab0ed636d79dd7a070ef}{offset\+\_\+val}}
+\begin{DoxyCompactList}\small\item\em Offset value for tare calibration. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_h_x711_ac134d242f054f565df66971933ac069d}{gain}}
+\begin{DoxyCompactList}\small\item\em Gain factor (128, 64, or 32) \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{struct_h_x711_a061cd6fc468b209182eb03ac0e21c795}{last\+\_\+estimation\+\_\+read}}
+\begin{DoxyCompactList}\small\item\em Last filtered value. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{struct_h_x711_aca4752b4d40ea5255d3110df760094dc}{last\+\_\+read}}
+\begin{DoxyCompactList}\small\item\em Last raw value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure representing an \doxylink{struct_h_x711}{HX711} load cell amplifier. 
+
+This structure holds the GPIO configuration for the data and clock pins, as well as calibration and last read values for the \doxylink{struct_h_x711}{HX711} module. 
+
+\label{doc-variable-members}
+\Hypertarget{struct_h_x711_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{struct_h_x711_a4cc253c90abbb819de3125e1e0512f0c}\index{HX711@{HX711}!CLK\_GPIO\_PIN@{CLK\_GPIO\_PIN}}
+\index{CLK\_GPIO\_PIN@{CLK\_GPIO\_PIN}!HX711@{HX711}}
+\doxysubsubsection{\texorpdfstring{CLK\_GPIO\_PIN}{CLK\_GPIO\_PIN}}
+{\footnotesize\ttfamily \label{struct_h_x711_a4cc253c90abbb819de3125e1e0512f0c} 
+uint16\+\_\+t CLK\+\_\+\+GPIO\+\_\+\+PIN}
+
+
+
+GPIO pin number for clock. 
+
+\Hypertarget{struct_h_x711_ac5ad4c67bf4b3142c480b4e0dbcc595a}\index{HX711@{HX711}!CLK\_GPIO\_PORT@{CLK\_GPIO\_PORT}}
+\index{CLK\_GPIO\_PORT@{CLK\_GPIO\_PORT}!HX711@{HX711}}
+\doxysubsubsection{\texorpdfstring{CLK\_GPIO\_PORT}{CLK\_GPIO\_PORT}}
+{\footnotesize\ttfamily \label{struct_h_x711_ac5ad4c67bf4b3142c480b4e0dbcc595a} 
+GPIO\+\_\+\+Type\+Def\texorpdfstring{$\ast$}{*} CLK\+\_\+\+GPIO\+\_\+\+PORT}
+
+
+
+GPIO port for clock pin. 
+
+\Hypertarget{struct_h_x711_aa1a2cdf182c1bc402f5daade9a39f2de}\index{HX711@{HX711}!DATA\_GPIO\_PIN@{DATA\_GPIO\_PIN}}
+\index{DATA\_GPIO\_PIN@{DATA\_GPIO\_PIN}!HX711@{HX711}}
+\doxysubsubsection{\texorpdfstring{DATA\_GPIO\_PIN}{DATA\_GPIO\_PIN}}
+{\footnotesize\ttfamily \label{struct_h_x711_aa1a2cdf182c1bc402f5daade9a39f2de} 
+uint16\+\_\+t DATA\+\_\+\+GPIO\+\_\+\+PIN}
+
+
+
+GPIO pin number for data. 
+
+\Hypertarget{struct_h_x711_a5d52aed3990521a3f31648b5cbb04374}\index{HX711@{HX711}!DATA\_GPIO\_PORT@{DATA\_GPIO\_PORT}}
+\index{DATA\_GPIO\_PORT@{DATA\_GPIO\_PORT}!HX711@{HX711}}
+\doxysubsubsection{\texorpdfstring{DATA\_GPIO\_PORT}{DATA\_GPIO\_PORT}}
+{\footnotesize\ttfamily \label{struct_h_x711_a5d52aed3990521a3f31648b5cbb04374} 
+GPIO\+\_\+\+Type\+Def\texorpdfstring{$\ast$}{*} DATA\+\_\+\+GPIO\+\_\+\+PORT}
+
+
+
+GPIO port for data pin. 
+
+\Hypertarget{struct_h_x711_ac134d242f054f565df66971933ac069d}\index{HX711@{HX711}!gain@{gain}}
+\index{gain@{gain}!HX711@{HX711}}
+\doxysubsubsection{\texorpdfstring{gain}{gain}}
+{\footnotesize\ttfamily \label{struct_h_x711_ac134d242f054f565df66971933ac069d} 
+uint32\+\_\+t gain}
+
+
+
+Gain factor (128, 64, or 32) 
+
+\Hypertarget{struct_h_x711_a061cd6fc468b209182eb03ac0e21c795}\index{HX711@{HX711}!last\_estimation\_read@{last\_estimation\_read}}
+\index{last\_estimation\_read@{last\_estimation\_read}!HX711@{HX711}}
+\doxysubsubsection{\texorpdfstring{last\_estimation\_read}{last\_estimation\_read}}
+{\footnotesize\ttfamily \label{struct_h_x711_a061cd6fc468b209182eb03ac0e21c795} 
+float last\+\_\+estimation\+\_\+read}
+
+
+
+Last filtered value. 
+
+\Hypertarget{struct_h_x711_aca4752b4d40ea5255d3110df760094dc}\index{HX711@{HX711}!last\_read@{last\_read}}
+\index{last\_read@{last\_read}!HX711@{HX711}}
+\doxysubsubsection{\texorpdfstring{last\_read}{last\_read}}
+{\footnotesize\ttfamily \label{struct_h_x711_aca4752b4d40ea5255d3110df760094dc} 
+float last\+\_\+read}
+
+
+
+Last raw value. 
+
+\Hypertarget{struct_h_x711_a1c27a085e431ab0ed636d79dd7a070ef}\index{HX711@{HX711}!offset\_val@{offset\_val}}
+\index{offset\_val@{offset\_val}!HX711@{HX711}}
+\doxysubsubsection{\texorpdfstring{offset\_val}{offset\_val}}
+{\footnotesize\ttfamily \label{struct_h_x711_a1c27a085e431ab0ed636d79dd7a070ef} 
+long offset\+\_\+val}
+
+
+
+Offset value for tare calibration. 
+

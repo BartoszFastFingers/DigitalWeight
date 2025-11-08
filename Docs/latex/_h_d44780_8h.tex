@@ -1,0 +1,543 @@
+\doxysection{HD44780.\+h File Reference}
+\hypertarget{_h_d44780_8h}{}\label{_h_d44780_8h}\index{HD44780.h@{HD44780.h}}
+
+
+Function prototypes and structures for controlling \doxylink{struct_h_d44780}{HD44780} LCD.  
+
+
+{\ttfamily \#include "{}Gen\+\_\+libary.\+h"{}}\newline
+{\ttfamily \#include "{}HD44780\+\_\+control.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_h_d44780}{HD44780}}
+\begin{DoxyCompactList}\small\item\em Structure representing an \doxylink{struct_h_d44780}{HD44780} LCD display instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_a881973a1ca73e4b505fc09d4f1da1d4e}{HD44780\+\_\+\+ROWS}}~2
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_a2bc3f0a9bf403fb5e6bd2fcce1c5f740}{HD44780\+\_\+\+COLS}}~16
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_a4710e892e362b0178da5b19a64e103f5}{HD44780\+\_\+\+CLEAR\+\_\+\+DISPLAY}}~0x01
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_a88a64c447d5995535c32f52f3cbeebf5}{HD44780\+\_\+\+RETURN\+\_\+\+HOME}}~0\+X02
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_a58d075a41fbe35c1574e461d707c1d4c}{HD44780\+\_\+\+ENTRY\+\_\+\+MODE}}~0\+X04
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_a122e39da7314876fdf8e9ecc81489564}{HD44780\+\_\+\+SHIFT\+\_\+\+CURSOR}}~0x00
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_a31cbb50417e68174238c420602d0a342}{HD44780\+\_\+\+SHIFT\+\_\+\+DISP}}~0x01
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_ade55bcfdb6c76c8fcfe20ab494ad442a}{HD44780\+\_\+\+CUR\+\_\+\+LEFT}}~0x00
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_a23af0f44b15bcd0f6054ee40f57c81e2}{HD44780\+\_\+\+CUR\+\_\+\+RIGHT}}~0x02
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_a8681242d2631f65479e4f9ba7cbd99cf}{HD44780\+\_\+\+DISPLAY\+\_\+\+ON\+\_\+\+OFF}}~0x08
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_aefd6f75e3454ecbe00950c818e9e9420}{HD44780\+\_\+\+DISPLAY\+\_\+\+ON}}~0x04
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_ac4aaf8f148b62f169dab65206d304371}{HD44780\+\_\+\+DISPLAY\+\_\+\+OFF}}~0x00
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_aed29ee5796a08c632ff7db8ebc43a4fb}{HD44780\+\_\+\+DISPLAY\+\_\+\+CURSOR\+\_\+\+DISP\+\_\+\+ON}}~0x02
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_a2b053673445452521e534aec930da918}{HD44780\+\_\+\+DISPLAY\+\_\+\+CURSOR\+\_\+\+DISP\+\_\+\+OFF}}~0x00
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_a7b21b6dabba020abf206a636eea10daf}{HD44780\+\_\+\+BLINK\+\_\+\+ON}}~0x01
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_af0a47bb22cdb9097983f9f9864305459}{HD44780\+\_\+\+BLINK\+\_\+\+OFF}}~0x00
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_af7c39d79841bec68592d078fd26824b8}{HD44780\+\_\+\+SHIFT}}~0x10
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_a748fc2dd9601886387d14d8449464e4b}{HD44780\+\_\+\+DISPLAY\+\_\+\+SHIFT}}~0x08
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_a5f061bf32bf16e23a60408de9029d80d}{HD44780\+\_\+\+CURSOR\+\_\+\+SHIFT}}~0x00
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_afc02ee9757fbf6e80c65c9c68196e1a2}{HD44780\+\_\+\+RIGHT\+\_\+\+SHIFT}}~0x04
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_af91e53b158d091c572cf3141a93e6214}{HD44780\+\_\+\+LEFT\+\_\+\+SHIFT}}~0x00
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_a27ed98d9f8d626aef82459f913b9d81b}{HD44780\+\_\+\+FUN\+\_\+\+SET}}~0x20
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_a7a68555ea3933fef3671a601c178e3de}{HD44780\+\_\+8\+BIT}}~0x10
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_af4322eded53b86caf6eebb2ca16b184f}{HD44780\+\_\+4\+BIT}}~0x00
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_a6556347fef6812728bceed97d7e95914}{HD44780\+\_\+2\+LINES}}~0x08
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_a3b7d5815e59447c6f7094c0c0d3f92e4}{HD44780\+\_\+1\+LINE}}~0x00
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_a0da74c845cb9b89767bf627344c329aa}{HD44780\+\_\+5x10\+\_\+\+FONT}}~0x04
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_a8b7109c282b3a41cf1dabe91fc2e5c4f}{HD44780\+\_\+5x8\+\_\+\+FONT}}~0x00
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_a38771356a2b57fb03fcc5eee36cc6e7f}{HD44780\+\_\+\+SET\+\_\+\+CGRAM}}~0x40
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_a4459ba0f4d9255fe532a71a433543b70}{HD44780\+\_\+\+SET\+\_\+\+DDRAM}}~0x80
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_aad62953747ddba5188f473093121fa3b}{HD44780\+\_\+\+LINE1}}~0x00
+\item 
+\#define \mbox{\hyperlink{_h_d44780_8h_a4a1dd3ec4ef2862c9249a0fde7756770}{HD44780\+\_\+\+LINE2}}~0x40
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_h_d44780_8h_ae148543722d453a25d06112b0559d6c7}{HD44780\+\_\+init}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}rs\+\_\+gpio\+\_\+port, uint16\+\_\+t rs\+\_\+gpio\+\_\+pin, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}rw\+\_\+gpio\+\_\+port, uint16\+\_\+t rw\+\_\+gpio\+\_\+pin, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}e\+\_\+gpio\+\_\+port, uint16\+\_\+t e\+\_\+gpio\+\_\+pin, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}d4\+\_\+gpio\+\_\+port, uint16\+\_\+t d4\+\_\+gpio\+\_\+pin, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}d5\+\_\+gpio\+\_\+port, uint16\+\_\+t d5\+\_\+gpio\+\_\+pin, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}d6\+\_\+gpio\+\_\+port, uint16\+\_\+t d6\+\_\+gpio\+\_\+pin, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}d7\+\_\+gpio\+\_\+port, uint16\+\_\+t d7\+\_\+gpio\+\_\+pin)
+\begin{DoxyCompactList}\small\item\em Initializes the \doxylink{struct_h_d44780}{HD44780} LCD structure with GPIO pins. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_d44780_8h_aceb8f4bb61998c17f55fca63a8ac20a7}{HD44780\+\_\+init\+\_\+brightness}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780, TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}timer, volatile uint32\+\_\+t \texorpdfstring{$\ast$}{*}pwm\+\_\+reg\+\_\+ccr, volatile uint32\+\_\+t \texorpdfstring{$\ast$}{*}pwm\+\_\+reg\+\_\+arr, uint32\+\_\+t chan)
+\begin{DoxyCompactList}\small\item\em Initializes PWM for LCD backlight brightness. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_d44780_8h_a065ceb6d5b9ae7a8e4566866b2770a99}{HD44780\+\_\+init\+\_\+weight}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780, \mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}hx711)
+\begin{DoxyCompactList}\small\item\em Links a \doxylink{struct_h_x711}{HX711} weight sensor to the LCD structure. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_d44780_8h_aedc306addb36c8b315ec890b7ea4242b}{HD44780\+\_\+init\+\_\+keypad}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780, \mbox{\hyperlink{struct_keypad}{Keypad}} \texorpdfstring{$\ast$}{*}K)
+\begin{DoxyCompactList}\small\item\em Links a keypad to the LCD structure for menu input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_d44780_8h_a3e31974d11995ef3c6ca9db90f72c50d}{HD44780\+\_\+set\+\_\+\+IR}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780)
+\begin{DoxyCompactList}\small\item\em Set LCD to instruction register mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_d44780_8h_ab4cdd916c0dba0189e3e05665b3d4dfc}{HD44780\+\_\+set\+\_\+\+DR}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780)
+\begin{DoxyCompactList}\small\item\em Set LCD to data register mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_d44780_8h_a36000f4705af2578ed3ff4abcff35990}{HD44780\+\_\+set\+\_\+write}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780)
+\begin{DoxyCompactList}\small\item\em Set LCD to write mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_d44780_8h_a7adceb2de76172145c33106cb104eb3c}{HD44780\+\_\+set\+\_\+read}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780)
+\begin{DoxyCompactList}\small\item\em Set LCD to read mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_d44780_8h_a2bda360f04b89af11c93449ca405f6e2}{HD44780\+\_\+pulse\+\_\+E}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780)
+\begin{DoxyCompactList}\small\item\em Generate enable pulse for LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_d44780_8h_a45300f5405aa9e6bf3318a9d63eb9534}{HD44780\+\_\+write\+\_\+cmd}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780, uint8\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em Write command byte to LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_d44780_8h_a68e33e52ac91b59f88d852ce8828674d}{HD44780\+\_\+write\+\_\+char}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780, uint8\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em Write character to LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_d44780_8h_a7a1887aa8eb101819bf4b76ba9dec0ef}{HD44780\+\_\+set\+\_\+location}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780, uint8\+\_\+t x, uint8\+\_\+t y)
+\begin{DoxyCompactList}\small\item\em Set cursor position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_d44780_8h_ab8b359bb2b405149ffabb445502dc141}{HD44780\+\_\+str}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780, char \texorpdfstring{$\ast$}{*}txt)
+\begin{DoxyCompactList}\small\item\em Print string on LCD. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{_h_d44780_8h_a43fd6f7b9bf8e26b7c70aba95ca05538}{HD44780\+\_\+read\+\_\+\+BF\+\_\+\+ADD}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780)
+\begin{DoxyCompactList}\small\item\em Read busy flag and address counter. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_h_d44780_8h_a5a7eb7275937010c1fc7474ca6dc2e14}{HD44780\+\_\+is\+\_\+busy}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780)
+\begin{DoxyCompactList}\small\item\em Check if LCD is busy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_d44780_8h_a6527dbbf7ab32c6a35158003bc7bed98}{HD44780\+\_\+while\+\_\+busy}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}hd44780)
+\begin{DoxyCompactList}\small\item\em Wait until LCD is not busy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Function prototypes and structures for controlling \doxylink{struct_h_d44780}{HD44780} LCD. 
+
+This file contains all definitions, macros, and function prototypes required to initialize and control an HD44780-\/compatible LCD in 4-\/bit mode, including support for brightness PWM, keypad input, weight measurement via \doxylink{struct_h_x711}{HX711}, and hierarchical menu display. 
+
+\label{doc-define-members}
+\Hypertarget{_h_d44780_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_h_d44780_8h_a3b7d5815e59447c6f7094c0c0d3f92e4}\index{HD44780.h@{HD44780.h}!HD44780\_1LINE@{HD44780\_1LINE}}
+\index{HD44780\_1LINE@{HD44780\_1LINE}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_1LINE}{HD44780\_1LINE}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a3b7d5815e59447c6f7094c0c0d3f92e4} 
+\#define HD44780\+\_\+1\+LINE~0x00}
+
+\Hypertarget{_h_d44780_8h_a6556347fef6812728bceed97d7e95914}\index{HD44780.h@{HD44780.h}!HD44780\_2LINES@{HD44780\_2LINES}}
+\index{HD44780\_2LINES@{HD44780\_2LINES}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_2LINES}{HD44780\_2LINES}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a6556347fef6812728bceed97d7e95914} 
+\#define HD44780\+\_\+2\+LINES~0x08}
+
+\Hypertarget{_h_d44780_8h_af4322eded53b86caf6eebb2ca16b184f}\index{HD44780.h@{HD44780.h}!HD44780\_4BIT@{HD44780\_4BIT}}
+\index{HD44780\_4BIT@{HD44780\_4BIT}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_4BIT}{HD44780\_4BIT}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_af4322eded53b86caf6eebb2ca16b184f} 
+\#define HD44780\+\_\+4\+BIT~0x00}
+
+\Hypertarget{_h_d44780_8h_a0da74c845cb9b89767bf627344c329aa}\index{HD44780.h@{HD44780.h}!HD44780\_5x10\_FONT@{HD44780\_5x10\_FONT}}
+\index{HD44780\_5x10\_FONT@{HD44780\_5x10\_FONT}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_5x10\_FONT}{HD44780\_5x10\_FONT}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a0da74c845cb9b89767bf627344c329aa} 
+\#define HD44780\+\_\+5x10\+\_\+\+FONT~0x04}
+
+\Hypertarget{_h_d44780_8h_a8b7109c282b3a41cf1dabe91fc2e5c4f}\index{HD44780.h@{HD44780.h}!HD44780\_5x8\_FONT@{HD44780\_5x8\_FONT}}
+\index{HD44780\_5x8\_FONT@{HD44780\_5x8\_FONT}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_5x8\_FONT}{HD44780\_5x8\_FONT}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a8b7109c282b3a41cf1dabe91fc2e5c4f} 
+\#define HD44780\+\_\+5x8\+\_\+\+FONT~0x00}
+
+\Hypertarget{_h_d44780_8h_a7a68555ea3933fef3671a601c178e3de}\index{HD44780.h@{HD44780.h}!HD44780\_8BIT@{HD44780\_8BIT}}
+\index{HD44780\_8BIT@{HD44780\_8BIT}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_8BIT}{HD44780\_8BIT}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a7a68555ea3933fef3671a601c178e3de} 
+\#define HD44780\+\_\+8\+BIT~0x10}
+
+\Hypertarget{_h_d44780_8h_af0a47bb22cdb9097983f9f9864305459}\index{HD44780.h@{HD44780.h}!HD44780\_BLINK\_OFF@{HD44780\_BLINK\_OFF}}
+\index{HD44780\_BLINK\_OFF@{HD44780\_BLINK\_OFF}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_BLINK\_OFF}{HD44780\_BLINK\_OFF}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_af0a47bb22cdb9097983f9f9864305459} 
+\#define HD44780\+\_\+\+BLINK\+\_\+\+OFF~0x00}
+
+\Hypertarget{_h_d44780_8h_a7b21b6dabba020abf206a636eea10daf}\index{HD44780.h@{HD44780.h}!HD44780\_BLINK\_ON@{HD44780\_BLINK\_ON}}
+\index{HD44780\_BLINK\_ON@{HD44780\_BLINK\_ON}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_BLINK\_ON}{HD44780\_BLINK\_ON}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a7b21b6dabba020abf206a636eea10daf} 
+\#define HD44780\+\_\+\+BLINK\+\_\+\+ON~0x01}
+
+\Hypertarget{_h_d44780_8h_a4710e892e362b0178da5b19a64e103f5}\index{HD44780.h@{HD44780.h}!HD44780\_CLEAR\_DISPLAY@{HD44780\_CLEAR\_DISPLAY}}
+\index{HD44780\_CLEAR\_DISPLAY@{HD44780\_CLEAR\_DISPLAY}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_CLEAR\_DISPLAY}{HD44780\_CLEAR\_DISPLAY}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a4710e892e362b0178da5b19a64e103f5} 
+\#define HD44780\+\_\+\+CLEAR\+\_\+\+DISPLAY~0x01}
+
+\Hypertarget{_h_d44780_8h_a2bc3f0a9bf403fb5e6bd2fcce1c5f740}\index{HD44780.h@{HD44780.h}!HD44780\_COLS@{HD44780\_COLS}}
+\index{HD44780\_COLS@{HD44780\_COLS}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_COLS}{HD44780\_COLS}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a2bc3f0a9bf403fb5e6bd2fcce1c5f740} 
+\#define HD44780\+\_\+\+COLS~16}
+
+\Hypertarget{_h_d44780_8h_ade55bcfdb6c76c8fcfe20ab494ad442a}\index{HD44780.h@{HD44780.h}!HD44780\_CUR\_LEFT@{HD44780\_CUR\_LEFT}}
+\index{HD44780\_CUR\_LEFT@{HD44780\_CUR\_LEFT}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_CUR\_LEFT}{HD44780\_CUR\_LEFT}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_ade55bcfdb6c76c8fcfe20ab494ad442a} 
+\#define HD44780\+\_\+\+CUR\+\_\+\+LEFT~0x00}
+
+\Hypertarget{_h_d44780_8h_a23af0f44b15bcd0f6054ee40f57c81e2}\index{HD44780.h@{HD44780.h}!HD44780\_CUR\_RIGHT@{HD44780\_CUR\_RIGHT}}
+\index{HD44780\_CUR\_RIGHT@{HD44780\_CUR\_RIGHT}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_CUR\_RIGHT}{HD44780\_CUR\_RIGHT}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a23af0f44b15bcd0f6054ee40f57c81e2} 
+\#define HD44780\+\_\+\+CUR\+\_\+\+RIGHT~0x02}
+
+\Hypertarget{_h_d44780_8h_a5f061bf32bf16e23a60408de9029d80d}\index{HD44780.h@{HD44780.h}!HD44780\_CURSOR\_SHIFT@{HD44780\_CURSOR\_SHIFT}}
+\index{HD44780\_CURSOR\_SHIFT@{HD44780\_CURSOR\_SHIFT}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_CURSOR\_SHIFT}{HD44780\_CURSOR\_SHIFT}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a5f061bf32bf16e23a60408de9029d80d} 
+\#define HD44780\+\_\+\+CURSOR\+\_\+\+SHIFT~0x00}
+
+\Hypertarget{_h_d44780_8h_a2b053673445452521e534aec930da918}\index{HD44780.h@{HD44780.h}!HD44780\_DISPLAY\_CURSOR\_DISP\_OFF@{HD44780\_DISPLAY\_CURSOR\_DISP\_OFF}}
+\index{HD44780\_DISPLAY\_CURSOR\_DISP\_OFF@{HD44780\_DISPLAY\_CURSOR\_DISP\_OFF}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_DISPLAY\_CURSOR\_DISP\_OFF}{HD44780\_DISPLAY\_CURSOR\_DISP\_OFF}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a2b053673445452521e534aec930da918} 
+\#define HD44780\+\_\+\+DISPLAY\+\_\+\+CURSOR\+\_\+\+DISP\+\_\+\+OFF~0x00}
+
+\Hypertarget{_h_d44780_8h_aed29ee5796a08c632ff7db8ebc43a4fb}\index{HD44780.h@{HD44780.h}!HD44780\_DISPLAY\_CURSOR\_DISP\_ON@{HD44780\_DISPLAY\_CURSOR\_DISP\_ON}}
+\index{HD44780\_DISPLAY\_CURSOR\_DISP\_ON@{HD44780\_DISPLAY\_CURSOR\_DISP\_ON}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_DISPLAY\_CURSOR\_DISP\_ON}{HD44780\_DISPLAY\_CURSOR\_DISP\_ON}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_aed29ee5796a08c632ff7db8ebc43a4fb} 
+\#define HD44780\+\_\+\+DISPLAY\+\_\+\+CURSOR\+\_\+\+DISP\+\_\+\+ON~0x02}
+
+\Hypertarget{_h_d44780_8h_ac4aaf8f148b62f169dab65206d304371}\index{HD44780.h@{HD44780.h}!HD44780\_DISPLAY\_OFF@{HD44780\_DISPLAY\_OFF}}
+\index{HD44780\_DISPLAY\_OFF@{HD44780\_DISPLAY\_OFF}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_DISPLAY\_OFF}{HD44780\_DISPLAY\_OFF}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_ac4aaf8f148b62f169dab65206d304371} 
+\#define HD44780\+\_\+\+DISPLAY\+\_\+\+OFF~0x00}
+
+\Hypertarget{_h_d44780_8h_aefd6f75e3454ecbe00950c818e9e9420}\index{HD44780.h@{HD44780.h}!HD44780\_DISPLAY\_ON@{HD44780\_DISPLAY\_ON}}
+\index{HD44780\_DISPLAY\_ON@{HD44780\_DISPLAY\_ON}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_DISPLAY\_ON}{HD44780\_DISPLAY\_ON}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_aefd6f75e3454ecbe00950c818e9e9420} 
+\#define HD44780\+\_\+\+DISPLAY\+\_\+\+ON~0x04}
+
+\Hypertarget{_h_d44780_8h_a8681242d2631f65479e4f9ba7cbd99cf}\index{HD44780.h@{HD44780.h}!HD44780\_DISPLAY\_ON\_OFF@{HD44780\_DISPLAY\_ON\_OFF}}
+\index{HD44780\_DISPLAY\_ON\_OFF@{HD44780\_DISPLAY\_ON\_OFF}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_DISPLAY\_ON\_OFF}{HD44780\_DISPLAY\_ON\_OFF}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a8681242d2631f65479e4f9ba7cbd99cf} 
+\#define HD44780\+\_\+\+DISPLAY\+\_\+\+ON\+\_\+\+OFF~0x08}
+
+\Hypertarget{_h_d44780_8h_a748fc2dd9601886387d14d8449464e4b}\index{HD44780.h@{HD44780.h}!HD44780\_DISPLAY\_SHIFT@{HD44780\_DISPLAY\_SHIFT}}
+\index{HD44780\_DISPLAY\_SHIFT@{HD44780\_DISPLAY\_SHIFT}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_DISPLAY\_SHIFT}{HD44780\_DISPLAY\_SHIFT}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a748fc2dd9601886387d14d8449464e4b} 
+\#define HD44780\+\_\+\+DISPLAY\+\_\+\+SHIFT~0x08}
+
+\Hypertarget{_h_d44780_8h_a58d075a41fbe35c1574e461d707c1d4c}\index{HD44780.h@{HD44780.h}!HD44780\_ENTRY\_MODE@{HD44780\_ENTRY\_MODE}}
+\index{HD44780\_ENTRY\_MODE@{HD44780\_ENTRY\_MODE}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_ENTRY\_MODE}{HD44780\_ENTRY\_MODE}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a58d075a41fbe35c1574e461d707c1d4c} 
+\#define HD44780\+\_\+\+ENTRY\+\_\+\+MODE~0\+X04}
+
+\Hypertarget{_h_d44780_8h_a27ed98d9f8d626aef82459f913b9d81b}\index{HD44780.h@{HD44780.h}!HD44780\_FUN\_SET@{HD44780\_FUN\_SET}}
+\index{HD44780\_FUN\_SET@{HD44780\_FUN\_SET}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_FUN\_SET}{HD44780\_FUN\_SET}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a27ed98d9f8d626aef82459f913b9d81b} 
+\#define HD44780\+\_\+\+FUN\+\_\+\+SET~0x20}
+
+\Hypertarget{_h_d44780_8h_af91e53b158d091c572cf3141a93e6214}\index{HD44780.h@{HD44780.h}!HD44780\_LEFT\_SHIFT@{HD44780\_LEFT\_SHIFT}}
+\index{HD44780\_LEFT\_SHIFT@{HD44780\_LEFT\_SHIFT}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_LEFT\_SHIFT}{HD44780\_LEFT\_SHIFT}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_af91e53b158d091c572cf3141a93e6214} 
+\#define HD44780\+\_\+\+LEFT\+\_\+\+SHIFT~0x00}
+
+\Hypertarget{_h_d44780_8h_aad62953747ddba5188f473093121fa3b}\index{HD44780.h@{HD44780.h}!HD44780\_LINE1@{HD44780\_LINE1}}
+\index{HD44780\_LINE1@{HD44780\_LINE1}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_LINE1}{HD44780\_LINE1}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_aad62953747ddba5188f473093121fa3b} 
+\#define HD44780\+\_\+\+LINE1~0x00}
+
+\Hypertarget{_h_d44780_8h_a4a1dd3ec4ef2862c9249a0fde7756770}\index{HD44780.h@{HD44780.h}!HD44780\_LINE2@{HD44780\_LINE2}}
+\index{HD44780\_LINE2@{HD44780\_LINE2}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_LINE2}{HD44780\_LINE2}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a4a1dd3ec4ef2862c9249a0fde7756770} 
+\#define HD44780\+\_\+\+LINE2~0x40}
+
+\Hypertarget{_h_d44780_8h_a88a64c447d5995535c32f52f3cbeebf5}\index{HD44780.h@{HD44780.h}!HD44780\_RETURN\_HOME@{HD44780\_RETURN\_HOME}}
+\index{HD44780\_RETURN\_HOME@{HD44780\_RETURN\_HOME}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_RETURN\_HOME}{HD44780\_RETURN\_HOME}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a88a64c447d5995535c32f52f3cbeebf5} 
+\#define HD44780\+\_\+\+RETURN\+\_\+\+HOME~0\+X02}
+
+\Hypertarget{_h_d44780_8h_afc02ee9757fbf6e80c65c9c68196e1a2}\index{HD44780.h@{HD44780.h}!HD44780\_RIGHT\_SHIFT@{HD44780\_RIGHT\_SHIFT}}
+\index{HD44780\_RIGHT\_SHIFT@{HD44780\_RIGHT\_SHIFT}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_RIGHT\_SHIFT}{HD44780\_RIGHT\_SHIFT}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_afc02ee9757fbf6e80c65c9c68196e1a2} 
+\#define HD44780\+\_\+\+RIGHT\+\_\+\+SHIFT~0x04}
+
+\Hypertarget{_h_d44780_8h_a881973a1ca73e4b505fc09d4f1da1d4e}\index{HD44780.h@{HD44780.h}!HD44780\_ROWS@{HD44780\_ROWS}}
+\index{HD44780\_ROWS@{HD44780\_ROWS}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_ROWS}{HD44780\_ROWS}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a881973a1ca73e4b505fc09d4f1da1d4e} 
+\#define HD44780\+\_\+\+ROWS~2}
+
+\Hypertarget{_h_d44780_8h_a38771356a2b57fb03fcc5eee36cc6e7f}\index{HD44780.h@{HD44780.h}!HD44780\_SET\_CGRAM@{HD44780\_SET\_CGRAM}}
+\index{HD44780\_SET\_CGRAM@{HD44780\_SET\_CGRAM}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_SET\_CGRAM}{HD44780\_SET\_CGRAM}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a38771356a2b57fb03fcc5eee36cc6e7f} 
+\#define HD44780\+\_\+\+SET\+\_\+\+CGRAM~0x40}
+
+\Hypertarget{_h_d44780_8h_a4459ba0f4d9255fe532a71a433543b70}\index{HD44780.h@{HD44780.h}!HD44780\_SET\_DDRAM@{HD44780\_SET\_DDRAM}}
+\index{HD44780\_SET\_DDRAM@{HD44780\_SET\_DDRAM}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_SET\_DDRAM}{HD44780\_SET\_DDRAM}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a4459ba0f4d9255fe532a71a433543b70} 
+\#define HD44780\+\_\+\+SET\+\_\+\+DDRAM~0x80}
+
+\Hypertarget{_h_d44780_8h_af7c39d79841bec68592d078fd26824b8}\index{HD44780.h@{HD44780.h}!HD44780\_SHIFT@{HD44780\_SHIFT}}
+\index{HD44780\_SHIFT@{HD44780\_SHIFT}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_SHIFT}{HD44780\_SHIFT}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_af7c39d79841bec68592d078fd26824b8} 
+\#define HD44780\+\_\+\+SHIFT~0x10}
+
+\Hypertarget{_h_d44780_8h_a122e39da7314876fdf8e9ecc81489564}\index{HD44780.h@{HD44780.h}!HD44780\_SHIFT\_CURSOR@{HD44780\_SHIFT\_CURSOR}}
+\index{HD44780\_SHIFT\_CURSOR@{HD44780\_SHIFT\_CURSOR}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_SHIFT\_CURSOR}{HD44780\_SHIFT\_CURSOR}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a122e39da7314876fdf8e9ecc81489564} 
+\#define HD44780\+\_\+\+SHIFT\+\_\+\+CURSOR~0x00}
+
+\Hypertarget{_h_d44780_8h_a31cbb50417e68174238c420602d0a342}\index{HD44780.h@{HD44780.h}!HD44780\_SHIFT\_DISP@{HD44780\_SHIFT\_DISP}}
+\index{HD44780\_SHIFT\_DISP@{HD44780\_SHIFT\_DISP}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_SHIFT\_DISP}{HD44780\_SHIFT\_DISP}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a31cbb50417e68174238c420602d0a342} 
+\#define HD44780\+\_\+\+SHIFT\+\_\+\+DISP~0x01}
+
+
+
+\label{doc-func-members}
+\Hypertarget{_h_d44780_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_h_d44780_8h_ae148543722d453a25d06112b0559d6c7}\index{HD44780.h@{HD44780.h}!HD44780\_init@{HD44780\_init}}
+\index{HD44780\_init@{HD44780\_init}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_init()}{HD44780\_init()}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_ae148543722d453a25d06112b0559d6c7} 
+void HD44780\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{, }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{rs\+\_\+gpio\+\_\+port}{, }\item[{uint16\+\_\+t}]{rs\+\_\+gpio\+\_\+pin}{, }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{rw\+\_\+gpio\+\_\+port}{, }\item[{uint16\+\_\+t}]{rw\+\_\+gpio\+\_\+pin}{, }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{e\+\_\+gpio\+\_\+port}{, }\item[{uint16\+\_\+t}]{e\+\_\+gpio\+\_\+pin}{, }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{d4\+\_\+gpio\+\_\+port}{, }\item[{uint16\+\_\+t}]{d4\+\_\+gpio\+\_\+pin}{, }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{d5\+\_\+gpio\+\_\+port}{, }\item[{uint16\+\_\+t}]{d5\+\_\+gpio\+\_\+pin}{, }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{d6\+\_\+gpio\+\_\+port}{, }\item[{uint16\+\_\+t}]{d6\+\_\+gpio\+\_\+pin}{, }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{d7\+\_\+gpio\+\_\+port}{, }\item[{uint16\+\_\+t}]{d7\+\_\+gpio\+\_\+pin}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the \doxylink{struct_h_d44780}{HD44780} LCD structure with GPIO pins. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hd44780} & Pointer to \doxylink{struct_h_d44780}{HD44780} structure. \\
+\hline
+{\em rs\+\_\+gpio\+\_\+port} & GPIO port for RS pin. \\
+\hline
+{\em rs\+\_\+gpio\+\_\+pin} & GPIO pin for RS. \\
+\hline
+{\em rw\+\_\+gpio\+\_\+port} & GPIO port for RW pin. \\
+\hline
+{\em rw\+\_\+gpio\+\_\+pin} & GPIO pin for RW. \\
+\hline
+{\em e\+\_\+gpio\+\_\+port} & GPIO port for E pin. \\
+\hline
+{\em e\+\_\+gpio\+\_\+pin} & GPIO pin for E. \\
+\hline
+{\em d4\+\_\+gpio\+\_\+port} & GPIO port for D4 pin. \\
+\hline
+{\em d4\+\_\+gpio\+\_\+pin} & GPIO pin for D4. \\
+\hline
+{\em d5\+\_\+gpio\+\_\+port} & GPIO port for D5 pin. \\
+\hline
+{\em d5\+\_\+gpio\+\_\+pin} & GPIO pin for D5. \\
+\hline
+{\em d6\+\_\+gpio\+\_\+port} & GPIO port for D6 pin. \\
+\hline
+{\em d6\+\_\+gpio\+\_\+pin} & GPIO pin for D6. \\
+\hline
+{\em d7\+\_\+gpio\+\_\+port} & GPIO port for D7 pin. \\
+\hline
+{\em d7\+\_\+gpio\+\_\+pin} & GPIO pin for D7. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_h_d44780_8h_aceb8f4bb61998c17f55fca63a8ac20a7}\index{HD44780.h@{HD44780.h}!HD44780\_init\_brightness@{HD44780\_init\_brightness}}
+\index{HD44780\_init\_brightness@{HD44780\_init\_brightness}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_init\_brightness()}{HD44780\_init\_brightness()}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_aceb8f4bb61998c17f55fca63a8ac20a7} 
+void HD44780\+\_\+init\+\_\+brightness (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{, }\item[{TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{timer}{, }\item[{volatile uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{pwm\+\_\+reg\+\_\+ccr}{, }\item[{volatile uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{pwm\+\_\+reg\+\_\+arr}{, }\item[{uint32\+\_\+t}]{chan}{}\end{DoxyParamCaption})}
+
+
+
+Initializes PWM for LCD backlight brightness. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hd44780} & Pointer to \doxylink{struct_h_d44780}{HD44780} structure. \\
+\hline
+{\em timer} & Pointer to STM32 timer handle. \\
+\hline
+{\em pwm\+\_\+reg\+\_\+ccr} & Pointer to CCR register of the timer. \\
+\hline
+{\em pwm\+\_\+reg\+\_\+arr} & Pointer to ARR register of the timer. \\
+\hline
+{\em chan} & Timer channel number. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_h_d44780_8h_aedc306addb36c8b315ec890b7ea4242b}\index{HD44780.h@{HD44780.h}!HD44780\_init\_keypad@{HD44780\_init\_keypad}}
+\index{HD44780\_init\_keypad@{HD44780\_init\_keypad}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_init\_keypad()}{HD44780\_init\_keypad()}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_aedc306addb36c8b315ec890b7ea4242b} 
+void HD44780\+\_\+init\+\_\+keypad (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{, }\item[{\mbox{\hyperlink{struct_keypad}{Keypad}} \texorpdfstring{$\ast$}{*}}]{K}{}\end{DoxyParamCaption})}
+
+
+
+Links a keypad to the LCD structure for menu input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hd44780} & Pointer to \doxylink{struct_h_d44780}{HD44780} structure. \\
+\hline
+{\em K} & Pointer to \doxylink{struct_keypad}{Keypad} structure. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_h_d44780_8h_a065ceb6d5b9ae7a8e4566866b2770a99}\index{HD44780.h@{HD44780.h}!HD44780\_init\_weight@{HD44780\_init\_weight}}
+\index{HD44780\_init\_weight@{HD44780\_init\_weight}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_init\_weight()}{HD44780\_init\_weight()}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a065ceb6d5b9ae7a8e4566866b2770a99} 
+void HD44780\+\_\+init\+\_\+weight (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{, }\item[{\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}}]{hx711}{}\end{DoxyParamCaption})}
+
+
+
+Links a \doxylink{struct_h_x711}{HX711} weight sensor to the LCD structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hd44780} & Pointer to \doxylink{struct_h_d44780}{HD44780} structure. \\
+\hline
+{\em hx711} & Pointer to \doxylink{struct_h_x711}{HX711} handle. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_h_d44780_8h_a5a7eb7275937010c1fc7474ca6dc2e14}\index{HD44780.h@{HD44780.h}!HD44780\_is\_busy@{HD44780\_is\_busy}}
+\index{HD44780\_is\_busy@{HD44780\_is\_busy}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_is\_busy()}{HD44780\_is\_busy()}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a5a7eb7275937010c1fc7474ca6dc2e14} 
+bool HD44780\+\_\+is\+\_\+busy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{}\end{DoxyParamCaption})}
+
+
+
+Check if LCD is busy. 
+
+\Hypertarget{_h_d44780_8h_a2bda360f04b89af11c93449ca405f6e2}\index{HD44780.h@{HD44780.h}!HD44780\_pulse\_E@{HD44780\_pulse\_E}}
+\index{HD44780\_pulse\_E@{HD44780\_pulse\_E}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_pulse\_E()}{HD44780\_pulse\_E()}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a2bda360f04b89af11c93449ca405f6e2} 
+void HD44780\+\_\+pulse\+\_\+E (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{}\end{DoxyParamCaption})}
+
+
+
+Generate enable pulse for LCD. 
+
+\Hypertarget{_h_d44780_8h_a43fd6f7b9bf8e26b7c70aba95ca05538}\index{HD44780.h@{HD44780.h}!HD44780\_read\_BF\_ADD@{HD44780\_read\_BF\_ADD}}
+\index{HD44780\_read\_BF\_ADD@{HD44780\_read\_BF\_ADD}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_read\_BF\_ADD()}{HD44780\_read\_BF\_ADD()}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a43fd6f7b9bf8e26b7c70aba95ca05538} 
+uint8\+\_\+t HD44780\+\_\+read\+\_\+\+BF\+\_\+\+ADD (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{}\end{DoxyParamCaption})}
+
+
+
+Read busy flag and address counter. 
+
+\Hypertarget{_h_d44780_8h_ab4cdd916c0dba0189e3e05665b3d4dfc}\index{HD44780.h@{HD44780.h}!HD44780\_set\_DR@{HD44780\_set\_DR}}
+\index{HD44780\_set\_DR@{HD44780\_set\_DR}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_set\_DR()}{HD44780\_set\_DR()}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_ab4cdd916c0dba0189e3e05665b3d4dfc} 
+void HD44780\+\_\+set\+\_\+\+DR (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{}\end{DoxyParamCaption})}
+
+
+
+Set LCD to data register mode. 
+
+\Hypertarget{_h_d44780_8h_a3e31974d11995ef3c6ca9db90f72c50d}\index{HD44780.h@{HD44780.h}!HD44780\_set\_IR@{HD44780\_set\_IR}}
+\index{HD44780\_set\_IR@{HD44780\_set\_IR}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_set\_IR()}{HD44780\_set\_IR()}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a3e31974d11995ef3c6ca9db90f72c50d} 
+void HD44780\+\_\+set\+\_\+\+IR (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{}\end{DoxyParamCaption})}
+
+
+
+Set LCD to instruction register mode. 
+
+\Hypertarget{_h_d44780_8h_a7a1887aa8eb101819bf4b76ba9dec0ef}\index{HD44780.h@{HD44780.h}!HD44780\_set\_location@{HD44780\_set\_location}}
+\index{HD44780\_set\_location@{HD44780\_set\_location}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_set\_location()}{HD44780\_set\_location()}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a7a1887aa8eb101819bf4b76ba9dec0ef} 
+void HD44780\+\_\+set\+\_\+location (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{, }\item[{uint8\+\_\+t}]{x}{, }\item[{uint8\+\_\+t}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Set cursor position. 
+
+\Hypertarget{_h_d44780_8h_a7adceb2de76172145c33106cb104eb3c}\index{HD44780.h@{HD44780.h}!HD44780\_set\_read@{HD44780\_set\_read}}
+\index{HD44780\_set\_read@{HD44780\_set\_read}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_set\_read()}{HD44780\_set\_read()}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a7adceb2de76172145c33106cb104eb3c} 
+void HD44780\+\_\+set\+\_\+read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{}\end{DoxyParamCaption})}
+
+
+
+Set LCD to read mode. 
+
+\Hypertarget{_h_d44780_8h_a36000f4705af2578ed3ff4abcff35990}\index{HD44780.h@{HD44780.h}!HD44780\_set\_write@{HD44780\_set\_write}}
+\index{HD44780\_set\_write@{HD44780\_set\_write}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_set\_write()}{HD44780\_set\_write()}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a36000f4705af2578ed3ff4abcff35990} 
+void HD44780\+\_\+set\+\_\+write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{}\end{DoxyParamCaption})}
+
+
+
+Set LCD to write mode. 
+
+\Hypertarget{_h_d44780_8h_ab8b359bb2b405149ffabb445502dc141}\index{HD44780.h@{HD44780.h}!HD44780\_str@{HD44780\_str}}
+\index{HD44780\_str@{HD44780\_str}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_str()}{HD44780\_str()}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_ab8b359bb2b405149ffabb445502dc141} 
+void HD44780\+\_\+str (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{txt}{}\end{DoxyParamCaption})}
+
+
+
+Print string on LCD. 
+
+\Hypertarget{_h_d44780_8h_a6527dbbf7ab32c6a35158003bc7bed98}\index{HD44780.h@{HD44780.h}!HD44780\_while\_busy@{HD44780\_while\_busy}}
+\index{HD44780\_while\_busy@{HD44780\_while\_busy}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_while\_busy()}{HD44780\_while\_busy()}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a6527dbbf7ab32c6a35158003bc7bed98} 
+void HD44780\+\_\+while\+\_\+busy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{}\end{DoxyParamCaption})}
+
+
+
+Wait until LCD is not busy. 
+
+\Hypertarget{_h_d44780_8h_a68e33e52ac91b59f88d852ce8828674d}\index{HD44780.h@{HD44780.h}!HD44780\_write\_char@{HD44780\_write\_char}}
+\index{HD44780\_write\_char@{HD44780\_write\_char}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_write\_char()}{HD44780\_write\_char()}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a68e33e52ac91b59f88d852ce8828674d} 
+void HD44780\+\_\+write\+\_\+char (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{, }\item[{uint8\+\_\+t}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Write character to LCD. 
+
+\Hypertarget{_h_d44780_8h_a45300f5405aa9e6bf3318a9d63eb9534}\index{HD44780.h@{HD44780.h}!HD44780\_write\_cmd@{HD44780\_write\_cmd}}
+\index{HD44780\_write\_cmd@{HD44780\_write\_cmd}!HD44780.h@{HD44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_write\_cmd()}{HD44780\_write\_cmd()}}
+{\footnotesize\ttfamily \label{_h_d44780_8h_a45300f5405aa9e6bf3318a9d63eb9534} 
+void HD44780\+\_\+write\+\_\+cmd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{hd44780}{, }\item[{uint8\+\_\+t}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Write command byte to LCD. 
+

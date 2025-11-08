@@ -1,0 +1,110 @@
+\doxysection{HD44780.\+h}
+\hypertarget{_h_d44780_8h_source}{}\label{_h_d44780_8h_source}\mbox{\hyperlink{_h_d44780_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ Header\ */}}
+\DoxyCodeLine{00011\ \textcolor{comment}{/*\ USER\ CODE\ END\ Header\ */}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifndef\ INC\_HD44780\_H\_}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ INC\_HD44780\_H\_}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_gen__libary_8h}{Gen\_libary.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_h_d44780__control_8h}{HD44780\_control.h}}"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ HD44780\_ROWS\ \ 2}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ HD44780\_COLS\ \ 16}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{structpin__t}{pin\_t}}\ \mbox{\hyperlink{struct_h_d44780_a6353f710d2752d7e4e0233de6b205e0e}{RS}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{structpin__t}{pin\_t}}\ \mbox{\hyperlink{struct_h_d44780_a656dffeb7e74008e1df34ff69e6d4f6c}{RW}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{structpin__t}{pin\_t}}\ \mbox{\hyperlink{struct_h_d44780_a54244ea44502b1031647fd61b4c4e376}{E}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{structpin__t}{pin\_t}}\ \mbox{\hyperlink{struct_h_d44780_a9f70ce20df92cfbb65b3d1fe6e25070e}{data\_pins}}[4];\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_h_d44780_af811257227ffe90ec736fb49185b2a0e}{io}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{structbuf__t}{buf\_t}}\ \mbox{\hyperlink{struct_h_d44780_aae45ab74069d09aaf897d3cc7197eace}{buf}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{structmenu__disp}{menu\_disp}}\ \mbox{\hyperlink{struct_h_d44780_a1e4b02ba3208f12071e1821e779fcb9d}{menu}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\_t}}*\ \mbox{\hyperlink{struct_h_d44780_a5cc4f59804bfb7224a9734eb1d0f90e5}{menu\_root}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{structlcd__control}{lcd\_control}}\ \mbox{\hyperlink{struct_h_d44780_ace2f71ec3d7755f8762d52381d1bf9be}{control}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00044\ \}\mbox{\hyperlink{struct_h_d44780}{HD44780}};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ HD44780\_CLEAR\_DISPLAY\ 0x01}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ HD44780\_RETURN\_HOME\ 0X02}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ HD44780\_ENTRY\_MODE\ 0X04}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\ \ \ \ \#define\ HD44780\_SHIFT\_CURSOR\ 0x00}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\ \ \ \ \#define\ HD44780\_SHIFT\_DISP\ 0x01}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\ \ \ \ \#define\ HD44780\_CUR\_LEFT\ 0x00}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\ \ \ \ \#define\ HD44780\_CUR\_RIGHT\ 0x02}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ HD44780\_DISPLAY\_ON\_OFF\ 0x08}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\ \ \ \ \#define\ HD44780\_DISPLAY\_ON\ 0x04}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\ \ \ \ \#define\ HD44780\_DISPLAY\_OFF\ 0x00}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\ \ \ \ \#define\ HD44780\_DISPLAY\_CURSOR\_DISP\_ON\ 0x02}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\ \ \ \ \#define\ HD44780\_DISPLAY\_CURSOR\_DISP\_OFF\ 0x00}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\ \ \ \ \#define\ HD44780\_BLINK\_ON\ 0x01}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\ \ \ \ \#define\ HD44780\_BLINK\_OFF\ 0x00}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ HD44780\_SHIFT\ 0x10}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\ \ \ \ \#define\ HD44780\_DISPLAY\_SHIFT\ 0x08}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\ \ \ \ \#define\ HD44780\_CURSOR\_SHIFT\ 0x00}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\ \ \ \ \#define\ HD44780\_RIGHT\_SHIFT\ 0x04}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\ \ \ \ \#define\ HD44780\_LEFT\_SHIFT\ 0x00}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ HD44780\_FUN\_SET\ 0x20}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\ \ \ \ \#define\ HD44780\_8BIT\ 0x10}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\ \ \ \ \#define\ HD44780\_4BIT\ 0x00}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\ \ \ \ \#define\ HD44780\_2LINES\ 0x08}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\ \ \ \ \#define\ HD44780\_1LINE\ 0x00}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\ \ \ \ \#define\ HD44780\_5x10\_FONT\ 0x04}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\ \ \ \ \#define\ HD44780\_5x8\_FONT\ 0x00}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ HD44780\_SET\_CGRAM\ 0x40}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ HD44780\_SET\_DDRAM\ 0x80}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ HD44780\_LINE1\ 0x00}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ HD44780\_LINE2\ 0x40}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00105\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_h_d44780_8h_ae148543722d453a25d06112b0559d6c7}{HD44780\_init}}(\mbox{\hyperlink{struct_h_d44780}{HD44780}}*\ hd44780,}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ GPIO\_TypeDef*\ rs\_gpio\_port,\ uint16\_t\ rs\_gpio\_pin,}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ GPIO\_TypeDef*\ rw\_gpio\_port,\ uint16\_t\ rw\_gpio\_pin,}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ GPIO\_TypeDef*\ e\_gpio\_port,\ uint16\_t\ e\_gpio\_pin,}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ GPIO\_TypeDef*\ d4\_gpio\_port,\ uint16\_t\ d4\_gpio\_pin,}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ GPIO\_TypeDef*\ d5\_gpio\_port,\ uint16\_t\ d5\_gpio\_pin,}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ GPIO\_TypeDef*\ d6\_gpio\_port,\ uint16\_t\ d6\_gpio\_pin,}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ GPIO\_TypeDef*\ d7\_gpio\_port,\ uint16\_t\ d7\_gpio\_pin);}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00124\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_h_d44780_8h_aceb8f4bb61998c17f55fca63a8ac20a7}{HD44780\_init\_brightness}}(\mbox{\hyperlink{struct_h_d44780}{HD44780}}*\ hd44780,\ TIM\_HandleTypeDef*\ timer,}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ uint32\_t\ *pwm\_reg\_ccr,\textcolor{keyword}{volatile}\ uint32\_t\ *pwm\_reg\_arr,\ uint32\_t\ chan);}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00134\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_h_d44780_8h_a065ceb6d5b9ae7a8e4566866b2770a99}{HD44780\_init\_weight}}(\mbox{\hyperlink{struct_h_d44780}{HD44780}}*\ hd44780,\ \mbox{\hyperlink{struct_h_x711}{HX711}}*\ hx711);}
+\DoxyCodeLine{00141\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_h_d44780_8h_aedc306addb36c8b315ec890b7ea4242b}{HD44780\_init\_keypad}}(\mbox{\hyperlink{struct_h_d44780}{HD44780}}*\ hd44780,\ \mbox{\hyperlink{struct_keypad}{Keypad}}*\ K);}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_h_d44780_8h_a3e31974d11995ef3c6ca9db90f72c50d}{HD44780\_set\_IR}}(\mbox{\hyperlink{struct_h_d44780}{HD44780}}*\ hd44780);\ }
+\DoxyCodeLine{00144\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_h_d44780_8h_ab4cdd916c0dba0189e3e05665b3d4dfc}{HD44780\_set\_DR}}(\mbox{\hyperlink{struct_h_d44780}{HD44780}}*\ hd44780);\ }
+\DoxyCodeLine{00145\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_h_d44780_8h_a36000f4705af2578ed3ff4abcff35990}{HD44780\_set\_write}}(\mbox{\hyperlink{struct_h_d44780}{HD44780}}*\ hd44780);\ \ \ }
+\DoxyCodeLine{00146\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_h_d44780_8h_a7adceb2de76172145c33106cb104eb3c}{HD44780\_set\_read}}(\mbox{\hyperlink{struct_h_d44780}{HD44780}}*\ hd44780);\ }
+\DoxyCodeLine{00147\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_h_d44780_8h_a2bda360f04b89af11c93449ca405f6e2}{HD44780\_pulse\_E}}(\mbox{\hyperlink{struct_h_d44780}{HD44780}}*\ hd44780);\ \ \ \ \ \ \ }
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_h_d44780_8h_a45300f5405aa9e6bf3318a9d63eb9534}{HD44780\_write\_cmd}}(\mbox{\hyperlink{struct_h_d44780}{HD44780}}*\ hd44780,\ uint8\_t\ data);\ }
+\DoxyCodeLine{00150\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_h_d44780_8h_a68e33e52ac91b59f88d852ce8828674d}{HD44780\_write\_char}}(\mbox{\hyperlink{struct_h_d44780}{HD44780}}*\ hd44780,\ uint8\_t\ data);\ \ \ }
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_h_d44780_8h_a7a1887aa8eb101819bf4b76ba9dec0ef}{HD44780\_set\_location}}(\mbox{\hyperlink{struct_h_d44780}{HD44780}}*\ hd44780,\ uint8\_t\ x,\ uint8\_t\ y);\ }
+\DoxyCodeLine{00155\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_h_d44780_8h_ab8b359bb2b405149ffabb445502dc141}{HD44780\_str}}(\mbox{\hyperlink{struct_h_d44780}{HD44780}}*\ hd44780,\ \textcolor{keywordtype}{char}*\ txt);\ }
+\DoxyCodeLine{00156\ uint8\_t\ \mbox{\hyperlink{_h_d44780_8h_a43fd6f7b9bf8e26b7c70aba95ca05538}{HD44780\_read\_BF\_ADD}}(\mbox{\hyperlink{struct_h_d44780}{HD44780}}*\ hd44780);\ }
+\DoxyCodeLine{00157\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_h_d44780_8h_a5a7eb7275937010c1fc7474ca6dc2e14}{HD44780\_is\_busy}}(\mbox{\hyperlink{struct_h_d44780}{HD44780}}*\ hd44780);\ \ \ \ \ \ \ }
+\DoxyCodeLine{00158\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_h_d44780_8h_a6527dbbf7ab32c6a35158003bc7bed98}{HD44780\_while\_busy}}(\mbox{\hyperlink{struct_h_d44780}{HD44780}}*\ hd44780);\ \ \ \ }
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_HD44780\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

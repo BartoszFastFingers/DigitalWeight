@@ -1,0 +1,84 @@
+\doxysection{Src/\+Joystick.c File Reference}
+\hypertarget{_joystick_8c}{}\label{_joystick_8c}\index{Src/Joystick.c@{Src/Joystick.c}}
+{\ttfamily \#include "{}Joystick.\+h"{}}\newline
+{\ttfamily \#include "{}stm32f1xx\+\_\+it.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_joystick_8c_adb75862f582a7d68347ceae4f4c003c9}{DEBOUNCE\+\_\+\+DELAY}}~20
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_joystick_8c_a747e9f9f2043a934b488c63651baf285}{Joystick\+Init}} (\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}J, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}up\+\_\+port, uint16\+\_\+t up\+\_\+pin, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}right\+\_\+port, uint16\+\_\+t right\+\_\+pin, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}down\+\_\+port, uint16\+\_\+t down\+\_\+pin, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}left\+\_\+port, uint16\+\_\+t left\+\_\+pin, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}click\+\_\+port, uint16\+\_\+t click\+\_\+pin)
+\item 
+bool \mbox{\hyperlink{_joystick_8c_ad94374537ad25b5fc4c8f1f4f64674e2}{is\+\_\+up\+\_\+pressed}} (\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}J)
+\item 
+bool \mbox{\hyperlink{_joystick_8c_a5444e66c3970ae7da03e0c0174c13b8b}{is\+\_\+right\+\_\+pressed}} (\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}J)
+\item 
+bool \mbox{\hyperlink{_joystick_8c_ae74cd60b6d3dc3714a940723cfe4cd17}{is\+\_\+down\+\_\+pressed}} (\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}J)
+\item 
+bool \mbox{\hyperlink{_joystick_8c_ab87b21457ecd00a677986ad4d6d6dc70}{is\+\_\+left\+\_\+pressed}} (\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}J)
+\item 
+bool \mbox{\hyperlink{_joystick_8c_a2fa9124accec0664c8980d167232755f}{is\+\_\+click\+\_\+pressed}} (\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}J)
+\item 
+void \mbox{\hyperlink{_joystick_8c_a50bb9c30188354157cb4710b855243f5}{pool\+\_\+joystick}} (\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}J)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{_joystick_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_joystick_8c_adb75862f582a7d68347ceae4f4c003c9}\index{Joystick.c@{Joystick.c}!DEBOUNCE\_DELAY@{DEBOUNCE\_DELAY}}
+\index{DEBOUNCE\_DELAY@{DEBOUNCE\_DELAY}!Joystick.c@{Joystick.c}}
+\doxysubsubsection{\texorpdfstring{DEBOUNCE\_DELAY}{DEBOUNCE\_DELAY}}
+{\footnotesize\ttfamily \label{_joystick_8c_adb75862f582a7d68347ceae4f4c003c9} 
+\#define DEBOUNCE\+\_\+\+DELAY~20}
+
+
+
+\label{doc-func-members}
+\Hypertarget{_joystick_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_joystick_8c_a2fa9124accec0664c8980d167232755f}\index{Joystick.c@{Joystick.c}!is\_click\_pressed@{is\_click\_pressed}}
+\index{is\_click\_pressed@{is\_click\_pressed}!Joystick.c@{Joystick.c}}
+\doxysubsubsection{\texorpdfstring{is\_click\_pressed()}{is\_click\_pressed()}}
+{\footnotesize\ttfamily \label{_joystick_8c_a2fa9124accec0664c8980d167232755f} 
+bool is\+\_\+click\+\_\+pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}}]{J}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_joystick_8c_ae74cd60b6d3dc3714a940723cfe4cd17}\index{Joystick.c@{Joystick.c}!is\_down\_pressed@{is\_down\_pressed}}
+\index{is\_down\_pressed@{is\_down\_pressed}!Joystick.c@{Joystick.c}}
+\doxysubsubsection{\texorpdfstring{is\_down\_pressed()}{is\_down\_pressed()}}
+{\footnotesize\ttfamily \label{_joystick_8c_ae74cd60b6d3dc3714a940723cfe4cd17} 
+bool is\+\_\+down\+\_\+pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}}]{J}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_joystick_8c_ab87b21457ecd00a677986ad4d6d6dc70}\index{Joystick.c@{Joystick.c}!is\_left\_pressed@{is\_left\_pressed}}
+\index{is\_left\_pressed@{is\_left\_pressed}!Joystick.c@{Joystick.c}}
+\doxysubsubsection{\texorpdfstring{is\_left\_pressed()}{is\_left\_pressed()}}
+{\footnotesize\ttfamily \label{_joystick_8c_ab87b21457ecd00a677986ad4d6d6dc70} 
+bool is\+\_\+left\+\_\+pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}}]{J}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_joystick_8c_a5444e66c3970ae7da03e0c0174c13b8b}\index{Joystick.c@{Joystick.c}!is\_right\_pressed@{is\_right\_pressed}}
+\index{is\_right\_pressed@{is\_right\_pressed}!Joystick.c@{Joystick.c}}
+\doxysubsubsection{\texorpdfstring{is\_right\_pressed()}{is\_right\_pressed()}}
+{\footnotesize\ttfamily \label{_joystick_8c_a5444e66c3970ae7da03e0c0174c13b8b} 
+bool is\+\_\+right\+\_\+pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}}]{J}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_joystick_8c_ad94374537ad25b5fc4c8f1f4f64674e2}\index{Joystick.c@{Joystick.c}!is\_up\_pressed@{is\_up\_pressed}}
+\index{is\_up\_pressed@{is\_up\_pressed}!Joystick.c@{Joystick.c}}
+\doxysubsubsection{\texorpdfstring{is\_up\_pressed()}{is\_up\_pressed()}}
+{\footnotesize\ttfamily \label{_joystick_8c_ad94374537ad25b5fc4c8f1f4f64674e2} 
+bool is\+\_\+up\+\_\+pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}}]{J}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_joystick_8c_a747e9f9f2043a934b488c63651baf285}\index{Joystick.c@{Joystick.c}!JoystickInit@{JoystickInit}}
+\index{JoystickInit@{JoystickInit}!Joystick.c@{Joystick.c}}
+\doxysubsubsection{\texorpdfstring{JoystickInit()}{JoystickInit()}}
+{\footnotesize\ttfamily \label{_joystick_8c_a747e9f9f2043a934b488c63651baf285} 
+void Joystick\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}}]{J}{, }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{up\+\_\+port}{, }\item[{uint16\+\_\+t}]{up\+\_\+pin}{, }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{right\+\_\+port}{, }\item[{uint16\+\_\+t}]{right\+\_\+pin}{, }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{down\+\_\+port}{, }\item[{uint16\+\_\+t}]{down\+\_\+pin}{, }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{left\+\_\+port}{, }\item[{uint16\+\_\+t}]{left\+\_\+pin}{, }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{click\+\_\+port}{, }\item[{uint16\+\_\+t}]{click\+\_\+pin}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_joystick_8c_a50bb9c30188354157cb4710b855243f5}\index{Joystick.c@{Joystick.c}!pool\_joystick@{pool\_joystick}}
+\index{pool\_joystick@{pool\_joystick}!Joystick.c@{Joystick.c}}
+\doxysubsubsection{\texorpdfstring{pool\_joystick()}{pool\_joystick()}}
+{\footnotesize\ttfamily \label{_joystick_8c_a50bb9c30188354157cb4710b855243f5} 
+void pool\+\_\+joystick (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}}]{J}{}\end{DoxyParamCaption})}
+

@@ -1,0 +1,4 @@
+../Core/Src/Keypad.c:16:6:Keypad_init	32	static
+../Core/Src/Keypad.c:48:6:Keypad_scan	24	static
+../Core/Src/Keypad.c:68:6:Keypad_get_pressed	24	static
+../Core/Src/Keypad.c:98:6:Keypad_return_val	24	static

@@ -1,0 +1,94 @@
+\doxysection{menu\+\_\+struct Struct Reference}
+\hypertarget{structmenu__struct}{}\label{structmenu__struct}\index{menu\_struct@{menu\_struct}}
+
+
+Structure representing a single menu item.  
+
+
+
+
+{\ttfamily \#include $<$Gen\+\_\+libary.\+h$>$}
+
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structmenu__struct_a8f8f80d37794cde9472343e4487ba3eb}{name}}
+\begin{DoxyCompactList}\small\item\em Name of the menu item. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structmenu__struct_a7723e7a1b88d10de49abb9eaa2afc61d}{next}}
+\begin{DoxyCompactList}\small\item\em Pointer to the next sibling menu item. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structmenu__struct_a978c7a728d933b9b2e01ca2001e82cfe}{prev}}
+\begin{DoxyCompactList}\small\item\em Pointer to the previous sibling menu item. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structmenu__struct_a1b8f6023f1e12fbf2edc09427be002b5}{child}}
+\begin{DoxyCompactList}\small\item\em Pointer to the first child menu item (sub-\/menu) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structmenu__struct_ac2445d53bec1392136235f7841ffe575}{parent}}
+\begin{DoxyCompactList}\small\item\em Pointer to the parent menu item. \end{DoxyCompactList}\item 
+void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structmenu__struct_aaf92e6754c8bace70313198a06388d42}{menu\+\_\+function}} )(uint8\+\_\+t \texorpdfstring{$\ast$}{*}state)
+\begin{DoxyCompactList}\small\item\em Function to execute when the menu is selected. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure representing a single menu item. 
+
+\label{doc-variable-members}
+\Hypertarget{structmenu__struct_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{structmenu__struct_a1b8f6023f1e12fbf2edc09427be002b5}\index{menu\_struct@{menu\_struct}!child@{child}}
+\index{child@{child}!menu\_struct@{menu\_struct}}
+\doxysubsubsection{\texorpdfstring{child}{child}}
+{\footnotesize\ttfamily \label{structmenu__struct_a1b8f6023f1e12fbf2edc09427be002b5} 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}}\texorpdfstring{$\ast$}{*} child}
+
+
+
+Pointer to the first child menu item (sub-\/menu) 
+
+\Hypertarget{structmenu__struct_aaf92e6754c8bace70313198a06388d42}\index{menu\_struct@{menu\_struct}!menu\_function@{menu\_function}}
+\index{menu\_function@{menu\_function}!menu\_struct@{menu\_struct}}
+\doxysubsubsection{\texorpdfstring{menu\_function}{menu\_function}}
+{\footnotesize\ttfamily \label{structmenu__struct_aaf92e6754c8bace70313198a06388d42} 
+void(\texorpdfstring{$\ast$}{*} menu\+\_\+function) (uint8\+\_\+t \texorpdfstring{$\ast$}{*}state)}
+
+
+
+Function to execute when the menu is selected. 
+
+\Hypertarget{structmenu__struct_a8f8f80d37794cde9472343e4487ba3eb}\index{menu\_struct@{menu\_struct}!name@{name}}
+\index{name@{name}!menu\_struct@{menu\_struct}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily \label{structmenu__struct_a8f8f80d37794cde9472343e4487ba3eb} 
+const char\texorpdfstring{$\ast$}{*} name}
+
+
+
+Name of the menu item. 
+
+\Hypertarget{structmenu__struct_a7723e7a1b88d10de49abb9eaa2afc61d}\index{menu\_struct@{menu\_struct}!next@{next}}
+\index{next@{next}!menu\_struct@{menu\_struct}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \label{structmenu__struct_a7723e7a1b88d10de49abb9eaa2afc61d} 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}}\texorpdfstring{$\ast$}{*} next}
+
+
+
+Pointer to the next sibling menu item. 
+
+\Hypertarget{structmenu__struct_ac2445d53bec1392136235f7841ffe575}\index{menu\_struct@{menu\_struct}!parent@{parent}}
+\index{parent@{parent}!menu\_struct@{menu\_struct}}
+\doxysubsubsection{\texorpdfstring{parent}{parent}}
+{\footnotesize\ttfamily \label{structmenu__struct_ac2445d53bec1392136235f7841ffe575} 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}}\texorpdfstring{$\ast$}{*} parent}
+
+
+
+Pointer to the parent menu item. 
+
+\Hypertarget{structmenu__struct_a978c7a728d933b9b2e01ca2001e82cfe}\index{menu\_struct@{menu\_struct}!prev@{prev}}
+\index{prev@{prev}!menu\_struct@{menu\_struct}}
+\doxysubsubsection{\texorpdfstring{prev}{prev}}
+{\footnotesize\ttfamily \label{structmenu__struct_a978c7a728d933b9b2e01ca2001e82cfe} 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}}\texorpdfstring{$\ast$}{*} prev}
+
+
+
+Pointer to the previous sibling menu item. 
+

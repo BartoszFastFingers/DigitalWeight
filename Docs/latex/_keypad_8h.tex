@@ -1,0 +1,86 @@
+\doxysection{Keypad.\+h File Reference}
+\hypertarget{_keypad_8h}{}\label{_keypad_8h}\index{Keypad.h@{Keypad.h}}
+
+
+\doxylink{struct_keypad}{Keypad} driver library for STM32.  
+
+
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include "{}Gen\+\_\+libary.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_keypad}{Keypad}}
+\begin{DoxyCompactList}\small\item\em Structure representing a matrix keypad. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_keypad_8h_a28a55f92abc3cd810f4d20f53d85ee5e}{Keypad\+\_\+init}} (\mbox{\hyperlink{struct_keypad}{Keypad}} \texorpdfstring{$\ast$}{*}keypad, \mbox{\hyperlink{structpin__t}{pin\+\_\+t}} \texorpdfstring{$\ast$}{*}R\+\_\+pins, \mbox{\hyperlink{structpin__t}{pin\+\_\+t}} \texorpdfstring{$\ast$}{*}C\+\_\+pins, uint8\+\_\+t rows, uint8\+\_\+t columns)
+\begin{DoxyCompactList}\small\item\em Initializes the keypad structure with row/column pins. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_keypad_8h_ad5361f66a9a7547e5a5cfc6810c26bdc}{Keypad\+\_\+scan}} (\mbox{\hyperlink{struct_keypad}{Keypad}} \texorpdfstring{$\ast$}{*}keypad)
+\begin{DoxyCompactList}\small\item\em Scans the keypad and updates key states. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_keypad_8h_a8eff8ece3d8fa6bc045b2d9df3381aca}{Keypad\+\_\+get\+\_\+pressed}} (\mbox{\hyperlink{struct_keypad}{Keypad}} \texorpdfstring{$\ast$}{*}keypad)
+\begin{DoxyCompactList}\small\item\em Updates pressed flags based on stable key states. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{_keypad_8h_ae15569c2b6c321387c7e045a8f5b7f59}{Keypad\+\_\+return\+\_\+val}} (\mbox{\hyperlink{struct_keypad}{Keypad}} \texorpdfstring{$\ast$}{*}keypad)
+\begin{DoxyCompactList}\small\item\em Returns the character of the currently pressed key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{struct_keypad}{Keypad} driver library for STM32. 
+
+Provides functions and structures to initialize and scan a matrix keypad with debounce handling. Supports retrieval of pressed key values and stable key states.
+
+\begin{DoxyAuthor}{Author}
+Bartosz Terlecki 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/08-\/24 
+\end{DoxyDate}
+
+
+\label{doc-func-members}
+\Hypertarget{_keypad_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_keypad_8h_a8eff8ece3d8fa6bc045b2d9df3381aca}\index{Keypad.h@{Keypad.h}!Keypad\_get\_pressed@{Keypad\_get\_pressed}}
+\index{Keypad\_get\_pressed@{Keypad\_get\_pressed}!Keypad.h@{Keypad.h}}
+\doxysubsubsection{\texorpdfstring{Keypad\_get\_pressed()}{Keypad\_get\_pressed()}}
+{\footnotesize\ttfamily \label{_keypad_8h_a8eff8ece3d8fa6bc045b2d9df3381aca} 
+void Keypad\+\_\+get\+\_\+pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_keypad}{Keypad}} \texorpdfstring{$\ast$}{*}}]{keypad}{}\end{DoxyParamCaption})}
+
+
+
+Updates pressed flags based on stable key states. 
+
+\Hypertarget{_keypad_8h_a28a55f92abc3cd810f4d20f53d85ee5e}\index{Keypad.h@{Keypad.h}!Keypad\_init@{Keypad\_init}}
+\index{Keypad\_init@{Keypad\_init}!Keypad.h@{Keypad.h}}
+\doxysubsubsection{\texorpdfstring{Keypad\_init()}{Keypad\_init()}}
+{\footnotesize\ttfamily \label{_keypad_8h_a28a55f92abc3cd810f4d20f53d85ee5e} 
+void Keypad\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_keypad}{Keypad}} \texorpdfstring{$\ast$}{*}}]{keypad}{, }\item[{\mbox{\hyperlink{structpin__t}{pin\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{R\+\_\+pins}{, }\item[{\mbox{\hyperlink{structpin__t}{pin\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{C\+\_\+pins}{, }\item[{uint8\+\_\+t}]{rows}{, }\item[{uint8\+\_\+t}]{columns}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the keypad structure with row/column pins. 
+
+\Hypertarget{_keypad_8h_ae15569c2b6c321387c7e045a8f5b7f59}\index{Keypad.h@{Keypad.h}!Keypad\_return\_val@{Keypad\_return\_val}}
+\index{Keypad\_return\_val@{Keypad\_return\_val}!Keypad.h@{Keypad.h}}
+\doxysubsubsection{\texorpdfstring{Keypad\_return\_val()}{Keypad\_return\_val()}}
+{\footnotesize\ttfamily \label{_keypad_8h_ae15569c2b6c321387c7e045a8f5b7f59} 
+char Keypad\+\_\+return\+\_\+val (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_keypad}{Keypad}} \texorpdfstring{$\ast$}{*}}]{keypad}{}\end{DoxyParamCaption})}
+
+
+
+Returns the character of the currently pressed key. 
+
+\begin{DoxyReturn}{Returns}
+Pressed key character. 
+\end{DoxyReturn}
+\Hypertarget{_keypad_8h_ad5361f66a9a7547e5a5cfc6810c26bdc}\index{Keypad.h@{Keypad.h}!Keypad\_scan@{Keypad\_scan}}
+\index{Keypad\_scan@{Keypad\_scan}!Keypad.h@{Keypad.h}}
+\doxysubsubsection{\texorpdfstring{Keypad\_scan()}{Keypad\_scan()}}
+{\footnotesize\ttfamily \label{_keypad_8h_ad5361f66a9a7547e5a5cfc6810c26bdc} 
+void Keypad\+\_\+scan (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_keypad}{Keypad}} \texorpdfstring{$\ast$}{*}}]{keypad}{}\end{DoxyParamCaption})}
+
+
+
+Scans the keypad and updates key states. 
+

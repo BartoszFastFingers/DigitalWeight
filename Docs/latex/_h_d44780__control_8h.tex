@@ -1,0 +1,38 @@
+\doxysection{HD44780\+\_\+control.\+h File Reference}
+\hypertarget{_h_d44780__control_8h}{}\label{_h_d44780__control_8h}\index{HD44780\_control.h@{HD44780\_control.h}}
+
+
+Structures for controlling \doxylink{struct_h_d44780}{HD44780} LCD display, keypad input, and brightness.  
+
+
+{\ttfamily \#include "{}HX711\+\_\+pro.\+h"{}}\newline
+{\ttfamily \#include "{}Gen\+\_\+libary.\+h"{}}\newline
+{\ttfamily \#include "{}Keypad.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_keypad__control}{Keypad\+\_\+control}}
+\begin{DoxyCompactList}\small\item\em Structure for managing keypad input and string buffer. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlcd__control}{lcd\+\_\+control}}
+\begin{DoxyCompactList}\small\item\em Structure for LCD control and menu interaction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structures for controlling \doxylink{struct_h_d44780}{HD44780} LCD display, keypad input, and brightness. 
+
+Defines key data structures for managing\+:
+\begin{DoxyItemize}
+\item \doxylink{struct_keypad}{Keypad} input handling
+\item LCD display state and menu navigation
+\item PWM-\/based backlight brightness control
+\item Integration with \doxylink{struct_h_x711}{HX711} weight sensor for measurements
+\end{DoxyItemize}
+
+This header provides the core control interfaces for the \doxylink{struct_h_d44780}{HD44780} module in STM32-\/based projects.
+
+\begin{DoxyAuthor}{Author}
+barte 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Aug 21, 2025 
+\end{DoxyDate}

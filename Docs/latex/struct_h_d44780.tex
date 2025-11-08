@@ -1,0 +1,132 @@
+\doxysection{HD44780 Struct Reference}
+\hypertarget{struct_h_d44780}{}\label{struct_h_d44780}\index{HD44780@{HD44780}}
+
+
+Structure representing an \doxylink{struct_h_d44780}{HD44780} LCD display instance.  
+
+
+
+
+{\ttfamily \#include $<$HD44780.\+h$>$}
+
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structpin__t}{pin\+\_\+t}} \mbox{\hyperlink{struct_h_d44780_a6353f710d2752d7e4e0233de6b205e0e}{RS}}
+\begin{DoxyCompactList}\small\item\em Register Select pin. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structpin__t}{pin\+\_\+t}} \mbox{\hyperlink{struct_h_d44780_a656dffeb7e74008e1df34ff69e6d4f6c}{RW}}
+\begin{DoxyCompactList}\small\item\em Read/\+Write pin. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structpin__t}{pin\+\_\+t}} \mbox{\hyperlink{struct_h_d44780_a54244ea44502b1031647fd61b4c4e376}{E}}
+\begin{DoxyCompactList}\small\item\em Enable pin. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structpin__t}{pin\+\_\+t}} \mbox{\hyperlink{struct_h_d44780_a9f70ce20df92cfbb65b3d1fe6e25070e}{data\+\_\+pins}} \mbox{[}4\mbox{]}
+\begin{DoxyCompactList}\small\item\em Data pins D4-\/\+D7 for 4-\/bit communication. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_h_d44780_af811257227ffe90ec736fb49185b2a0e}{io}}
+\begin{DoxyCompactList}\small\item\em I/O direction\+: input = 0, output = 1. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structbuf__t}{buf\+\_\+t}} \mbox{\hyperlink{struct_h_d44780_aae45ab74069d09aaf897d3cc7197eace}{buf}}
+\begin{DoxyCompactList}\small\item\em Internal buffer for LCD content. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structmenu__disp}{menu\+\_\+disp}} \mbox{\hyperlink{struct_h_d44780_a1e4b02ba3208f12071e1821e779fcb9d}{menu}}
+\begin{DoxyCompactList}\small\item\em Current menu display structure. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_h_d44780_a5cc4f59804bfb7224a9734eb1d0f90e5}{menu\+\_\+root}}
+\begin{DoxyCompactList}\small\item\em Pointer to the root menu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlcd__control}{lcd\+\_\+control}} \mbox{\hyperlink{struct_h_d44780_ace2f71ec3d7755f8762d52381d1bf9be}{control}}
+\begin{DoxyCompactList}\small\item\em LCD control flags and settings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure representing an \doxylink{struct_h_d44780}{HD44780} LCD display instance. 
+
+This structure holds all the necessary pins, buffers, and control structures to interface with an HD44780-\/based LCD in 4-\/bit mode. It also contains menu display state and control flags for brightness, weight sensor (\doxylink{struct_h_x711}{HX711}), and keypad input. 
+
+\label{doc-variable-members}
+\Hypertarget{struct_h_d44780_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{struct_h_d44780_aae45ab74069d09aaf897d3cc7197eace}\index{HD44780@{HD44780}!buf@{buf}}
+\index{buf@{buf}!HD44780@{HD44780}}
+\doxysubsubsection{\texorpdfstring{buf}{buf}}
+{\footnotesize\ttfamily \label{struct_h_d44780_aae45ab74069d09aaf897d3cc7197eace} 
+\mbox{\hyperlink{structbuf__t}{buf\+\_\+t}} buf}
+
+
+
+Internal buffer for LCD content. 
+
+\Hypertarget{struct_h_d44780_ace2f71ec3d7755f8762d52381d1bf9be}\index{HD44780@{HD44780}!control@{control}}
+\index{control@{control}!HD44780@{HD44780}}
+\doxysubsubsection{\texorpdfstring{control}{control}}
+{\footnotesize\ttfamily \label{struct_h_d44780_ace2f71ec3d7755f8762d52381d1bf9be} 
+\mbox{\hyperlink{structlcd__control}{lcd\+\_\+control}} control}
+
+
+
+LCD control flags and settings. 
+
+\Hypertarget{struct_h_d44780_a9f70ce20df92cfbb65b3d1fe6e25070e}\index{HD44780@{HD44780}!data\_pins@{data\_pins}}
+\index{data\_pins@{data\_pins}!HD44780@{HD44780}}
+\doxysubsubsection{\texorpdfstring{data\_pins}{data\_pins}}
+{\footnotesize\ttfamily \label{struct_h_d44780_a9f70ce20df92cfbb65b3d1fe6e25070e} 
+\mbox{\hyperlink{structpin__t}{pin\+\_\+t}} data\+\_\+pins\mbox{[}4\mbox{]}}
+
+
+
+Data pins D4-\/\+D7 for 4-\/bit communication. 
+
+\Hypertarget{struct_h_d44780_a54244ea44502b1031647fd61b4c4e376}\index{HD44780@{HD44780}!E@{E}}
+\index{E@{E}!HD44780@{HD44780}}
+\doxysubsubsection{\texorpdfstring{E}{E}}
+{\footnotesize\ttfamily \label{struct_h_d44780_a54244ea44502b1031647fd61b4c4e376} 
+\mbox{\hyperlink{structpin__t}{pin\+\_\+t}} E}
+
+
+
+Enable pin. 
+
+\Hypertarget{struct_h_d44780_af811257227ffe90ec736fb49185b2a0e}\index{HD44780@{HD44780}!io@{io}}
+\index{io@{io}!HD44780@{HD44780}}
+\doxysubsubsection{\texorpdfstring{io}{io}}
+{\footnotesize\ttfamily \label{struct_h_d44780_af811257227ffe90ec736fb49185b2a0e} 
+bool io}
+
+
+
+I/O direction\+: input = 0, output = 1. 
+
+\Hypertarget{struct_h_d44780_a1e4b02ba3208f12071e1821e779fcb9d}\index{HD44780@{HD44780}!menu@{menu}}
+\index{menu@{menu}!HD44780@{HD44780}}
+\doxysubsubsection{\texorpdfstring{menu}{menu}}
+{\footnotesize\ttfamily \label{struct_h_d44780_a1e4b02ba3208f12071e1821e779fcb9d} 
+\mbox{\hyperlink{structmenu__disp}{menu\+\_\+disp}} menu}
+
+
+
+Current menu display structure. 
+
+\Hypertarget{struct_h_d44780_a5cc4f59804bfb7224a9734eb1d0f90e5}\index{HD44780@{HD44780}!menu\_root@{menu\_root}}
+\index{menu\_root@{menu\_root}!HD44780@{HD44780}}
+\doxysubsubsection{\texorpdfstring{menu\_root}{menu\_root}}
+{\footnotesize\ttfamily \label{struct_h_d44780_a5cc4f59804bfb7224a9734eb1d0f90e5} 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}}\texorpdfstring{$\ast$}{*} menu\+\_\+root}
+
+
+
+Pointer to the root menu. 
+
+\Hypertarget{struct_h_d44780_a6353f710d2752d7e4e0233de6b205e0e}\index{HD44780@{HD44780}!RS@{RS}}
+\index{RS@{RS}!HD44780@{HD44780}}
+\doxysubsubsection{\texorpdfstring{RS}{RS}}
+{\footnotesize\ttfamily \label{struct_h_d44780_a6353f710d2752d7e4e0233de6b205e0e} 
+\mbox{\hyperlink{structpin__t}{pin\+\_\+t}} RS}
+
+
+
+Register Select pin. 
+
+\Hypertarget{struct_h_d44780_a656dffeb7e74008e1df34ff69e6d4f6c}\index{HD44780@{HD44780}!RW@{RW}}
+\index{RW@{RW}!HD44780@{HD44780}}
+\doxysubsubsection{\texorpdfstring{RW}{RW}}
+{\footnotesize\ttfamily \label{struct_h_d44780_a656dffeb7e74008e1df34ff69e6d4f6c} 
+\mbox{\hyperlink{structpin__t}{pin\+\_\+t}} RW}
+
+
+
+Read/\+Write pin. 
+

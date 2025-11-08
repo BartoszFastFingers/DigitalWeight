@@ -1,0 +1,98 @@
+\doxysection{buf\+\_\+t Struct Reference}
+\hypertarget{structbuf__t}{}\label{structbuf__t}\index{buf\_t@{buf\_t}}
+
+
+Buffer structure for \doxylink{struct_h_d44780}{HD44780} or other frame-\/based displays.  
+
+
+
+
+{\ttfamily \#include $<$Gen\+\_\+libary.\+h$>$}
+
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structbuf__t_a0f561e77fa0f040b637f4e04f6cd8078}{x}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structbuf__t_a17f97f62d93bc8cfb4a2b5d273a2aa72}{y}}
+\begin{DoxyCompactList}\small\item\em Current cursor coordinates. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structbuf__t_aca4207e49c7fa18c80f4c06dec855a25}{asyn\+\_\+x}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structbuf__t_a3611371a9a9a092b021a27327410bdc2}{asyn\+\_\+y}}
+\begin{DoxyCompactList}\small\item\em Asynchronous or temporary coordinates for async updates. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structbuf__t_a8b3ab54ed3e81c69863d65e4e6c424a0}{flag}}
+\begin{DoxyCompactList}\small\item\em Update flag indicating if buffer has changed. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structbuf__t_a1ea33582ea199d4c95fe86a7746a1021}{frame}}
+\begin{DoxyCompactList}\small\item\em Pointer to the current frame content. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structbuf__t_a62e467ce45be3f7b5f2bb18637497bb4}{frame\+\_\+old}}
+\begin{DoxyCompactList}\small\item\em Pointer to the previous frame content for comparison. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Buffer structure for \doxylink{struct_h_d44780}{HD44780} or other frame-\/based displays. 
+
+\label{doc-variable-members}
+\Hypertarget{structbuf__t_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{structbuf__t_aca4207e49c7fa18c80f4c06dec855a25}\index{buf\_t@{buf\_t}!asyn\_x@{asyn\_x}}
+\index{asyn\_x@{asyn\_x}!buf\_t@{buf\_t}}
+\doxysubsubsection{\texorpdfstring{asyn\_x}{asyn\_x}}
+{\footnotesize\ttfamily \label{structbuf__t_aca4207e49c7fa18c80f4c06dec855a25} 
+uint8\+\_\+t asyn\+\_\+x}
+
+\Hypertarget{structbuf__t_a3611371a9a9a092b021a27327410bdc2}\index{buf\_t@{buf\_t}!asyn\_y@{asyn\_y}}
+\index{asyn\_y@{asyn\_y}!buf\_t@{buf\_t}}
+\doxysubsubsection{\texorpdfstring{asyn\_y}{asyn\_y}}
+{\footnotesize\ttfamily \label{structbuf__t_a3611371a9a9a092b021a27327410bdc2} 
+uint8\+\_\+t asyn\+\_\+y}
+
+
+
+Asynchronous or temporary coordinates for async updates. 
+
+\Hypertarget{structbuf__t_a8b3ab54ed3e81c69863d65e4e6c424a0}\index{buf\_t@{buf\_t}!flag@{flag}}
+\index{flag@{flag}!buf\_t@{buf\_t}}
+\doxysubsubsection{\texorpdfstring{flag}{flag}}
+{\footnotesize\ttfamily \label{structbuf__t_a8b3ab54ed3e81c69863d65e4e6c424a0} 
+bool flag}
+
+
+
+Update flag indicating if buffer has changed. 
+
+\Hypertarget{structbuf__t_a1ea33582ea199d4c95fe86a7746a1021}\index{buf\_t@{buf\_t}!frame@{frame}}
+\index{frame@{frame}!buf\_t@{buf\_t}}
+\doxysubsubsection{\texorpdfstring{frame}{frame}}
+{\footnotesize\ttfamily \label{structbuf__t_a1ea33582ea199d4c95fe86a7746a1021} 
+char\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} frame}
+
+
+
+Pointer to the current frame content. 
+
+\Hypertarget{structbuf__t_a62e467ce45be3f7b5f2bb18637497bb4}\index{buf\_t@{buf\_t}!frame\_old@{frame\_old}}
+\index{frame\_old@{frame\_old}!buf\_t@{buf\_t}}
+\doxysubsubsection{\texorpdfstring{frame\_old}{frame\_old}}
+{\footnotesize\ttfamily \label{structbuf__t_a62e467ce45be3f7b5f2bb18637497bb4} 
+char\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} frame\+\_\+old}
+
+
+
+Pointer to the previous frame content for comparison. 
+
+\Hypertarget{structbuf__t_a0f561e77fa0f040b637f4e04f6cd8078}\index{buf\_t@{buf\_t}!x@{x}}
+\index{x@{x}!buf\_t@{buf\_t}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily \label{structbuf__t_a0f561e77fa0f040b637f4e04f6cd8078} 
+uint8\+\_\+t x}
+
+\Hypertarget{structbuf__t_a17f97f62d93bc8cfb4a2b5d273a2aa72}\index{buf\_t@{buf\_t}!y@{y}}
+\index{y@{y}!buf\_t@{buf\_t}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily \label{structbuf__t_a17f97f62d93bc8cfb4a2b5d273a2aa72} 
+uint8\+\_\+t y}
+
+
+
+Current cursor coordinates. 
+

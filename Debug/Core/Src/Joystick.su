@@ -1,0 +1,7 @@
+../Core/Src/Joystick.c:12:6:JoystickInit	24	static
+../Core/Src/Joystick.c:30:6:is_up_pressed	16	static
+../Core/Src/Joystick.c:35:6:is_right_pressed	16	static
+../Core/Src/Joystick.c:40:6:is_down_pressed	16	static
+../Core/Src/Joystick.c:45:6:is_left_pressed	16	static
+../Core/Src/Joystick.c:51:6:is_click_pressed	16	static
+../Core/Src/Joystick.c:57:6:pool_joystick	32	static

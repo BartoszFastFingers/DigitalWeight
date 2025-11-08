@@ -1,0 +1,229 @@
+\doxysection{Gen\+\_\+libary.\+h File Reference}
+\hypertarget{_gen__libary_8h}{}\label{_gen__libary_8h}\index{Gen\_libary.h@{Gen\_libary.h}}
+
+
+General-\/purpose STM32 library for GPIO, timers, PWM, and menu handling.  
+
+
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include "{}tim.\+h"{}}\newline
+{\ttfamily \#include "{}main.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpin__t}{pin\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Structure representing a GPIO pin. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structbuf__t}{buf\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Buffer structure for \doxylink{struct_h_d44780}{HD44780} or other frame-\/based displays. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structmenu__struct}{menu\+\_\+struct}}
+\begin{DoxyCompactList}\small\item\em Structure representing a single menu item. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structmenu__disp}{menu\+\_\+disp}}
+\begin{DoxyCompactList}\small\item\em Structure tracking the menu display state. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structpwm__channel__t}{pwm\+\_\+channel\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Structure representing a PWM output channel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structmenu__struct}{menu\+\_\+struct}} \mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Forward declaration of menu structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_gen__libary_8h_a7c0cc8647e0b63de906e4431264473bc}{Gen\+\_\+libary\+\_\+\+Timer\+\_\+init}} (TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}htim)
+\begin{DoxyCompactList}\small\item\em Initialize general-\/purpose timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_gen__libary_8h_ab33ebb2c5ca2d80d259c64a9d658589f}{delay\+\_\+us}} (uint32\+\_\+t us)
+\begin{DoxyCompactList}\small\item\em Delay execution for specified microseconds. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_gen__libary_8h_a5db1364852c72a863638649aab4a8889}{CHANGE\+\_\+\+IO\+\_\+\+GPIO\+\_\+\+PUSH\+\_\+\+PULL}} (\mbox{\hyperlink{structpin__t}{pin\+\_\+t}} gpio, uint32\+\_\+t GPIO\+\_\+\+INIT\+\_\+\+MODE)
+\begin{DoxyCompactList}\small\item\em Change GPIO mode for push-\/pull output. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_gen__libary_8h_a6fcf55c8f157edea486d93a393aab824}{CHANGE\+\_\+\+GENERAL\+\_\+\+IO\+\_\+\+GPIO\+\_\+\+PUSH\+\_\+\+PULL}} (\mbox{\hyperlink{structpin__t}{pin\+\_\+t}} gpio, uint32\+\_\+t GPIO\+\_\+\+INIT\+\_\+\+MODE, uint32\+\_\+t Pull, uint32\+\_\+t Speed, uint32\+\_\+t Alternate)
+\begin{DoxyCompactList}\small\item\em General GPIO configuration with additional parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_gen__libary_8h_a38cd57181fe93b2ab8747dd021a556c4}{General\+\_\+timer}}
+\begin{DoxyCompactList}\small\item\em Pointer to general-\/purpose timer used across the library. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} \mbox{\hyperlink{_gen__libary_8h_a1042f2bd4c252f627d4988e3e8c5ff64}{menu\+\_\+1}}
+\begin{DoxyCompactList}\small\item\em Example menu items (extern declarations) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} \mbox{\hyperlink{_gen__libary_8h_a0ad56d48f2ece7dc10c2d43603013eea}{menu\+\_\+2}}
+\item 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} \mbox{\hyperlink{_gen__libary_8h_a9243b8bd7c864c95c461d6d693866e8e}{menu\+\_\+3}}
+\item 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} \mbox{\hyperlink{_gen__libary_8h_a4bbffd211a232c3b85853bcd94905bed}{sub\+\_\+menu\+\_\+1\+\_\+1}}
+\item 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} \mbox{\hyperlink{_gen__libary_8h_a545cff59b1d374bc8542b7306a102065}{sub\+\_\+menu\+\_\+1\+\_\+2}}
+\item 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} \mbox{\hyperlink{_gen__libary_8h_a1bb1c13ed0b921e92d0d140f0711597b}{sub\+\_\+menu\+\_\+2\+\_\+1}}
+\item 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} \mbox{\hyperlink{_gen__libary_8h_a3a2e206f4ffe33a4c15964ad68ea7eed}{sub\+\_\+menu\+\_\+3\+\_\+1}}
+\item 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} \mbox{\hyperlink{_gen__libary_8h_ab3c9cff4ea7895a46d83461457dbf6a9}{sub\+\_\+menu\+\_\+3\+\_\+2}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+General-\/purpose STM32 library for GPIO, timers, PWM, and menu handling. 
+
+Provides utility structures and functions for\+:
+\begin{DoxyItemize}
+\item Timer initialization and microsecond delays
+\item GPIO configuration and state changes
+\item PWM channel management
+\item Menu system with hierarchical navigation
+\end{DoxyItemize}
+
+This library centralizes common hardware and UI functionalities for STM32-\/based projects.
+
+\begin{DoxyAuthor}{Author}
+barte 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/08-\/08 
+\end{DoxyDate}
+
+
+\label{doc-typedef-members}
+\Hypertarget{_gen__libary_8h_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}\index{Gen\_libary.h@{Gen\_libary.h}!menu\_t@{menu\_t}}
+\index{menu\_t@{menu\_t}!Gen\_libary.h@{Gen\_libary.h}}
+\doxysubsubsection{\texorpdfstring{menu\_t}{menu\_t}}
+{\footnotesize\ttfamily \label{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae} 
+typedef struct \mbox{\hyperlink{structmenu__struct}{menu\+\_\+struct}} \mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}}}
+
+
+
+Forward declaration of menu structure. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{_gen__libary_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_gen__libary_8h_a6fcf55c8f157edea486d93a393aab824}\index{Gen\_libary.h@{Gen\_libary.h}!CHANGE\_GENERAL\_IO\_GPIO\_PUSH\_PULL@{CHANGE\_GENERAL\_IO\_GPIO\_PUSH\_PULL}}
+\index{CHANGE\_GENERAL\_IO\_GPIO\_PUSH\_PULL@{CHANGE\_GENERAL\_IO\_GPIO\_PUSH\_PULL}!Gen\_libary.h@{Gen\_libary.h}}
+\doxysubsubsection{\texorpdfstring{CHANGE\_GENERAL\_IO\_GPIO\_PUSH\_PULL()}{CHANGE\_GENERAL\_IO\_GPIO\_PUSH\_PULL()}}
+{\footnotesize\ttfamily \label{_gen__libary_8h_a6fcf55c8f157edea486d93a393aab824} 
+void CHANGE\+\_\+\+GENERAL\+\_\+\+IO\+\_\+\+GPIO\+\_\+\+PUSH\+\_\+\+PULL (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpin__t}{pin\+\_\+t}}}]{gpio}{, }\item[{uint32\+\_\+t}]{GPIO\+\_\+\+INIT\+\_\+\+MODE}{, }\item[{uint32\+\_\+t}]{Pull}{, }\item[{uint32\+\_\+t}]{Speed}{, }\item[{uint32\+\_\+t}]{Alternate}{}\end{DoxyParamCaption})}
+
+
+
+General GPIO configuration with additional parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gpio} & Pin structure. \\
+\hline
+{\em GPIO\+\_\+\+INIT\+\_\+\+MODE} & Mode for initialization (e.\+g., GPIO\+\_\+\+MODE\+\_\+\+AF\+\_\+\+PP). \\
+\hline
+{\em Pull} & Pull-\/up/\+Pull-\/down configuration (e.\+g., GPIO\+\_\+\+NOPULL). \\
+\hline
+{\em Speed} & GPIO speed (e.\+g., GPIO\+\_\+\+SPEED\+\_\+\+FREQ\+\_\+\+HIGH). \\
+\hline
+{\em Alternate} & Alternate function number. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_gen__libary_8h_a5db1364852c72a863638649aab4a8889}\index{Gen\_libary.h@{Gen\_libary.h}!CHANGE\_IO\_GPIO\_PUSH\_PULL@{CHANGE\_IO\_GPIO\_PUSH\_PULL}}
+\index{CHANGE\_IO\_GPIO\_PUSH\_PULL@{CHANGE\_IO\_GPIO\_PUSH\_PULL}!Gen\_libary.h@{Gen\_libary.h}}
+\doxysubsubsection{\texorpdfstring{CHANGE\_IO\_GPIO\_PUSH\_PULL()}{CHANGE\_IO\_GPIO\_PUSH\_PULL()}}
+{\footnotesize\ttfamily \label{_gen__libary_8h_a5db1364852c72a863638649aab4a8889} 
+void CHANGE\+\_\+\+IO\+\_\+\+GPIO\+\_\+\+PUSH\+\_\+\+PULL (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpin__t}{pin\+\_\+t}}}]{gpio}{, }\item[{uint32\+\_\+t}]{GPIO\+\_\+\+INIT\+\_\+\+MODE}{}\end{DoxyParamCaption})}
+
+
+
+Change GPIO mode for push-\/pull output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gpio} & Pin structure. \\
+\hline
+{\em GPIO\+\_\+\+INIT\+\_\+\+MODE} & Mode for initialization (e.\+g., GPIO\+\_\+\+MODE\+\_\+\+OUTPUT\+\_\+\+PP). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_gen__libary_8h_ab33ebb2c5ca2d80d259c64a9d658589f}\index{Gen\_libary.h@{Gen\_libary.h}!delay\_us@{delay\_us}}
+\index{delay\_us@{delay\_us}!Gen\_libary.h@{Gen\_libary.h}}
+\doxysubsubsection{\texorpdfstring{delay\_us()}{delay\_us()}}
+{\footnotesize\ttfamily \label{_gen__libary_8h_ab33ebb2c5ca2d80d259c64a9d658589f} 
+void delay\+\_\+us (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{us}{}\end{DoxyParamCaption})}
+
+
+
+Delay execution for specified microseconds. 
+
+\Hypertarget{_gen__libary_8h_a7c0cc8647e0b63de906e4431264473bc}\index{Gen\_libary.h@{Gen\_libary.h}!Gen\_libary\_Timer\_init@{Gen\_libary\_Timer\_init}}
+\index{Gen\_libary\_Timer\_init@{Gen\_libary\_Timer\_init}!Gen\_libary.h@{Gen\_libary.h}}
+\doxysubsubsection{\texorpdfstring{Gen\_libary\_Timer\_init()}{Gen\_libary\_Timer\_init()}}
+{\footnotesize\ttfamily \label{_gen__libary_8h_a7c0cc8647e0b63de906e4431264473bc} 
+void Gen\+\_\+libary\+\_\+\+Timer\+\_\+init (\begin{DoxyParamCaption}\item[{TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{htim}{}\end{DoxyParamCaption})}
+
+
+
+Initialize general-\/purpose timer. 
+
+
+
+\label{doc-var-members}
+\Hypertarget{_gen__libary_8h_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{_gen__libary_8h_a38cd57181fe93b2ab8747dd021a556c4}\index{Gen\_libary.h@{Gen\_libary.h}!General\_timer@{General\_timer}}
+\index{General\_timer@{General\_timer}!Gen\_libary.h@{Gen\_libary.h}}
+\doxysubsubsection{\texorpdfstring{General\_timer}{General\_timer}}
+{\footnotesize\ttfamily \label{_gen__libary_8h_a38cd57181fe93b2ab8747dd021a556c4} 
+TIM\+\_\+\+Handle\+Type\+Def\texorpdfstring{$\ast$}{*} General\+\_\+timer\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Pointer to general-\/purpose timer used across the library. 
+
+\Hypertarget{_gen__libary_8h_a1042f2bd4c252f627d4988e3e8c5ff64}\index{Gen\_libary.h@{Gen\_libary.h}!menu\_1@{menu\_1}}
+\index{menu\_1@{menu\_1}!Gen\_libary.h@{Gen\_libary.h}}
+\doxysubsubsection{\texorpdfstring{menu\_1}{menu\_1}}
+{\footnotesize\ttfamily \label{_gen__libary_8h_a1042f2bd4c252f627d4988e3e8c5ff64} 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} menu\+\_\+1\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Example menu items (extern declarations) 
+
+\Hypertarget{_gen__libary_8h_a0ad56d48f2ece7dc10c2d43603013eea}\index{Gen\_libary.h@{Gen\_libary.h}!menu\_2@{menu\_2}}
+\index{menu\_2@{menu\_2}!Gen\_libary.h@{Gen\_libary.h}}
+\doxysubsubsection{\texorpdfstring{menu\_2}{menu\_2}}
+{\footnotesize\ttfamily \label{_gen__libary_8h_a0ad56d48f2ece7dc10c2d43603013eea} 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} menu\+\_\+2}
+
+\Hypertarget{_gen__libary_8h_a9243b8bd7c864c95c461d6d693866e8e}\index{Gen\_libary.h@{Gen\_libary.h}!menu\_3@{menu\_3}}
+\index{menu\_3@{menu\_3}!Gen\_libary.h@{Gen\_libary.h}}
+\doxysubsubsection{\texorpdfstring{menu\_3}{menu\_3}}
+{\footnotesize\ttfamily \label{_gen__libary_8h_a9243b8bd7c864c95c461d6d693866e8e} 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} menu\+\_\+3}
+
+\Hypertarget{_gen__libary_8h_a4bbffd211a232c3b85853bcd94905bed}\index{Gen\_libary.h@{Gen\_libary.h}!sub\_menu\_1\_1@{sub\_menu\_1\_1}}
+\index{sub\_menu\_1\_1@{sub\_menu\_1\_1}!Gen\_libary.h@{Gen\_libary.h}}
+\doxysubsubsection{\texorpdfstring{sub\_menu\_1\_1}{sub\_menu\_1\_1}}
+{\footnotesize\ttfamily \label{_gen__libary_8h_a4bbffd211a232c3b85853bcd94905bed} 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} sub\+\_\+menu\+\_\+1\+\_\+1\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{_gen__libary_8h_a545cff59b1d374bc8542b7306a102065}\index{Gen\_libary.h@{Gen\_libary.h}!sub\_menu\_1\_2@{sub\_menu\_1\_2}}
+\index{sub\_menu\_1\_2@{sub\_menu\_1\_2}!Gen\_libary.h@{Gen\_libary.h}}
+\doxysubsubsection{\texorpdfstring{sub\_menu\_1\_2}{sub\_menu\_1\_2}}
+{\footnotesize\ttfamily \label{_gen__libary_8h_a545cff59b1d374bc8542b7306a102065} 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} sub\+\_\+menu\+\_\+1\+\_\+2}
+
+\Hypertarget{_gen__libary_8h_a1bb1c13ed0b921e92d0d140f0711597b}\index{Gen\_libary.h@{Gen\_libary.h}!sub\_menu\_2\_1@{sub\_menu\_2\_1}}
+\index{sub\_menu\_2\_1@{sub\_menu\_2\_1}!Gen\_libary.h@{Gen\_libary.h}}
+\doxysubsubsection{\texorpdfstring{sub\_menu\_2\_1}{sub\_menu\_2\_1}}
+{\footnotesize\ttfamily \label{_gen__libary_8h_a1bb1c13ed0b921e92d0d140f0711597b} 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} sub\+\_\+menu\+\_\+2\+\_\+1}
+
+\Hypertarget{_gen__libary_8h_a3a2e206f4ffe33a4c15964ad68ea7eed}\index{Gen\_libary.h@{Gen\_libary.h}!sub\_menu\_3\_1@{sub\_menu\_3\_1}}
+\index{sub\_menu\_3\_1@{sub\_menu\_3\_1}!Gen\_libary.h@{Gen\_libary.h}}
+\doxysubsubsection{\texorpdfstring{sub\_menu\_3\_1}{sub\_menu\_3\_1}}
+{\footnotesize\ttfamily \label{_gen__libary_8h_a3a2e206f4ffe33a4c15964ad68ea7eed} 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} sub\+\_\+menu\+\_\+3\+\_\+1}
+
+\Hypertarget{_gen__libary_8h_ab3c9cff4ea7895a46d83461457dbf6a9}\index{Gen\_libary.h@{Gen\_libary.h}!sub\_menu\_3\_2@{sub\_menu\_3\_2}}
+\index{sub\_menu\_3\_2@{sub\_menu\_3\_2}!Gen\_libary.h@{Gen\_libary.h}}
+\doxysubsubsection{\texorpdfstring{sub\_menu\_3\_2}{sub\_menu\_3\_2}}
+{\footnotesize\ttfamily \label{_gen__libary_8h_ab3c9cff4ea7895a46d83461457dbf6a9} 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} sub\+\_\+menu\+\_\+3\+\_\+2}
+

@@ -1,0 +1,181 @@
+\doxysection{Src/main.c File Reference}
+\hypertarget{main_8c}{}\label{main_8c}\index{Src/main.c@{Src/main.c}}
+
+
+\+: Main program body  
+
+
+{\ttfamily \#include "{}main.\+h"{}}\newline
+{\ttfamily \#include "{}tim.\+h"{}}\newline
+{\ttfamily \#include "{}usart.\+h"{}}\newline
+{\ttfamily \#include "{}gpio.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include "{}Gen\+\_\+libary.\+h"{}}\newline
+{\ttfamily \#include "{}HX711\+\_\+pro.\+h"{}}\newline
+{\ttfamily \#include "{}HD44780.\+h"{}}\newline
+{\ttfamily \#include "{}HD44780\+\_\+menu.\+h"{}}\newline
+{\ttfamily \#include "{}Joystick.\+h"{}}\newline
+{\ttfamily \#include "{}Joystick\+\_\+menu.\+h"{}}\newline
+{\ttfamily \#include "{}HD44780\+\_\+callbacks.\+h"{}}\newline
+{\ttfamily \#include "{}stm32f1xx\+\_\+it.\+h"{}}\newline
+{\ttfamily \#include "{}Keypad.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}~0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8c_a70af21c671abfcc773614a9a4f63d920}{System\+Clock\+\_\+\+Config}} (void)
+\begin{DoxyCompactList}\small\item\em System Clock Configuration. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_abc513dd972081ae765b6949a62872eb7}{\+\_\+\+\_\+io\+\_\+putchar}} (int ch)
+\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em The application entry point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function is executed in case of error occurrence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} \mbox{\hyperlink{main_8c_a1042f2bd4c252f627d4988e3e8c5ff64}{menu\+\_\+1}} = \{"{}MEASURE"{}, \&\mbox{\hyperlink{_gen__libary_8h_a0ad56d48f2ece7dc10c2d43603013eea}{menu\+\_\+2}}, \&\mbox{\hyperlink{_gen__libary_8h_a9243b8bd7c864c95c461d6d693866e8e}{menu\+\_\+3}} , \&\mbox{\hyperlink{_gen__libary_8h_a4bbffd211a232c3b85853bcd94905bed}{sub\+\_\+menu\+\_\+1\+\_\+1}}, \mbox{\hyperlink{_h_d44780__callbacks_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \mbox{\hyperlink{_h_d44780__callbacks_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}\}
+\item 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} \mbox{\hyperlink{main_8c_a4bbffd211a232c3b85853bcd94905bed}{sub\+\_\+menu\+\_\+1\+\_\+1}} = \{"{}Realtime"{}, \&\mbox{\hyperlink{_gen__libary_8h_a545cff59b1d374bc8542b7306a102065}{sub\+\_\+menu\+\_\+1\+\_\+2}}, \&\mbox{\hyperlink{_gen__libary_8h_a545cff59b1d374bc8542b7306a102065}{sub\+\_\+menu\+\_\+1\+\_\+2}} , \mbox{\hyperlink{_h_d44780__callbacks_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \&\mbox{\hyperlink{_gen__libary_8h_a1042f2bd4c252f627d4988e3e8c5ff64}{menu\+\_\+1}}, \mbox{\hyperlink{_h_d44780__callbacks_8h_ad0772bfa94f8737f1c5abfabfe9a50d2}{disp\+\_\+weight\+\_\+callback}}\}
+\item 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} \mbox{\hyperlink{main_8c_a545cff59b1d374bc8542b7306a102065}{sub\+\_\+menu\+\_\+1\+\_\+2}} = \{"{}Probes"{}, \mbox{\hyperlink{_h_d44780__callbacks_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \&\mbox{\hyperlink{_gen__libary_8h_a4bbffd211a232c3b85853bcd94905bed}{sub\+\_\+menu\+\_\+1\+\_\+1}} , \mbox{\hyperlink{_h_d44780__callbacks_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \&\mbox{\hyperlink{_gen__libary_8h_a1042f2bd4c252f627d4988e3e8c5ff64}{menu\+\_\+1}}, \mbox{\hyperlink{_h_d44780__callbacks_8h_a0877a13d4c0be515f7334748f1e8b8fe}{disp\+\_\+weight\+\_\+p\+\_\+callback}}\}
+\item 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} \mbox{\hyperlink{main_8c_a0ad56d48f2ece7dc10c2d43603013eea}{menu\+\_\+2}} = \{"{}DISPLAY"{}, \&\mbox{\hyperlink{_gen__libary_8h_a9243b8bd7c864c95c461d6d693866e8e}{menu\+\_\+3}}, \&\mbox{\hyperlink{_gen__libary_8h_a1042f2bd4c252f627d4988e3e8c5ff64}{menu\+\_\+1}}, \&\mbox{\hyperlink{_gen__libary_8h_a1bb1c13ed0b921e92d0d140f0711597b}{sub\+\_\+menu\+\_\+2\+\_\+1}}, \mbox{\hyperlink{_h_d44780__callbacks_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \mbox{\hyperlink{_h_d44780__callbacks_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}\}
+\item 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} \mbox{\hyperlink{main_8c_a1bb1c13ed0b921e92d0d140f0711597b}{sub\+\_\+menu\+\_\+2\+\_\+1}} = \{"{}Brightness"{}, \mbox{\hyperlink{_h_d44780__callbacks_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \&sub\+\_\+menu\+\_\+2\+\_\+1, \mbox{\hyperlink{_h_d44780__callbacks_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \&\mbox{\hyperlink{_gen__libary_8h_a0ad56d48f2ece7dc10c2d43603013eea}{menu\+\_\+2}}, \mbox{\hyperlink{_h_d44780__callbacks_8h_aae7c8f0c05c908a11fc5b2c4aab02bc4}{disp\+\_\+brightness\+\_\+callback}}\}
+\item 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} \mbox{\hyperlink{main_8c_a9243b8bd7c864c95c461d6d693866e8e}{menu\+\_\+3}} = \{"{}SET OFFSET"{}, \mbox{\hyperlink{_h_d44780__callbacks_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \&\mbox{\hyperlink{_gen__libary_8h_a0ad56d48f2ece7dc10c2d43603013eea}{menu\+\_\+2}}, \&\mbox{\hyperlink{_gen__libary_8h_a3a2e206f4ffe33a4c15964ad68ea7eed}{sub\+\_\+menu\+\_\+3\+\_\+1}}, \mbox{\hyperlink{_h_d44780__callbacks_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \mbox{\hyperlink{_h_d44780__callbacks_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}\}
+\item 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} \mbox{\hyperlink{main_8c_a3a2e206f4ffe33a4c15964ad68ea7eed}{sub\+\_\+menu\+\_\+3\+\_\+1}} = \{"{}Set custom"{}, \mbox{\hyperlink{_h_d44780__callbacks_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \&sub\+\_\+menu\+\_\+3\+\_\+1, \mbox{\hyperlink{_h_d44780__callbacks_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \&\mbox{\hyperlink{_gen__libary_8h_a9243b8bd7c864c95c461d6d693866e8e}{menu\+\_\+3}}, \mbox{\hyperlink{_h_d44780__callbacks_8h_a2cde31a5fa44c9e0d2b6bf576f32b63f}{disp\+\_\+set\+\_\+custom\+\_\+callback}}\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Main program body 
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2025 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\label{doc-define-members}
+\Hypertarget{main_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{main_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}\index{main.c@{main.c}!NULL@{NULL}}
+\index{NULL@{NULL}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{NULL}{NULL}}
+{\footnotesize\ttfamily \label{main_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4} 
+\#define NULL~0}
+
+
+
+\label{doc-func-members}
+\Hypertarget{main_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8c_abc513dd972081ae765b6949a62872eb7}\index{main.c@{main.c}!\_\_io\_putchar@{\_\_io\_putchar}}
+\index{\_\_io\_putchar@{\_\_io\_putchar}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{\_\_io\_putchar()}{\_\_io\_putchar()}}
+{\footnotesize\ttfamily \label{main_8c_abc513dd972081ae765b6949a62872eb7} 
+int \+\_\+\+\_\+io\+\_\+putchar (\begin{DoxyParamCaption}\item[{int}]{ch}{}\end{DoxyParamCaption})}
+
+\Hypertarget{main_8c_a1730ffe1e560465665eb47d9264826f9}\index{main.c@{main.c}!Error\_Handler@{Error\_Handler}}
+\index{Error\_Handler@{Error\_Handler}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Error\_Handler()}{Error\_Handler()}}
+{\footnotesize\ttfamily \label{main_8c_a1730ffe1e560465665eb47d9264826f9} 
+void Error\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+This function is executed in case of error occurrence. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8c_a840291bc02cba5474a4cb46a9b9566fe} 
+int main (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+The application entry point. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em int} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{main_8c_a70af21c671abfcc773614a9a4f63d920}\index{main.c@{main.c}!SystemClock\_Config@{SystemClock\_Config}}
+\index{SystemClock\_Config@{SystemClock\_Config}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{SystemClock\_Config()}{SystemClock\_Config()}}
+{\footnotesize\ttfamily \label{main_8c_a70af21c671abfcc773614a9a4f63d920} 
+void System\+Clock\+\_\+\+Config (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+System Clock Configuration. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Initializes the RCC Oscillators according to the specified parameters in the RCC\+\_\+\+Osc\+Init\+Type\+Def structure.
+
+Initializes the CPU, AHB and APB buses clocks
+
+\label{doc-var-members}
+\Hypertarget{main_8c_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{main_8c_a1042f2bd4c252f627d4988e3e8c5ff64}\index{main.c@{main.c}!menu\_1@{menu\_1}}
+\index{menu\_1@{menu\_1}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{menu\_1}{menu\_1}}
+{\footnotesize\ttfamily \label{main_8c_a1042f2bd4c252f627d4988e3e8c5ff64} 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} menu\+\_\+1 = \{"{}MEASURE"{}, \&\mbox{\hyperlink{_gen__libary_8h_a0ad56d48f2ece7dc10c2d43603013eea}{menu\+\_\+2}}, \&\mbox{\hyperlink{_gen__libary_8h_a9243b8bd7c864c95c461d6d693866e8e}{menu\+\_\+3}} , \&\mbox{\hyperlink{_gen__libary_8h_a4bbffd211a232c3b85853bcd94905bed}{sub\+\_\+menu\+\_\+1\+\_\+1}}, \mbox{\hyperlink{_h_d44780__callbacks_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \mbox{\hyperlink{_h_d44780__callbacks_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}\}}
+
+\Hypertarget{main_8c_a0ad56d48f2ece7dc10c2d43603013eea}\index{main.c@{main.c}!menu\_2@{menu\_2}}
+\index{menu\_2@{menu\_2}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{menu\_2}{menu\_2}}
+{\footnotesize\ttfamily \label{main_8c_a0ad56d48f2ece7dc10c2d43603013eea} 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} menu\+\_\+2 = \{"{}DISPLAY"{}, \&\mbox{\hyperlink{_gen__libary_8h_a9243b8bd7c864c95c461d6d693866e8e}{menu\+\_\+3}}, \&\mbox{\hyperlink{_gen__libary_8h_a1042f2bd4c252f627d4988e3e8c5ff64}{menu\+\_\+1}}, \&\mbox{\hyperlink{_gen__libary_8h_a1bb1c13ed0b921e92d0d140f0711597b}{sub\+\_\+menu\+\_\+2\+\_\+1}}, \mbox{\hyperlink{_h_d44780__callbacks_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \mbox{\hyperlink{_h_d44780__callbacks_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}\}}
+
+\Hypertarget{main_8c_a9243b8bd7c864c95c461d6d693866e8e}\index{main.c@{main.c}!menu\_3@{menu\_3}}
+\index{menu\_3@{menu\_3}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{menu\_3}{menu\_3}}
+{\footnotesize\ttfamily \label{main_8c_a9243b8bd7c864c95c461d6d693866e8e} 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} menu\+\_\+3 = \{"{}SET OFFSET"{}, \mbox{\hyperlink{_h_d44780__callbacks_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \&\mbox{\hyperlink{_gen__libary_8h_a0ad56d48f2ece7dc10c2d43603013eea}{menu\+\_\+2}}, \&\mbox{\hyperlink{_gen__libary_8h_a3a2e206f4ffe33a4c15964ad68ea7eed}{sub\+\_\+menu\+\_\+3\+\_\+1}}, \mbox{\hyperlink{_h_d44780__callbacks_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \mbox{\hyperlink{_h_d44780__callbacks_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}\}}
+
+\Hypertarget{main_8c_a4bbffd211a232c3b85853bcd94905bed}\index{main.c@{main.c}!sub\_menu\_1\_1@{sub\_menu\_1\_1}}
+\index{sub\_menu\_1\_1@{sub\_menu\_1\_1}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{sub\_menu\_1\_1}{sub\_menu\_1\_1}}
+{\footnotesize\ttfamily \label{main_8c_a4bbffd211a232c3b85853bcd94905bed} 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} sub\+\_\+menu\+\_\+1\+\_\+1 = \{"{}Realtime"{}, \&\mbox{\hyperlink{_gen__libary_8h_a545cff59b1d374bc8542b7306a102065}{sub\+\_\+menu\+\_\+1\+\_\+2}}, \&\mbox{\hyperlink{_gen__libary_8h_a545cff59b1d374bc8542b7306a102065}{sub\+\_\+menu\+\_\+1\+\_\+2}} , \mbox{\hyperlink{_h_d44780__callbacks_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \&\mbox{\hyperlink{_gen__libary_8h_a1042f2bd4c252f627d4988e3e8c5ff64}{menu\+\_\+1}}, \mbox{\hyperlink{_h_d44780__callbacks_8h_ad0772bfa94f8737f1c5abfabfe9a50d2}{disp\+\_\+weight\+\_\+callback}}\}}
+
+\Hypertarget{main_8c_a545cff59b1d374bc8542b7306a102065}\index{main.c@{main.c}!sub\_menu\_1\_2@{sub\_menu\_1\_2}}
+\index{sub\_menu\_1\_2@{sub\_menu\_1\_2}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{sub\_menu\_1\_2}{sub\_menu\_1\_2}}
+{\footnotesize\ttfamily \label{main_8c_a545cff59b1d374bc8542b7306a102065} 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} sub\+\_\+menu\+\_\+1\+\_\+2 = \{"{}Probes"{}, \mbox{\hyperlink{_h_d44780__callbacks_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \&\mbox{\hyperlink{_gen__libary_8h_a4bbffd211a232c3b85853bcd94905bed}{sub\+\_\+menu\+\_\+1\+\_\+1}} , \mbox{\hyperlink{_h_d44780__callbacks_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \&\mbox{\hyperlink{_gen__libary_8h_a1042f2bd4c252f627d4988e3e8c5ff64}{menu\+\_\+1}}, \mbox{\hyperlink{_h_d44780__callbacks_8h_a0877a13d4c0be515f7334748f1e8b8fe}{disp\+\_\+weight\+\_\+p\+\_\+callback}}\}}
+
+\Hypertarget{main_8c_a1bb1c13ed0b921e92d0d140f0711597b}\index{main.c@{main.c}!sub\_menu\_2\_1@{sub\_menu\_2\_1}}
+\index{sub\_menu\_2\_1@{sub\_menu\_2\_1}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{sub\_menu\_2\_1}{sub\_menu\_2\_1}}
+{\footnotesize\ttfamily \label{main_8c_a1bb1c13ed0b921e92d0d140f0711597b} 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} sub\+\_\+menu\+\_\+2\+\_\+1 = \{"{}Brightness"{}, \mbox{\hyperlink{_h_d44780__callbacks_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \&sub\+\_\+menu\+\_\+2\+\_\+1, \mbox{\hyperlink{_h_d44780__callbacks_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \&\mbox{\hyperlink{_gen__libary_8h_a0ad56d48f2ece7dc10c2d43603013eea}{menu\+\_\+2}}, \mbox{\hyperlink{_h_d44780__callbacks_8h_aae7c8f0c05c908a11fc5b2c4aab02bc4}{disp\+\_\+brightness\+\_\+callback}}\}}
+
+\Hypertarget{main_8c_a3a2e206f4ffe33a4c15964ad68ea7eed}\index{main.c@{main.c}!sub\_menu\_3\_1@{sub\_menu\_3\_1}}
+\index{sub\_menu\_3\_1@{sub\_menu\_3\_1}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{sub\_menu\_3\_1}{sub\_menu\_3\_1}}
+{\footnotesize\ttfamily \label{main_8c_a3a2e206f4ffe33a4c15964ad68ea7eed} 
+\mbox{\hyperlink{_gen__libary_8h_a97e60d7bd09a3ff2ac173f2d51d092ae}{menu\+\_\+t}} sub\+\_\+menu\+\_\+3\+\_\+1 = \{"{}Set custom"{}, \mbox{\hyperlink{_h_d44780__callbacks_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \&sub\+\_\+menu\+\_\+3\+\_\+1, \mbox{\hyperlink{_h_d44780__callbacks_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \&\mbox{\hyperlink{_gen__libary_8h_a9243b8bd7c864c95c461d6d693866e8e}{menu\+\_\+3}}, \mbox{\hyperlink{_h_d44780__callbacks_8h_a2cde31a5fa44c9e0d2b6bf576f32b63f}{disp\+\_\+set\+\_\+custom\+\_\+callback}}\}}
+

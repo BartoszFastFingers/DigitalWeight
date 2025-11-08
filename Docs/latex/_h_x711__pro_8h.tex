@@ -1,0 +1,248 @@
+\doxysection{HX711\+\_\+pro.\+h File Reference}
+\hypertarget{_h_x711__pro_8h}{}\label{_h_x711__pro_8h}\index{HX711\_pro.h@{HX711\_pro.h}}
+
+
+\doxylink{struct_h_x711}{HX711} load cell amplifier driver for STM32.  
+
+
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include "{}Gen\+\_\+libary.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_h_x711}{HX711}}
+\begin{DoxyCompactList}\small\item\em Structure representing an \doxylink{struct_h_x711}{HX711} load cell amplifier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_h_x711__pro_8h_a850647ac3c8cb13bcfd5f5beed93382f}{TOLERATION}}~250
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_h_x711__pro_8h_a5227bd7167500d865fb90125b0f0c1eb}{HX711\+\_\+default\+\_\+init}} (\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}hx711, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}clk\+\_\+port, uint16\+\_\+t clk\+\_\+pin, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}data\+\_\+port, uint16\+\_\+t data\+\_\+pin)
+\begin{DoxyCompactList}\small\item\em Initializes \doxylink{struct_h_x711}{HX711} with default settings. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_x711__pro_8h_aa1fd2584a37d780e0561b0acf1222298}{HX711\+\_\+full\+\_\+init}} (\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}hx711, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}clk\+\_\+port, uint16\+\_\+t clk\+\_\+pin, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}data\+\_\+port, uint16\+\_\+t data\+\_\+pin, long init\+\_\+offset\+\_\+val, uint32\+\_\+t init\+\_\+gain)
+\begin{DoxyCompactList}\small\item\em Initializes \doxylink{struct_h_x711}{HX711} with custom offset and gain. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{_h_x711__pro_8h_a86db5068069c6ce61d9e41c2f535c9cf}{HX711\+\_\+read}} (\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}hx711)
+\begin{DoxyCompactList}\small\item\em Reads a single raw measurement from the \doxylink{struct_h_x711}{HX711} ADC. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{_h_x711__pro_8h_a3167e4ee7fde93097a39fb9c6bdddf33}{HX711\+\_\+estimation\+\_\+read}} (\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}hx711, uint8\+\_\+t Estimation\+\_\+samples)
+\begin{DoxyCompactList}\small\item\em Performs a filtered read of the \doxylink{struct_h_x711}{HX711} using multiple samples. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_x711__pro_8h_a5ee363684077c8aadba08b33df70ca38}{HX711\+\_\+tar}} (\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}hx711)
+\begin{DoxyCompactList}\small\item\em Sets the current reading as the zero offset (tare) for the \doxylink{struct_h_x711}{HX711}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_x711__pro_8h_a6a8f3b9124531175476ec70bbfb15ff1}{HX711\+\_\+set\+\_\+gain}} (\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}hx711, uint32\+\_\+t gain)
+\begin{DoxyCompactList}\small\item\em Sets the gain factor for the \doxylink{struct_h_x711}{HX711} ADC. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_x711__pro_8h_a959d4b9e2e933081c907c0c9cbf850cc}{HX711\+\_\+estimation\+\_\+weight\+\_\+read}} (\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}hx711, uint8\+\_\+t samples)
+\begin{DoxyCompactList}\small\item\em Reads the weight from \doxylink{struct_h_x711}{HX711} using multiple samples and filtering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_x711__pro_8h_a1e40cd68ce557b2f95af224763bf3205}{HX711\+\_\+weight\+\_\+read\+\_\+fast}} (\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}hx711)
+\begin{DoxyCompactList}\small\item\em Reads the weight from \doxylink{struct_h_x711}{HX711} with a single raw measurement (fast read). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{struct_h_x711}{HX711} load cell amplifier driver for STM32. 
+
+\begin{DoxyAuthor}{Author}
+Bartosz Terlecki 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/08-\/05 
+\end{DoxyDate}
+Provides initialization, raw read, filtered read and tare functionality. 
+
+\label{doc-define-members}
+\Hypertarget{_h_x711__pro_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_h_x711__pro_8h_a850647ac3c8cb13bcfd5f5beed93382f}\index{HX711\_pro.h@{HX711\_pro.h}!TOLERATION@{TOLERATION}}
+\index{TOLERATION@{TOLERATION}!HX711\_pro.h@{HX711\_pro.h}}
+\doxysubsubsection{\texorpdfstring{TOLERATION}{TOLERATION}}
+{\footnotesize\ttfamily \label{_h_x711__pro_8h_a850647ac3c8cb13bcfd5f5beed93382f} 
+\#define TOLERATION~250}
+
+
+
+\label{doc-func-members}
+\Hypertarget{_h_x711__pro_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_h_x711__pro_8h_a5227bd7167500d865fb90125b0f0c1eb}\index{HX711\_pro.h@{HX711\_pro.h}!HX711\_default\_init@{HX711\_default\_init}}
+\index{HX711\_default\_init@{HX711\_default\_init}!HX711\_pro.h@{HX711\_pro.h}}
+\doxysubsubsection{\texorpdfstring{HX711\_default\_init()}{HX711\_default\_init()}}
+{\footnotesize\ttfamily \label{_h_x711__pro_8h_a5227bd7167500d865fb90125b0f0c1eb} 
+void HX711\+\_\+default\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}}]{hx711}{, }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{clk\+\_\+port}{, }\item[{uint16\+\_\+t}]{clk\+\_\+pin}{, }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{data\+\_\+port}{, }\item[{uint16\+\_\+t}]{data\+\_\+pin}{}\end{DoxyParamCaption})}
+
+
+
+Initializes \doxylink{struct_h_x711}{HX711} with default settings. 
+
+Sets gain = 128 (highest sensitivity) and offset = 0. This function provides a quick way to start using \doxylink{struct_h_x711}{HX711} without advanced configuration.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hx711} & Pointer to \doxylink{struct_h_x711}{HX711} handle structure. \\
+\hline
+{\em clk\+\_\+port} & GPIO port for CLK pin. \\
+\hline
+{\em clk\+\_\+pin} & GPIO pin for CLK pin. \\
+\hline
+{\em data\+\_\+port} & GPIO port for DATA pin. \\
+\hline
+{\em data\+\_\+pin} & GPIO pin for DATA pin. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_h_x711__pro_8h_a3167e4ee7fde93097a39fb9c6bdddf33}\index{HX711\_pro.h@{HX711\_pro.h}!HX711\_estimation\_read@{HX711\_estimation\_read}}
+\index{HX711\_estimation\_read@{HX711\_estimation\_read}!HX711\_pro.h@{HX711\_pro.h}}
+\doxysubsubsection{\texorpdfstring{HX711\_estimation\_read()}{HX711\_estimation\_read()}}
+{\footnotesize\ttfamily \label{_h_x711__pro_8h_a3167e4ee7fde93097a39fb9c6bdddf33} 
+long HX711\+\_\+estimation\+\_\+read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}}]{hx711}{, }\item[{uint8\+\_\+t}]{Estimation\+\_\+samples}{}\end{DoxyParamCaption})}
+
+
+
+Performs a filtered read of the \doxylink{struct_h_x711}{HX711} using multiple samples. 
+
+This function reads the \doxylink{struct_h_x711}{HX711} ADC multiple times (specified by {\ttfamily Estimation\+\_\+samples}), sorts the results, and computes a filtered average by excluding outliers beyond a defined tolerance ({\ttfamily TOLERATION}). It is useful for reducing noise in weight measurements.
+
+Steps performed by the function\+:
+\begin{DoxyEnumerate}
+\item Reads {\ttfamily Estimation\+\_\+samples} raw values using {\ttfamily \doxylink{_h_x711__pro_8h_a86db5068069c6ce61d9e41c2f535c9cf}{HX711\+\_\+read()}}.
+\begin{DoxyItemize}
+\item If the device is not ready ({\ttfamily IS\+\_\+\+NOT\+\_\+\+READY}), the sample is retried.
+\end{DoxyItemize}
+\item Sorts the array of samples using {\ttfamily Bubble\+Sort()}.
+\item Computes the median of the samples.
+\item Sums only the values that are within {\ttfamily TOLERATION} of the median.
+\item Calculates the average of the filtered samples and subtracts the \doxylink{struct_h_x711}{HX711} offset.
+\item Stores the filtered result in {\ttfamily hx711-\/\texorpdfstring{$>$}{>}last\+\_\+estimation\+\_\+read} and returns it.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em hx711} & Pointer to \doxylink{struct_h_x711}{HX711} handle structure. \\
+\hline
+{\em Estimation\+\_\+samples} & Number of samples to take for estimation/filtering. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Filtered measurement as a long integer. If no sample is within tolerance, the function returns the median of all samples. 
+\end{DoxyReturn}
+\Hypertarget{_h_x711__pro_8h_a959d4b9e2e933081c907c0c9cbf850cc}\index{HX711\_pro.h@{HX711\_pro.h}!HX711\_estimation\_weight\_read@{HX711\_estimation\_weight\_read}}
+\index{HX711\_estimation\_weight\_read@{HX711\_estimation\_weight\_read}!HX711\_pro.h@{HX711\_pro.h}}
+\doxysubsubsection{\texorpdfstring{HX711\_estimation\_weight\_read()}{HX711\_estimation\_weight\_read()}}
+{\footnotesize\ttfamily \label{_h_x711__pro_8h_a959d4b9e2e933081c907c0c9cbf850cc} 
+void HX711\+\_\+estimation\+\_\+weight\+\_\+read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}}]{hx711}{, }\item[{uint8\+\_\+t}]{samples}{}\end{DoxyParamCaption})}
+
+
+
+Reads the weight from \doxylink{struct_h_x711}{HX711} using multiple samples and filtering. 
+
+This function performs a filtered read using {\ttfamily \doxylink{_h_x711__pro_8h_a3167e4ee7fde93097a39fb9c6bdddf33}{HX711\+\_\+estimation\+\_\+read()}} with the specified number of samples. The raw value is then converted to a weight approximation by dividing by 981 and subtracting the current offset.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hx711} & Pointer to \doxylink{struct_h_x711}{HX711} handle structure. \\
+\hline
+{\em samples} & Number of samples to take for estimation/filtering. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_h_x711__pro_8h_aa1fd2584a37d780e0561b0acf1222298}\index{HX711\_pro.h@{HX711\_pro.h}!HX711\_full\_init@{HX711\_full\_init}}
+\index{HX711\_full\_init@{HX711\_full\_init}!HX711\_pro.h@{HX711\_pro.h}}
+\doxysubsubsection{\texorpdfstring{HX711\_full\_init()}{HX711\_full\_init()}}
+{\footnotesize\ttfamily \label{_h_x711__pro_8h_aa1fd2584a37d780e0561b0acf1222298} 
+void HX711\+\_\+full\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}}]{hx711}{, }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{clk\+\_\+port}{, }\item[{uint16\+\_\+t}]{clk\+\_\+pin}{, }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{data\+\_\+port}{, }\item[{uint16\+\_\+t}]{data\+\_\+pin}{, }\item[{long}]{init\+\_\+offset\+\_\+val}{, }\item[{uint32\+\_\+t}]{init\+\_\+gain}{}\end{DoxyParamCaption})}
+
+
+
+Initializes \doxylink{struct_h_x711}{HX711} with custom offset and gain. 
+
+Unlike \doxylink{_h_x711__pro_8h_a5227bd7167500d865fb90125b0f0c1eb}{HX711\+\_\+default\+\_\+init()}, this function allows you to specify both the initial offset value and the gain setting. Useful when calibration values are already known or when more control over initialization is needed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hx711} & Pointer to \doxylink{struct_h_x711}{HX711} handle structure. \\
+\hline
+{\em clk\+\_\+port} & GPIO port for CLK pin. \\
+\hline
+{\em clk\+\_\+pin} & GPIO pin for CLK pin. \\
+\hline
+{\em data\+\_\+port} & GPIO port for DATA pin. \\
+\hline
+{\em data\+\_\+pin} & GPIO pin for DATA pin. \\
+\hline
+{\em init\+\_\+offset\+\_\+val} & Initial offset value (tare calibration). \\
+\hline
+{\em init\+\_\+gain} & Gain factor (valid values\+: 128, 64, 32). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_h_x711__pro_8h_a86db5068069c6ce61d9e41c2f535c9cf}\index{HX711\_pro.h@{HX711\_pro.h}!HX711\_read@{HX711\_read}}
+\index{HX711\_read@{HX711\_read}!HX711\_pro.h@{HX711\_pro.h}}
+\doxysubsubsection{\texorpdfstring{HX711\_read()}{HX711\_read()}}
+{\footnotesize\ttfamily \label{_h_x711__pro_8h_a86db5068069c6ce61d9e41c2f535c9cf} 
+long HX711\+\_\+read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}}]{hx711}{}\end{DoxyParamCaption})}
+
+
+
+Reads a single raw measurement from the \doxylink{struct_h_x711}{HX711} ADC. 
+
+This function performs a blocking read of the \doxylink{struct_h_x711}{HX711} data. It first checks if the \doxylink{struct_h_x711}{HX711} is ready using {\ttfamily is\+Ready()}. If the device is not ready, it returns the special value {\ttfamily IS\+\_\+\+NOT\+\_\+\+READY}.
+
+The function reads 3 bytes from the \doxylink{struct_h_x711}{HX711}, applies the configured gain, and converts the 24-\/bit two\textquotesingle{}s complement value into a signed long.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hx711} & Pointer to \doxylink{struct_h_x711}{HX711} handle structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Signed 32-\/bit value representing the raw ADC measurement. Returns {\ttfamily IS\+\_\+\+NOT\+\_\+\+READY} if \doxylink{struct_h_x711}{HX711} is not ready. 
+\end{DoxyReturn}
+\Hypertarget{_h_x711__pro_8h_a6a8f3b9124531175476ec70bbfb15ff1}\index{HX711\_pro.h@{HX711\_pro.h}!HX711\_set\_gain@{HX711\_set\_gain}}
+\index{HX711\_set\_gain@{HX711\_set\_gain}!HX711\_pro.h@{HX711\_pro.h}}
+\doxysubsubsection{\texorpdfstring{HX711\_set\_gain()}{HX711\_set\_gain()}}
+{\footnotesize\ttfamily \label{_h_x711__pro_8h_a6a8f3b9124531175476ec70bbfb15ff1} 
+void HX711\+\_\+set\+\_\+gain (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}}]{hx711}{, }\item[{uint32\+\_\+t}]{gain}{}\end{DoxyParamCaption})}
+
+
+
+Sets the gain factor for the \doxylink{struct_h_x711}{HX711} ADC. 
+
+This function updates the {\ttfamily gain} field in the \doxylink{struct_h_x711}{HX711} handle structure. Valid gain values are 128 (highest sensitivity), 64, or 32 (lowest sensitivity). If an invalid value is provided, the gain defaults to 128.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hx711} & Pointer to \doxylink{struct_h_x711}{HX711} handle structure. \\
+\hline
+{\em gain} & Desired gain factor (valid values\+: 128, 64, 32). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_h_x711__pro_8h_a5ee363684077c8aadba08b33df70ca38}\index{HX711\_pro.h@{HX711\_pro.h}!HX711\_tar@{HX711\_tar}}
+\index{HX711\_tar@{HX711\_tar}!HX711\_pro.h@{HX711\_pro.h}}
+\doxysubsubsection{\texorpdfstring{HX711\_tar()}{HX711\_tar()}}
+{\footnotesize\ttfamily \label{_h_x711__pro_8h_a5ee363684077c8aadba08b33df70ca38} 
+void HX711\+\_\+tar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}}]{hx711}{}\end{DoxyParamCaption})}
+
+
+
+Sets the current reading as the zero offset (tare) for the \doxylink{struct_h_x711}{HX711}. 
+
+This function updates the \doxylink{struct_h_x711}{HX711} handle\textquotesingle{}s {\ttfamily offset\+\_\+val} by adding the last filtered measurement ({\ttfamily last\+\_\+estimation\+\_\+read}). After calling this function, subsequent readings will be zeroed relative to the current weight on the load cell.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hx711} & Pointer to \doxylink{struct_h_x711}{HX711} handle structure. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_h_x711__pro_8h_a1e40cd68ce557b2f95af224763bf3205}\index{HX711\_pro.h@{HX711\_pro.h}!HX711\_weight\_read\_fast@{HX711\_weight\_read\_fast}}
+\index{HX711\_weight\_read\_fast@{HX711\_weight\_read\_fast}!HX711\_pro.h@{HX711\_pro.h}}
+\doxysubsubsection{\texorpdfstring{HX711\_weight\_read\_fast()}{HX711\_weight\_read\_fast()}}
+{\footnotesize\ttfamily \label{_h_x711__pro_8h_a1e40cd68ce557b2f95af224763bf3205} 
+void HX711\+\_\+weight\+\_\+read\+\_\+fast (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_x711}{HX711}} \texorpdfstring{$\ast$}{*}}]{hx711}{}\end{DoxyParamCaption})}
+
+
+
+Reads the weight from \doxylink{struct_h_x711}{HX711} with a single raw measurement (fast read). 
+
+This function reads a single raw value from the \doxylink{struct_h_x711}{HX711} ADC using {\ttfamily \doxylink{_h_x711__pro_8h_a86db5068069c6ce61d9e41c2f535c9cf}{HX711\+\_\+read()}}, converts it to an approximate weight by dividing by 981, and subtracts the offset. It does not perform any filtering, so it is faster but may be noisier.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hx711} & Pointer to \doxylink{struct_h_x711}{HX711} handle structure. \\
+\hline
+\end{DoxyParams}

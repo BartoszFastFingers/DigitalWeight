@@ -1,0 +1,38 @@
+\doxysection{Keypad.\+h}
+\hypertarget{_keypad_8h_source}{}\label{_keypad_8h_source}\mbox{\hyperlink{_keypad_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifndef\ INC\_KEYPAD\_H\_}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ INC\_KEYPAD\_H\_}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_gen__libary_8h}{Gen\_libary.h}}"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{struct_keypad_adc5a7075d2ab6ed2208a2bf7280a6c54}{key\_map}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{bool}*\ \mbox{\hyperlink{struct_keypad_ae2b17ca937a10c35a44c3cd540c8478f}{read}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{bool}*\ \mbox{\hyperlink{struct_keypad_a830066adc6ef5017925132b015dd0199}{stable}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}*\ \mbox{\hyperlink{struct_keypad_a76546e62c42814e70d0e3247d8afc288}{last\_read}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{bool}*\ \mbox{\hyperlink{struct_keypad_aac6cb190c5e24bdf8f070d2c20f585b4}{pressed}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ uint32\_t*\ \mbox{\hyperlink{struct_keypad_ab69ac56fb09f4635ba97661d30c56a44}{last\_debounce}};\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{structpin__t}{pin\_t}}*\ \mbox{\hyperlink{struct_keypad_a6988a479d79bc69cadaff309fd6db934}{R}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{structpin__t}{pin\_t}}*\ \mbox{\hyperlink{struct_keypad_a9ca4f29b5a1265a6b325130b3a6ab205}{C}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_keypad_adaa1a9f8ec83339cdb661714f5bd2c97}{rows}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_keypad_a9bf6c19eefefcddca5f152099add491c}{columns}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00036\ \}\ \mbox{\hyperlink{struct_keypad}{Keypad}};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_keypad_8h_a28a55f92abc3cd810f4d20f53d85ee5e}{Keypad\_init}}(\mbox{\hyperlink{struct_keypad}{Keypad}}*\ keypad,\ \mbox{\hyperlink{structpin__t}{pin\_t}}*\ R\_pins,\ \mbox{\hyperlink{structpin__t}{pin\_t}}*\ C\_pins,\ uint8\_t\ rows,\ uint8\_t\ columns);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_keypad_8h_ad5361f66a9a7547e5a5cfc6810c26bdc}{Keypad\_scan}}(\mbox{\hyperlink{struct_keypad}{Keypad}}*\ keypad);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00051\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_keypad_8h_a8eff8ece3d8fa6bc045b2d9df3381aca}{Keypad\_get\_pressed}}(\mbox{\hyperlink{struct_keypad}{Keypad}}*\ keypad);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{_keypad_8h_ae15569c2b6c321387c7e045a8f5b7f59}{Keypad\_return\_val}}(\mbox{\hyperlink{struct_keypad}{Keypad}}*\ keypad);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_KEYPAD\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,255 @@
+\doxysection{Joystick.\+h File Reference}
+\hypertarget{_joystick_8h}{}\label{_joystick_8h}\index{Joystick.h@{Joystick.h}}
+{\ttfamily \#include "{}Gen\+\_\+libary.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_joystick}{Joystick}}
+\begin{DoxyCompactList}\small\item\em Structure representing a 5-\/way joystick. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_joystick_8h_a747e9f9f2043a934b488c63651baf285}{Joystick\+Init}} (\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}J, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}up\+\_\+port, uint16\+\_\+t up\+\_\+pin, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}right\+\_\+port, uint16\+\_\+t right\+\_\+pin, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}down\+\_\+port, uint16\+\_\+t down\+\_\+pin, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}left\+\_\+port, uint16\+\_\+t left\+\_\+pin, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}click\+\_\+port, uint16\+\_\+t click\+\_\+pin)
+\begin{DoxyCompactList}\small\item\em Initializes the joystick with specified GPIO ports and pins. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_joystick_8h_ad94374537ad25b5fc4c8f1f4f64674e2}{is\+\_\+up\+\_\+pressed}} (\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}J)
+\begin{DoxyCompactList}\small\item\em Check if the UP button is pressed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_joystick_8h_a5444e66c3970ae7da03e0c0174c13b8b}{is\+\_\+right\+\_\+pressed}} (\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}J)
+\begin{DoxyCompactList}\small\item\em Check if the RIGHT button is pressed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_joystick_8h_ae74cd60b6d3dc3714a940723cfe4cd17}{is\+\_\+down\+\_\+pressed}} (\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}J)
+\begin{DoxyCompactList}\small\item\em Check if the DOWN button is pressed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_joystick_8h_ab87b21457ecd00a677986ad4d6d6dc70}{is\+\_\+left\+\_\+pressed}} (\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}J)
+\begin{DoxyCompactList}\small\item\em Check if the LEFT button is pressed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_joystick_8h_a2fa9124accec0664c8980d167232755f}{is\+\_\+click\+\_\+pressed}} (\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}J)
+\begin{DoxyCompactList}\small\item\em Check if the CLICK button is pressed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_joystick_8h_a1af2c5480793c70f9ec543e63337cd64}{while\+\_\+up\+\_\+pressed}} (\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}J)
+\begin{DoxyCompactList}\small\item\em Executes a loop while UP button is pressed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_joystick_8h_a5bd37aeb5dec57d54accbf22803d51a0}{while\+\_\+right\+\_\+pressed}} (\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}J)
+\begin{DoxyCompactList}\small\item\em Executes a loop while RIGHT button is pressed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_joystick_8h_ab98aa32ca1a126b53d2917bb962414b1}{while\+\_\+down\+\_\+pressed}} (\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}J)
+\begin{DoxyCompactList}\small\item\em Executes a loop while DOWN button is pressed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_joystick_8h_aa14f1fac33761314a052941320ff6cdc}{while\+\_\+left\+\_\+pressed}} (\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}J)
+\begin{DoxyCompactList}\small\item\em Executes a loop while LEFT button is pressed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_joystick_8h_a937c91fe12170c5771903d92b9a71eff}{while\+\_\+click\+\_\+pressed}} (\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}J)
+\begin{DoxyCompactList}\small\item\em Executes a loop while CLICK button is pressed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_joystick_8h_a50bb9c30188354157cb4710b855243f5}{pool\+\_\+joystick}} (\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}J)
+\begin{DoxyCompactList}\small\item\em Polls the joystick to update debounced and stable states. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{_joystick_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_joystick_8h_a2fa9124accec0664c8980d167232755f}\index{Joystick.h@{Joystick.h}!is\_click\_pressed@{is\_click\_pressed}}
+\index{is\_click\_pressed@{is\_click\_pressed}!Joystick.h@{Joystick.h}}
+\doxysubsubsection{\texorpdfstring{is\_click\_pressed()}{is\_click\_pressed()}}
+{\footnotesize\ttfamily \label{_joystick_8h_a2fa9124accec0664c8980d167232755f} 
+bool is\+\_\+click\+\_\+pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}}]{J}{}\end{DoxyParamCaption})}
+
+
+
+Check if the CLICK button is pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em J} & Pointer to \doxylink{struct_joystick}{Joystick} structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if pressed, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{_joystick_8h_ae74cd60b6d3dc3714a940723cfe4cd17}\index{Joystick.h@{Joystick.h}!is\_down\_pressed@{is\_down\_pressed}}
+\index{is\_down\_pressed@{is\_down\_pressed}!Joystick.h@{Joystick.h}}
+\doxysubsubsection{\texorpdfstring{is\_down\_pressed()}{is\_down\_pressed()}}
+{\footnotesize\ttfamily \label{_joystick_8h_ae74cd60b6d3dc3714a940723cfe4cd17} 
+bool is\+\_\+down\+\_\+pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}}]{J}{}\end{DoxyParamCaption})}
+
+
+
+Check if the DOWN button is pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em J} & Pointer to \doxylink{struct_joystick}{Joystick} structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if pressed, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{_joystick_8h_ab87b21457ecd00a677986ad4d6d6dc70}\index{Joystick.h@{Joystick.h}!is\_left\_pressed@{is\_left\_pressed}}
+\index{is\_left\_pressed@{is\_left\_pressed}!Joystick.h@{Joystick.h}}
+\doxysubsubsection{\texorpdfstring{is\_left\_pressed()}{is\_left\_pressed()}}
+{\footnotesize\ttfamily \label{_joystick_8h_ab87b21457ecd00a677986ad4d6d6dc70} 
+bool is\+\_\+left\+\_\+pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}}]{J}{}\end{DoxyParamCaption})}
+
+
+
+Check if the LEFT button is pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em J} & Pointer to \doxylink{struct_joystick}{Joystick} structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if pressed, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{_joystick_8h_a5444e66c3970ae7da03e0c0174c13b8b}\index{Joystick.h@{Joystick.h}!is\_right\_pressed@{is\_right\_pressed}}
+\index{is\_right\_pressed@{is\_right\_pressed}!Joystick.h@{Joystick.h}}
+\doxysubsubsection{\texorpdfstring{is\_right\_pressed()}{is\_right\_pressed()}}
+{\footnotesize\ttfamily \label{_joystick_8h_a5444e66c3970ae7da03e0c0174c13b8b} 
+bool is\+\_\+right\+\_\+pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}}]{J}{}\end{DoxyParamCaption})}
+
+
+
+Check if the RIGHT button is pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em J} & Pointer to \doxylink{struct_joystick}{Joystick} structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if pressed, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{_joystick_8h_ad94374537ad25b5fc4c8f1f4f64674e2}\index{Joystick.h@{Joystick.h}!is\_up\_pressed@{is\_up\_pressed}}
+\index{is\_up\_pressed@{is\_up\_pressed}!Joystick.h@{Joystick.h}}
+\doxysubsubsection{\texorpdfstring{is\_up\_pressed()}{is\_up\_pressed()}}
+{\footnotesize\ttfamily \label{_joystick_8h_ad94374537ad25b5fc4c8f1f4f64674e2} 
+bool is\+\_\+up\+\_\+pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}}]{J}{}\end{DoxyParamCaption})}
+
+
+
+Check if the UP button is pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em J} & Pointer to \doxylink{struct_joystick}{Joystick} structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if pressed, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{_joystick_8h_a747e9f9f2043a934b488c63651baf285}\index{Joystick.h@{Joystick.h}!JoystickInit@{JoystickInit}}
+\index{JoystickInit@{JoystickInit}!Joystick.h@{Joystick.h}}
+\doxysubsubsection{\texorpdfstring{JoystickInit()}{JoystickInit()}}
+{\footnotesize\ttfamily \label{_joystick_8h_a747e9f9f2043a934b488c63651baf285} 
+void Joystick\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}}]{J}{, }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{up\+\_\+port}{, }\item[{uint16\+\_\+t}]{up\+\_\+pin}{, }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{right\+\_\+port}{, }\item[{uint16\+\_\+t}]{right\+\_\+pin}{, }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{down\+\_\+port}{, }\item[{uint16\+\_\+t}]{down\+\_\+pin}{, }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{left\+\_\+port}{, }\item[{uint16\+\_\+t}]{left\+\_\+pin}{, }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{click\+\_\+port}{, }\item[{uint16\+\_\+t}]{click\+\_\+pin}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the joystick with specified GPIO ports and pins. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em J} & Pointer to \doxylink{struct_joystick}{Joystick} structure. \\
+\hline
+{\em up\+\_\+port} & GPIO port for UP direction. \\
+\hline
+{\em up\+\_\+pin} & GPIO pin for UP direction. \\
+\hline
+{\em right\+\_\+port} & GPIO port for RIGHT direction. \\
+\hline
+{\em right\+\_\+pin} & GPIO pin for RIGHT direction. \\
+\hline
+{\em down\+\_\+port} & GPIO port for DOWN direction. \\
+\hline
+{\em down\+\_\+pin} & GPIO pin for DOWN direction. \\
+\hline
+{\em left\+\_\+port} & GPIO port for LEFT direction. \\
+\hline
+{\em left\+\_\+pin} & GPIO pin for LEFT direction. \\
+\hline
+{\em click\+\_\+port} & GPIO port for CLICK button. \\
+\hline
+{\em click\+\_\+pin} & GPIO pin for CLICK button. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_joystick_8h_a50bb9c30188354157cb4710b855243f5}\index{Joystick.h@{Joystick.h}!pool\_joystick@{pool\_joystick}}
+\index{pool\_joystick@{pool\_joystick}!Joystick.h@{Joystick.h}}
+\doxysubsubsection{\texorpdfstring{pool\_joystick()}{pool\_joystick()}}
+{\footnotesize\ttfamily \label{_joystick_8h_a50bb9c30188354157cb4710b855243f5} 
+void pool\+\_\+joystick (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}}]{J}{}\end{DoxyParamCaption})}
+
+
+
+Polls the joystick to update debounced and stable states. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em J} & Pointer to \doxylink{struct_joystick}{Joystick} structure. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_joystick_8h_a937c91fe12170c5771903d92b9a71eff}\index{Joystick.h@{Joystick.h}!while\_click\_pressed@{while\_click\_pressed}}
+\index{while\_click\_pressed@{while\_click\_pressed}!Joystick.h@{Joystick.h}}
+\doxysubsubsection{\texorpdfstring{while\_click\_pressed()}{while\_click\_pressed()}}
+{\footnotesize\ttfamily \label{_joystick_8h_a937c91fe12170c5771903d92b9a71eff} 
+void while\+\_\+click\+\_\+pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}}]{J}{}\end{DoxyParamCaption})}
+
+
+
+Executes a loop while CLICK button is pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em J} & Pointer to \doxylink{struct_joystick}{Joystick} structure. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_joystick_8h_ab98aa32ca1a126b53d2917bb962414b1}\index{Joystick.h@{Joystick.h}!while\_down\_pressed@{while\_down\_pressed}}
+\index{while\_down\_pressed@{while\_down\_pressed}!Joystick.h@{Joystick.h}}
+\doxysubsubsection{\texorpdfstring{while\_down\_pressed()}{while\_down\_pressed()}}
+{\footnotesize\ttfamily \label{_joystick_8h_ab98aa32ca1a126b53d2917bb962414b1} 
+void while\+\_\+down\+\_\+pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}}]{J}{}\end{DoxyParamCaption})}
+
+
+
+Executes a loop while DOWN button is pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em J} & Pointer to \doxylink{struct_joystick}{Joystick} structure. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_joystick_8h_aa14f1fac33761314a052941320ff6cdc}\index{Joystick.h@{Joystick.h}!while\_left\_pressed@{while\_left\_pressed}}
+\index{while\_left\_pressed@{while\_left\_pressed}!Joystick.h@{Joystick.h}}
+\doxysubsubsection{\texorpdfstring{while\_left\_pressed()}{while\_left\_pressed()}}
+{\footnotesize\ttfamily \label{_joystick_8h_aa14f1fac33761314a052941320ff6cdc} 
+void while\+\_\+left\+\_\+pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}}]{J}{}\end{DoxyParamCaption})}
+
+
+
+Executes a loop while LEFT button is pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em J} & Pointer to \doxylink{struct_joystick}{Joystick} structure. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_joystick_8h_a5bd37aeb5dec57d54accbf22803d51a0}\index{Joystick.h@{Joystick.h}!while\_right\_pressed@{while\_right\_pressed}}
+\index{while\_right\_pressed@{while\_right\_pressed}!Joystick.h@{Joystick.h}}
+\doxysubsubsection{\texorpdfstring{while\_right\_pressed()}{while\_right\_pressed()}}
+{\footnotesize\ttfamily \label{_joystick_8h_a5bd37aeb5dec57d54accbf22803d51a0} 
+void while\+\_\+right\+\_\+pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}}]{J}{}\end{DoxyParamCaption})}
+
+
+
+Executes a loop while RIGHT button is pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em J} & Pointer to \doxylink{struct_joystick}{Joystick} structure. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_joystick_8h_a1af2c5480793c70f9ec543e63337cd64}\index{Joystick.h@{Joystick.h}!while\_up\_pressed@{while\_up\_pressed}}
+\index{while\_up\_pressed@{while\_up\_pressed}!Joystick.h@{Joystick.h}}
+\doxysubsubsection{\texorpdfstring{while\_up\_pressed()}{while\_up\_pressed()}}
+{\footnotesize\ttfamily \label{_joystick_8h_a1af2c5480793c70f9ec543e63337cd64} 
+void while\+\_\+up\+\_\+pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_joystick}{Joystick}} \texorpdfstring{$\ast$}{*}}]{J}{}\end{DoxyParamCaption})}
+
+
+
+Executes a loop while UP button is pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em J} & Pointer to \doxylink{struct_joystick}{Joystick} structure. \\
+\hline
+\end{DoxyParams}

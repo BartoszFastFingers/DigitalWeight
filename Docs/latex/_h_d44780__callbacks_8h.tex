@@ -1,0 +1,274 @@
+\doxysection{HD44780\+\_\+callbacks.\+h File Reference}
+\hypertarget{_h_d44780__callbacks_8h}{}\label{_h_d44780__callbacks_8h}\index{HD44780\_callbacks.h@{HD44780\_callbacks.h}}
+
+
+Callback functions for \doxylink{struct_h_d44780}{HD44780} LCD display and menu control.  
+
+
+{\ttfamily \#include "{}Joystick\+\_\+menu.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_h_d44780__callbacks_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}~0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_h_d44780__callbacks_8h_ad0772bfa94f8737f1c5abfabfe9a50d2}{disp\+\_\+weight\+\_\+callback}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}state)
+\begin{DoxyCompactList}\small\item\em Callback to display current weight. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_d44780__callbacks_8h_a0877a13d4c0be515f7334748f1e8b8fe}{disp\+\_\+weight\+\_\+p\+\_\+callback}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}state)
+\begin{DoxyCompactList}\small\item\em Callback to prompt for number of weight probes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_d44780__callbacks_8h_a2cde31a5fa44c9e0d2b6bf576f32b63f}{disp\+\_\+set\+\_\+custom\+\_\+callback}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}state)
+\begin{DoxyCompactList}\small\item\em Callback to set a custom offset value via keypad. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_d44780__callbacks_8h_aae7c8f0c05c908a11fc5b2c4aab02bc4}{disp\+\_\+brightness\+\_\+callback}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}state)
+\begin{DoxyCompactList}\small\item\em Callback to enter brightness adjustment menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_d44780__callbacks_8h_a6bd9698f2021c5e4818998324ac8247f}{disp\+\_\+brightness\+\_\+refresh}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}HD)
+\begin{DoxyCompactList}\small\item\em Refreshes the LCD to show current brightness value as a bar graph. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_d44780__callbacks_8h_a21778d01299a1cf75a1dd7001507e1a4}{disp\+\_\+brightness\+\_\+enter}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}HD)
+\begin{DoxyCompactList}\small\item\em Increases brightness by 10\%. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_d44780__callbacks_8h_a62f6be1fa341f10047cd2765568c988a}{disp\+\_\+brightness\+\_\+back}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}HD)
+\begin{DoxyCompactList}\small\item\em Decreases brightness by 10\%. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_d44780__callbacks_8h_ad6e4fb908d2b8d6ec9766cb3a35d53ba}{disp\+\_\+brightness\+\_\+on}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}HD)
+\begin{DoxyCompactList}\small\item\em Activates the brightness menu selection and returns to main menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_d44780__callbacks_8h_aec4153c1134716365a165fff4b321219}{disp\+\_\+weight\+\_\+refresh}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}HD)
+\begin{DoxyCompactList}\small\item\em Refreshes the LCD to display current weight. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_d44780__callbacks_8h_a6fedbd07932d8bde10bd23aeb2bb38a8}{disp\+\_\+weight\+\_\+p\+\_\+refresh}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}HD)
+\begin{DoxyCompactList}\small\item\em Refreshes the LCD to prompt for probe count input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_d44780__callbacks_8h_a1a17902b945598d6a5d16743f8c409f9}{disp\+\_\+weight\+\_\+p\+\_\+ok}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}HD)
+\begin{DoxyCompactList}\small\item\em Displays weight after probe measurements. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_d44780__callbacks_8h_a2cd1d8615e358c15a48dfad076d19a6c}{disp\+\_\+set\+\_\+custom\+\_\+refresh}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}HD)
+\begin{DoxyCompactList}\small\item\em Refreshes the custom offset menu and reads input from keypad. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_d44780__callbacks_8h_a11b766677bdbf83f3e4c3585a993e931}{disp\+\_\+menu\+\_\+fun\+\_\+callbacks\+\_\+state\+\_\+machine}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}HD)
+\begin{DoxyCompactList}\small\item\em Main state machine handling menu callbacks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Callback functions for \doxylink{struct_h_d44780}{HD44780} LCD display and menu control. 
+
+Provides a set of callback functions for\+:
+\begin{DoxyItemize}
+\item Displaying weight and probe count
+\item Adjusting display brightness
+\item Setting custom offset values
+\item Handling menu navigation and state machine
+\end{DoxyItemize}
+
+These functions interact with the \doxylink{struct_h_d44780}{HD44780} buffer, keypad input, and \doxylink{struct_h_x711}{HX711} weight sensor to manage real-\/time display updates and menu interactions on STM32-\/based projects.
+
+\begin{DoxyAuthor}{Author}
+barte 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Aug 20, 2025 
+\end{DoxyDate}
+
+
+\label{doc-define-members}
+\Hypertarget{_h_d44780__callbacks_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_h_d44780__callbacks_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}\index{HD44780\_callbacks.h@{HD44780\_callbacks.h}!NULL@{NULL}}
+\index{NULL@{NULL}!HD44780\_callbacks.h@{HD44780\_callbacks.h}}
+\doxysubsubsection{\texorpdfstring{NULL}{NULL}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4} 
+\#define NULL~0}
+
+
+
+\label{doc-func-members}
+\Hypertarget{_h_d44780__callbacks_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_h_d44780__callbacks_8h_a62f6be1fa341f10047cd2765568c988a}\index{HD44780\_callbacks.h@{HD44780\_callbacks.h}!disp\_brightness\_back@{disp\_brightness\_back}}
+\index{disp\_brightness\_back@{disp\_brightness\_back}!HD44780\_callbacks.h@{HD44780\_callbacks.h}}
+\doxysubsubsection{\texorpdfstring{disp\_brightness\_back()}{disp\_brightness\_back()}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8h_a62f6be1fa341f10047cd2765568c988a} 
+void disp\+\_\+brightness\+\_\+back (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{HD}{}\end{DoxyParamCaption})}
+
+
+
+Decreases brightness by 10\%. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em HD} & Pointer to the \doxylink{struct_h_d44780}{HD44780} structure. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_h_d44780__callbacks_8h_aae7c8f0c05c908a11fc5b2c4aab02bc4}\index{HD44780\_callbacks.h@{HD44780\_callbacks.h}!disp\_brightness\_callback@{disp\_brightness\_callback}}
+\index{disp\_brightness\_callback@{disp\_brightness\_callback}!HD44780\_callbacks.h@{HD44780\_callbacks.h}}
+\doxysubsubsection{\texorpdfstring{disp\_brightness\_callback()}{disp\_brightness\_callback()}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8h_aae7c8f0c05c908a11fc5b2c4aab02bc4} 
+void disp\+\_\+brightness\+\_\+callback (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Callback to enter brightness adjustment menu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Pointer to the menu state variable. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_h_d44780__callbacks_8h_a21778d01299a1cf75a1dd7001507e1a4}\index{HD44780\_callbacks.h@{HD44780\_callbacks.h}!disp\_brightness\_enter@{disp\_brightness\_enter}}
+\index{disp\_brightness\_enter@{disp\_brightness\_enter}!HD44780\_callbacks.h@{HD44780\_callbacks.h}}
+\doxysubsubsection{\texorpdfstring{disp\_brightness\_enter()}{disp\_brightness\_enter()}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8h_a21778d01299a1cf75a1dd7001507e1a4} 
+void disp\+\_\+brightness\+\_\+enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{HD}{}\end{DoxyParamCaption})}
+
+
+
+Increases brightness by 10\%. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em HD} & Pointer to the \doxylink{struct_h_d44780}{HD44780} structure. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_h_d44780__callbacks_8h_ad6e4fb908d2b8d6ec9766cb3a35d53ba}\index{HD44780\_callbacks.h@{HD44780\_callbacks.h}!disp\_brightness\_on@{disp\_brightness\_on}}
+\index{disp\_brightness\_on@{disp\_brightness\_on}!HD44780\_callbacks.h@{HD44780\_callbacks.h}}
+\doxysubsubsection{\texorpdfstring{disp\_brightness\_on()}{disp\_brightness\_on()}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8h_ad6e4fb908d2b8d6ec9766cb3a35d53ba} 
+void disp\+\_\+brightness\+\_\+on (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{HD}{}\end{DoxyParamCaption})}
+
+
+
+Activates the brightness menu selection and returns to main menu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em HD} & Pointer to the \doxylink{struct_h_d44780}{HD44780} structure. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_h_d44780__callbacks_8h_a6bd9698f2021c5e4818998324ac8247f}\index{HD44780\_callbacks.h@{HD44780\_callbacks.h}!disp\_brightness\_refresh@{disp\_brightness\_refresh}}
+\index{disp\_brightness\_refresh@{disp\_brightness\_refresh}!HD44780\_callbacks.h@{HD44780\_callbacks.h}}
+\doxysubsubsection{\texorpdfstring{disp\_brightness\_refresh()}{disp\_brightness\_refresh()}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8h_a6bd9698f2021c5e4818998324ac8247f} 
+void disp\+\_\+brightness\+\_\+refresh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{HD}{}\end{DoxyParamCaption})}
+
+
+
+Refreshes the LCD to show current brightness value as a bar graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em HD} & Pointer to the \doxylink{struct_h_d44780}{HD44780} structure. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_h_d44780__callbacks_8h_a11b766677bdbf83f3e4c3585a993e931}\index{HD44780\_callbacks.h@{HD44780\_callbacks.h}!disp\_menu\_fun\_callbacks\_state\_machine@{disp\_menu\_fun\_callbacks\_state\_machine}}
+\index{disp\_menu\_fun\_callbacks\_state\_machine@{disp\_menu\_fun\_callbacks\_state\_machine}!HD44780\_callbacks.h@{HD44780\_callbacks.h}}
+\doxysubsubsection{\texorpdfstring{disp\_menu\_fun\_callbacks\_state\_machine()}{disp\_menu\_fun\_callbacks\_state\_machine()}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8h_a11b766677bdbf83f3e4c3585a993e931} 
+void disp\+\_\+menu\+\_\+fun\+\_\+callbacks\+\_\+state\+\_\+machine (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{HD}{}\end{DoxyParamCaption})}
+
+
+
+Main state machine handling menu callbacks. 
+
+Updates LCD and executes appropriate functions depending on the current menu state. 
+\begin{DoxyParams}{Parameters}
+{\em HD} & Pointer to the \doxylink{struct_h_d44780}{HD44780} structure. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_h_d44780__callbacks_8h_a2cde31a5fa44c9e0d2b6bf576f32b63f}\index{HD44780\_callbacks.h@{HD44780\_callbacks.h}!disp\_set\_custom\_callback@{disp\_set\_custom\_callback}}
+\index{disp\_set\_custom\_callback@{disp\_set\_custom\_callback}!HD44780\_callbacks.h@{HD44780\_callbacks.h}}
+\doxysubsubsection{\texorpdfstring{disp\_set\_custom\_callback()}{disp\_set\_custom\_callback()}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8h_a2cde31a5fa44c9e0d2b6bf576f32b63f} 
+void disp\+\_\+set\+\_\+custom\+\_\+callback (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Callback to set a custom offset value via keypad. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Pointer to the menu state variable. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_h_d44780__callbacks_8h_a2cd1d8615e358c15a48dfad076d19a6c}\index{HD44780\_callbacks.h@{HD44780\_callbacks.h}!disp\_set\_custom\_refresh@{disp\_set\_custom\_refresh}}
+\index{disp\_set\_custom\_refresh@{disp\_set\_custom\_refresh}!HD44780\_callbacks.h@{HD44780\_callbacks.h}}
+\doxysubsubsection{\texorpdfstring{disp\_set\_custom\_refresh()}{disp\_set\_custom\_refresh()}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8h_a2cd1d8615e358c15a48dfad076d19a6c} 
+void disp\+\_\+set\+\_\+custom\+\_\+refresh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{HD}{}\end{DoxyParamCaption})}
+
+
+
+Refreshes the custom offset menu and reads input from keypad. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em HD} & Pointer to the \doxylink{struct_h_d44780}{HD44780} structure. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_h_d44780__callbacks_8h_ad0772bfa94f8737f1c5abfabfe9a50d2}\index{HD44780\_callbacks.h@{HD44780\_callbacks.h}!disp\_weight\_callback@{disp\_weight\_callback}}
+\index{disp\_weight\_callback@{disp\_weight\_callback}!HD44780\_callbacks.h@{HD44780\_callbacks.h}}
+\doxysubsubsection{\texorpdfstring{disp\_weight\_callback()}{disp\_weight\_callback()}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8h_ad0772bfa94f8737f1c5abfabfe9a50d2} 
+void disp\+\_\+weight\+\_\+callback (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Callback to display current weight. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Pointer to the menu state variable. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_h_d44780__callbacks_8h_a0877a13d4c0be515f7334748f1e8b8fe}\index{HD44780\_callbacks.h@{HD44780\_callbacks.h}!disp\_weight\_p\_callback@{disp\_weight\_p\_callback}}
+\index{disp\_weight\_p\_callback@{disp\_weight\_p\_callback}!HD44780\_callbacks.h@{HD44780\_callbacks.h}}
+\doxysubsubsection{\texorpdfstring{disp\_weight\_p\_callback()}{disp\_weight\_p\_callback()}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8h_a0877a13d4c0be515f7334748f1e8b8fe} 
+void disp\+\_\+weight\+\_\+p\+\_\+callback (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Callback to prompt for number of weight probes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Pointer to the menu state variable. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_h_d44780__callbacks_8h_a1a17902b945598d6a5d16743f8c409f9}\index{HD44780\_callbacks.h@{HD44780\_callbacks.h}!disp\_weight\_p\_ok@{disp\_weight\_p\_ok}}
+\index{disp\_weight\_p\_ok@{disp\_weight\_p\_ok}!HD44780\_callbacks.h@{HD44780\_callbacks.h}}
+\doxysubsubsection{\texorpdfstring{disp\_weight\_p\_ok()}{disp\_weight\_p\_ok()}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8h_a1a17902b945598d6a5d16743f8c409f9} 
+void disp\+\_\+weight\+\_\+p\+\_\+ok (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{HD}{}\end{DoxyParamCaption})}
+
+
+
+Displays weight after probe measurements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em HD} & Pointer to the \doxylink{struct_h_d44780}{HD44780} structure. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_h_d44780__callbacks_8h_a6fedbd07932d8bde10bd23aeb2bb38a8}\index{HD44780\_callbacks.h@{HD44780\_callbacks.h}!disp\_weight\_p\_refresh@{disp\_weight\_p\_refresh}}
+\index{disp\_weight\_p\_refresh@{disp\_weight\_p\_refresh}!HD44780\_callbacks.h@{HD44780\_callbacks.h}}
+\doxysubsubsection{\texorpdfstring{disp\_weight\_p\_refresh()}{disp\_weight\_p\_refresh()}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8h_a6fedbd07932d8bde10bd23aeb2bb38a8} 
+void disp\+\_\+weight\+\_\+p\+\_\+refresh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{HD}{}\end{DoxyParamCaption})}
+
+
+
+Refreshes the LCD to prompt for probe count input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em HD} & Pointer to the \doxylink{struct_h_d44780}{HD44780} structure. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_h_d44780__callbacks_8h_aec4153c1134716365a165fff4b321219}\index{HD44780\_callbacks.h@{HD44780\_callbacks.h}!disp\_weight\_refresh@{disp\_weight\_refresh}}
+\index{disp\_weight\_refresh@{disp\_weight\_refresh}!HD44780\_callbacks.h@{HD44780\_callbacks.h}}
+\doxysubsubsection{\texorpdfstring{disp\_weight\_refresh()}{disp\_weight\_refresh()}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8h_aec4153c1134716365a165fff4b321219} 
+void disp\+\_\+weight\+\_\+refresh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{HD}{}\end{DoxyParamCaption})}
+
+
+
+Refreshes the LCD to display current weight. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em HD} & Pointer to the \doxylink{struct_h_d44780}{HD44780} structure. \\
+\hline
+\end{DoxyParams}

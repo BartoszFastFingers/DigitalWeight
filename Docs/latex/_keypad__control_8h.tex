@@ -1,0 +1,57 @@
+\doxysection{Keypad\+\_\+control.\+h File Reference}
+\hypertarget{_keypad__control_8h}{}\label{_keypad__control_8h}\index{Keypad\_control.h@{Keypad\_control.h}}
+
+
+\doxylink{struct_keypad}{Keypad} input handling for numeric entry on \doxylink{struct_h_d44780}{HD44780} LCD.  
+
+
+{\ttfamily \#include "{}HD44780.\+h"{}}\newline
+{\ttfamily \#include "{}HD44780\+\_\+control.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_keypad__control_8h_a300a22174f13e17b050b1591db214a64}{Keypad\+\_\+digit\+\_\+control}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}HD, \mbox{\hyperlink{struct_keypad__control}{Keypad\+\_\+control}} \texorpdfstring{$\ast$}{*}Kc, char minus\+\_\+plus, int digits, void(\texorpdfstring{$\ast$}{*}Keypad\+\_\+enter\+\_\+fun)(\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}HD))
+\begin{DoxyCompactList}\small\item\em Handles digit input from keypad and updates \doxylink{struct_keypad__control}{Keypad\+\_\+control} buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{struct_keypad}{Keypad} input handling for numeric entry on \doxylink{struct_h_d44780}{HD44780} LCD. 
+
+Provides functions to control numeric input using a matrix keypad. Supports optional minus sign, digit limit, and callback function on "{}enter"{} key press.
+
+\begin{DoxyAuthor}{Author}
+Bartosz Terlecki 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/08-\/28 
+\end{DoxyDate}
+
+
+\label{doc-func-members}
+\Hypertarget{_keypad__control_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_keypad__control_8h_a300a22174f13e17b050b1591db214a64}\index{Keypad\_control.h@{Keypad\_control.h}!Keypad\_digit\_control@{Keypad\_digit\_control}}
+\index{Keypad\_digit\_control@{Keypad\_digit\_control}!Keypad\_control.h@{Keypad\_control.h}}
+\doxysubsubsection{\texorpdfstring{Keypad\_digit\_control()}{Keypad\_digit\_control()}}
+{\footnotesize\ttfamily \label{_keypad__control_8h_a300a22174f13e17b050b1591db214a64} 
+void Keypad\+\_\+digit\+\_\+control (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{HD}{, }\item[{\mbox{\hyperlink{struct_keypad__control}{Keypad\+\_\+control}} \texorpdfstring{$\ast$}{*}}]{Kc}{, }\item[{char}]{minus\+\_\+plus}{, }\item[{int}]{digits}{, }\item[{void(\texorpdfstring{$\ast$}{*}}]{Keypad\+\_\+enter\+\_\+fun~}{)(\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}HD)}\end{DoxyParamCaption})}
+
+
+
+Handles digit input from keypad and updates \doxylink{struct_keypad__control}{Keypad\+\_\+control} buffer. 
+
+Reads a key from the keypad, handles special characters \textquotesingle{}\texorpdfstring{$\ast$}{*}\textquotesingle{} (backspace) and \textquotesingle{}\#\textquotesingle{} (enter), supports optional minus sign, digit limit, and calls a callback function on enter key press.
+
+
+\begin{DoxyParams}{Parameters}
+{\em HD} & Pointer to \doxylink{struct_h_d44780}{HD44780} LCD structure. \\
+\hline
+{\em Kc} & Pointer to \doxylink{struct_keypad__control}{Keypad\+\_\+control} structure storing input buffer. \\
+\hline
+{\em minus\+\_\+plus} & Character flag\+: \textquotesingle{}-\/\textquotesingle{} if negative numbers allowed, otherwise any other char. \\
+\hline
+{\em digits} & Maximum number of digits allowed. \\
+\hline
+{\em Keypad\+\_\+enter\+\_\+fun} & Callback function to execute when \textquotesingle{}\#\textquotesingle{} is pressed. \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,219 @@
+\doxysection{Src/\+HD44780\+\_\+callbacks.c File Reference}
+\hypertarget{_h_d44780__callbacks_8c}{}\label{_h_d44780__callbacks_8c}\index{Src/HD44780\_callbacks.c@{Src/HD44780\_callbacks.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}HD44780\+\_\+callbacks.\+h"{}}\newline
+{\ttfamily \#include "{}Keypad\+\_\+control.\+h"{}}\newline
+{\ttfamily \#include "{}HD44780\+\_\+menu.\+h"{}}\newline
+{\ttfamily \#include "{}HD44780\+\_\+buf.\+h"{}}\newline
+{\ttfamily \#include "{}HX711\+\_\+pro.\+h"{}}\newline
+{\ttfamily \#include "{}Keypad.\+h"{}}\newline
+{\ttfamily \#include "{}stm32f1xx\+\_\+it.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_h_d44780__callbacks_8c_aaa67df6726d3707c387dec5d0355b1ee}{DO\+\_\+\+NOTHING}}~0
+\item 
+\#define \mbox{\hyperlink{_h_d44780__callbacks_8c_a0f25bcb0820c5526101086d10208210f}{BACK\+\_\+\+TO\+\_\+\+MENU}}~1
+\item 
+\#define \mbox{\hyperlink{_h_d44780__callbacks_8c_a15bb608211a655212c2af56671ceecb4}{DISP\+\_\+\+WEIGHT\+\_\+\+CALLBACK}}~2
+\item 
+\#define \mbox{\hyperlink{_h_d44780__callbacks_8c_a934562760613e7e561baa3d5149ad076}{DISP\+\_\+\+WEIGHT\+\_\+\+P\+\_\+\+CALLBACK}}~3
+\item 
+\#define \mbox{\hyperlink{_h_d44780__callbacks_8c_a1685ed9cddc665dd7d60ed0553a1fcdf}{DISP\+\_\+\+BRIGHTNESS\+\_\+\+CALLBACK}}~4
+\item 
+\#define \mbox{\hyperlink{_h_d44780__callbacks_8c_a1cfde33908de5b3253971d528681f8e5}{CUSTOM\+\_\+\+OFFSET\+\_\+\+CALLBACK}}~5
+\item 
+\#define \mbox{\hyperlink{_h_d44780__callbacks_8c_a630c75b7f13dcb69595dfc6b38be9208}{DISP\+\_\+\+WEIGHT\+\_\+P}}~6
+\item 
+\#define \mbox{\hyperlink{_h_d44780__callbacks_8c_a81c7a08b57d690fa3dce26ba8d6fa3ed}{PERCENT\+\_\+\+MIN}}~1
+\item 
+\#define \mbox{\hyperlink{_h_d44780__callbacks_8c_a9a7b7ec7ca248563920c128470fe1c14}{PERCENT\+\_\+\+MAX}}~100
+\item 
+\#define \mbox{\hyperlink{_h_d44780__callbacks_8c_a852c6eb7dfa299b86a7a46c53ab5affa}{DISPLAY\+\_\+\+DELAY}}~100
+\item 
+\#define \mbox{\hyperlink{_h_d44780__callbacks_8c_a2bc3f0a9bf403fb5e6bd2fcce1c5f740}{HD44780\+\_\+\+COLS}}~16
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_h_d44780__callbacks_8c_ad0772bfa94f8737f1c5abfabfe9a50d2}{disp\+\_\+weight\+\_\+callback}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}state)
+\item 
+void \mbox{\hyperlink{_h_d44780__callbacks_8c_a0877a13d4c0be515f7334748f1e8b8fe}{disp\+\_\+weight\+\_\+p\+\_\+callback}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}state)
+\item 
+void \mbox{\hyperlink{_h_d44780__callbacks_8c_a2cde31a5fa44c9e0d2b6bf576f32b63f}{disp\+\_\+set\+\_\+custom\+\_\+callback}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}state)
+\item 
+void \mbox{\hyperlink{_h_d44780__callbacks_8c_aae7c8f0c05c908a11fc5b2c4aab02bc4}{disp\+\_\+brightness\+\_\+callback}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}state)
+\item 
+void \mbox{\hyperlink{_h_d44780__callbacks_8c_a62f6be1fa341f10047cd2765568c988a}{disp\+\_\+brightness\+\_\+back}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}HD)
+\item 
+void \mbox{\hyperlink{_h_d44780__callbacks_8c_a21778d01299a1cf75a1dd7001507e1a4}{disp\+\_\+brightness\+\_\+enter}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}HD)
+\item 
+void \mbox{\hyperlink{_h_d44780__callbacks_8c_ad6e4fb908d2b8d6ec9766cb3a35d53ba}{disp\+\_\+brightness\+\_\+on}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}HD)
+\item 
+void \mbox{\hyperlink{_h_d44780__callbacks_8c_a6bd9698f2021c5e4818998324ac8247f}{disp\+\_\+brightness\+\_\+refresh}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}HD)
+\item 
+void \mbox{\hyperlink{_h_d44780__callbacks_8c_aec4153c1134716365a165fff4b321219}{disp\+\_\+weight\+\_\+refresh}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}HD)
+\item 
+void \mbox{\hyperlink{_h_d44780__callbacks_8c_a6fedbd07932d8bde10bd23aeb2bb38a8}{disp\+\_\+weight\+\_\+p\+\_\+refresh}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}HD)
+\item 
+void \mbox{\hyperlink{_h_d44780__callbacks_8c_a1a17902b945598d6a5d16743f8c409f9}{disp\+\_\+weight\+\_\+p\+\_\+ok}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}HD)
+\item 
+void \mbox{\hyperlink{_h_d44780__callbacks_8c_a2cd1d8615e358c15a48dfad076d19a6c}{disp\+\_\+set\+\_\+custom\+\_\+refresh}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}HD)
+\item 
+void \mbox{\hyperlink{_h_d44780__callbacks_8c_a11b766677bdbf83f3e4c3585a993e931}{disp\+\_\+menu\+\_\+fun\+\_\+callbacks\+\_\+state\+\_\+machine}} (\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}HD)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{_h_d44780__callbacks_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_h_d44780__callbacks_8c_a0f25bcb0820c5526101086d10208210f}\index{HD44780\_callbacks.c@{HD44780\_callbacks.c}!BACK\_TO\_MENU@{BACK\_TO\_MENU}}
+\index{BACK\_TO\_MENU@{BACK\_TO\_MENU}!HD44780\_callbacks.c@{HD44780\_callbacks.c}}
+\doxysubsubsection{\texorpdfstring{BACK\_TO\_MENU}{BACK\_TO\_MENU}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8c_a0f25bcb0820c5526101086d10208210f} 
+\#define BACK\+\_\+\+TO\+\_\+\+MENU~1}
+
+\Hypertarget{_h_d44780__callbacks_8c_a1cfde33908de5b3253971d528681f8e5}\index{HD44780\_callbacks.c@{HD44780\_callbacks.c}!CUSTOM\_OFFSET\_CALLBACK@{CUSTOM\_OFFSET\_CALLBACK}}
+\index{CUSTOM\_OFFSET\_CALLBACK@{CUSTOM\_OFFSET\_CALLBACK}!HD44780\_callbacks.c@{HD44780\_callbacks.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_OFFSET\_CALLBACK}{CUSTOM\_OFFSET\_CALLBACK}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8c_a1cfde33908de5b3253971d528681f8e5} 
+\#define CUSTOM\+\_\+\+OFFSET\+\_\+\+CALLBACK~5}
+
+\Hypertarget{_h_d44780__callbacks_8c_a1685ed9cddc665dd7d60ed0553a1fcdf}\index{HD44780\_callbacks.c@{HD44780\_callbacks.c}!DISP\_BRIGHTNESS\_CALLBACK@{DISP\_BRIGHTNESS\_CALLBACK}}
+\index{DISP\_BRIGHTNESS\_CALLBACK@{DISP\_BRIGHTNESS\_CALLBACK}!HD44780\_callbacks.c@{HD44780\_callbacks.c}}
+\doxysubsubsection{\texorpdfstring{DISP\_BRIGHTNESS\_CALLBACK}{DISP\_BRIGHTNESS\_CALLBACK}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8c_a1685ed9cddc665dd7d60ed0553a1fcdf} 
+\#define DISP\+\_\+\+BRIGHTNESS\+\_\+\+CALLBACK~4}
+
+\Hypertarget{_h_d44780__callbacks_8c_a15bb608211a655212c2af56671ceecb4}\index{HD44780\_callbacks.c@{HD44780\_callbacks.c}!DISP\_WEIGHT\_CALLBACK@{DISP\_WEIGHT\_CALLBACK}}
+\index{DISP\_WEIGHT\_CALLBACK@{DISP\_WEIGHT\_CALLBACK}!HD44780\_callbacks.c@{HD44780\_callbacks.c}}
+\doxysubsubsection{\texorpdfstring{DISP\_WEIGHT\_CALLBACK}{DISP\_WEIGHT\_CALLBACK}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8c_a15bb608211a655212c2af56671ceecb4} 
+\#define DISP\+\_\+\+WEIGHT\+\_\+\+CALLBACK~2}
+
+\Hypertarget{_h_d44780__callbacks_8c_a630c75b7f13dcb69595dfc6b38be9208}\index{HD44780\_callbacks.c@{HD44780\_callbacks.c}!DISP\_WEIGHT\_P@{DISP\_WEIGHT\_P}}
+\index{DISP\_WEIGHT\_P@{DISP\_WEIGHT\_P}!HD44780\_callbacks.c@{HD44780\_callbacks.c}}
+\doxysubsubsection{\texorpdfstring{DISP\_WEIGHT\_P}{DISP\_WEIGHT\_P}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8c_a630c75b7f13dcb69595dfc6b38be9208} 
+\#define DISP\+\_\+\+WEIGHT\+\_\+P~6}
+
+\Hypertarget{_h_d44780__callbacks_8c_a934562760613e7e561baa3d5149ad076}\index{HD44780\_callbacks.c@{HD44780\_callbacks.c}!DISP\_WEIGHT\_P\_CALLBACK@{DISP\_WEIGHT\_P\_CALLBACK}}
+\index{DISP\_WEIGHT\_P\_CALLBACK@{DISP\_WEIGHT\_P\_CALLBACK}!HD44780\_callbacks.c@{HD44780\_callbacks.c}}
+\doxysubsubsection{\texorpdfstring{DISP\_WEIGHT\_P\_CALLBACK}{DISP\_WEIGHT\_P\_CALLBACK}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8c_a934562760613e7e561baa3d5149ad076} 
+\#define DISP\+\_\+\+WEIGHT\+\_\+\+P\+\_\+\+CALLBACK~3}
+
+\Hypertarget{_h_d44780__callbacks_8c_a852c6eb7dfa299b86a7a46c53ab5affa}\index{HD44780\_callbacks.c@{HD44780\_callbacks.c}!DISPLAY\_DELAY@{DISPLAY\_DELAY}}
+\index{DISPLAY\_DELAY@{DISPLAY\_DELAY}!HD44780\_callbacks.c@{HD44780\_callbacks.c}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_DELAY}{DISPLAY\_DELAY}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8c_a852c6eb7dfa299b86a7a46c53ab5affa} 
+\#define DISPLAY\+\_\+\+DELAY~100}
+
+\Hypertarget{_h_d44780__callbacks_8c_aaa67df6726d3707c387dec5d0355b1ee}\index{HD44780\_callbacks.c@{HD44780\_callbacks.c}!DO\_NOTHING@{DO\_NOTHING}}
+\index{DO\_NOTHING@{DO\_NOTHING}!HD44780\_callbacks.c@{HD44780\_callbacks.c}}
+\doxysubsubsection{\texorpdfstring{DO\_NOTHING}{DO\_NOTHING}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8c_aaa67df6726d3707c387dec5d0355b1ee} 
+\#define DO\+\_\+\+NOTHING~0}
+
+\Hypertarget{_h_d44780__callbacks_8c_a2bc3f0a9bf403fb5e6bd2fcce1c5f740}\index{HD44780\_callbacks.c@{HD44780\_callbacks.c}!HD44780\_COLS@{HD44780\_COLS}}
+\index{HD44780\_COLS@{HD44780\_COLS}!HD44780\_callbacks.c@{HD44780\_callbacks.c}}
+\doxysubsubsection{\texorpdfstring{HD44780\_COLS}{HD44780\_COLS}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8c_a2bc3f0a9bf403fb5e6bd2fcce1c5f740} 
+\#define HD44780\+\_\+\+COLS~16}
+
+\Hypertarget{_h_d44780__callbacks_8c_a9a7b7ec7ca248563920c128470fe1c14}\index{HD44780\_callbacks.c@{HD44780\_callbacks.c}!PERCENT\_MAX@{PERCENT\_MAX}}
+\index{PERCENT\_MAX@{PERCENT\_MAX}!HD44780\_callbacks.c@{HD44780\_callbacks.c}}
+\doxysubsubsection{\texorpdfstring{PERCENT\_MAX}{PERCENT\_MAX}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8c_a9a7b7ec7ca248563920c128470fe1c14} 
+\#define PERCENT\+\_\+\+MAX~100}
+
+\Hypertarget{_h_d44780__callbacks_8c_a81c7a08b57d690fa3dce26ba8d6fa3ed}\index{HD44780\_callbacks.c@{HD44780\_callbacks.c}!PERCENT\_MIN@{PERCENT\_MIN}}
+\index{PERCENT\_MIN@{PERCENT\_MIN}!HD44780\_callbacks.c@{HD44780\_callbacks.c}}
+\doxysubsubsection{\texorpdfstring{PERCENT\_MIN}{PERCENT\_MIN}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8c_a81c7a08b57d690fa3dce26ba8d6fa3ed} 
+\#define PERCENT\+\_\+\+MIN~1}
+
+
+
+\label{doc-func-members}
+\Hypertarget{_h_d44780__callbacks_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_h_d44780__callbacks_8c_a62f6be1fa341f10047cd2765568c988a}\index{HD44780\_callbacks.c@{HD44780\_callbacks.c}!disp\_brightness\_back@{disp\_brightness\_back}}
+\index{disp\_brightness\_back@{disp\_brightness\_back}!HD44780\_callbacks.c@{HD44780\_callbacks.c}}
+\doxysubsubsection{\texorpdfstring{disp\_brightness\_back()}{disp\_brightness\_back()}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8c_a62f6be1fa341f10047cd2765568c988a} 
+void disp\+\_\+brightness\+\_\+back (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{HD}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_h_d44780__callbacks_8c_aae7c8f0c05c908a11fc5b2c4aab02bc4}\index{HD44780\_callbacks.c@{HD44780\_callbacks.c}!disp\_brightness\_callback@{disp\_brightness\_callback}}
+\index{disp\_brightness\_callback@{disp\_brightness\_callback}!HD44780\_callbacks.c@{HD44780\_callbacks.c}}
+\doxysubsubsection{\texorpdfstring{disp\_brightness\_callback()}{disp\_brightness\_callback()}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8c_aae7c8f0c05c908a11fc5b2c4aab02bc4} 
+void disp\+\_\+brightness\+\_\+callback (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{state}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_h_d44780__callbacks_8c_a21778d01299a1cf75a1dd7001507e1a4}\index{HD44780\_callbacks.c@{HD44780\_callbacks.c}!disp\_brightness\_enter@{disp\_brightness\_enter}}
+\index{disp\_brightness\_enter@{disp\_brightness\_enter}!HD44780\_callbacks.c@{HD44780\_callbacks.c}}
+\doxysubsubsection{\texorpdfstring{disp\_brightness\_enter()}{disp\_brightness\_enter()}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8c_a21778d01299a1cf75a1dd7001507e1a4} 
+void disp\+\_\+brightness\+\_\+enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{HD}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_h_d44780__callbacks_8c_ad6e4fb908d2b8d6ec9766cb3a35d53ba}\index{HD44780\_callbacks.c@{HD44780\_callbacks.c}!disp\_brightness\_on@{disp\_brightness\_on}}
+\index{disp\_brightness\_on@{disp\_brightness\_on}!HD44780\_callbacks.c@{HD44780\_callbacks.c}}
+\doxysubsubsection{\texorpdfstring{disp\_brightness\_on()}{disp\_brightness\_on()}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8c_ad6e4fb908d2b8d6ec9766cb3a35d53ba} 
+void disp\+\_\+brightness\+\_\+on (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{HD}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_h_d44780__callbacks_8c_a6bd9698f2021c5e4818998324ac8247f}\index{HD44780\_callbacks.c@{HD44780\_callbacks.c}!disp\_brightness\_refresh@{disp\_brightness\_refresh}}
+\index{disp\_brightness\_refresh@{disp\_brightness\_refresh}!HD44780\_callbacks.c@{HD44780\_callbacks.c}}
+\doxysubsubsection{\texorpdfstring{disp\_brightness\_refresh()}{disp\_brightness\_refresh()}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8c_a6bd9698f2021c5e4818998324ac8247f} 
+void disp\+\_\+brightness\+\_\+refresh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{HD}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_h_d44780__callbacks_8c_a11b766677bdbf83f3e4c3585a993e931}\index{HD44780\_callbacks.c@{HD44780\_callbacks.c}!disp\_menu\_fun\_callbacks\_state\_machine@{disp\_menu\_fun\_callbacks\_state\_machine}}
+\index{disp\_menu\_fun\_callbacks\_state\_machine@{disp\_menu\_fun\_callbacks\_state\_machine}!HD44780\_callbacks.c@{HD44780\_callbacks.c}}
+\doxysubsubsection{\texorpdfstring{disp\_menu\_fun\_callbacks\_state\_machine()}{disp\_menu\_fun\_callbacks\_state\_machine()}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8c_a11b766677bdbf83f3e4c3585a993e931} 
+void disp\+\_\+menu\+\_\+fun\+\_\+callbacks\+\_\+state\+\_\+machine (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{HD}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_h_d44780__callbacks_8c_a2cde31a5fa44c9e0d2b6bf576f32b63f}\index{HD44780\_callbacks.c@{HD44780\_callbacks.c}!disp\_set\_custom\_callback@{disp\_set\_custom\_callback}}
+\index{disp\_set\_custom\_callback@{disp\_set\_custom\_callback}!HD44780\_callbacks.c@{HD44780\_callbacks.c}}
+\doxysubsubsection{\texorpdfstring{disp\_set\_custom\_callback()}{disp\_set\_custom\_callback()}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8c_a2cde31a5fa44c9e0d2b6bf576f32b63f} 
+void disp\+\_\+set\+\_\+custom\+\_\+callback (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{state}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_h_d44780__callbacks_8c_a2cd1d8615e358c15a48dfad076d19a6c}\index{HD44780\_callbacks.c@{HD44780\_callbacks.c}!disp\_set\_custom\_refresh@{disp\_set\_custom\_refresh}}
+\index{disp\_set\_custom\_refresh@{disp\_set\_custom\_refresh}!HD44780\_callbacks.c@{HD44780\_callbacks.c}}
+\doxysubsubsection{\texorpdfstring{disp\_set\_custom\_refresh()}{disp\_set\_custom\_refresh()}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8c_a2cd1d8615e358c15a48dfad076d19a6c} 
+void disp\+\_\+set\+\_\+custom\+\_\+refresh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{HD}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_h_d44780__callbacks_8c_ad0772bfa94f8737f1c5abfabfe9a50d2}\index{HD44780\_callbacks.c@{HD44780\_callbacks.c}!disp\_weight\_callback@{disp\_weight\_callback}}
+\index{disp\_weight\_callback@{disp\_weight\_callback}!HD44780\_callbacks.c@{HD44780\_callbacks.c}}
+\doxysubsubsection{\texorpdfstring{disp\_weight\_callback()}{disp\_weight\_callback()}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8c_ad0772bfa94f8737f1c5abfabfe9a50d2} 
+void disp\+\_\+weight\+\_\+callback (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{state}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_h_d44780__callbacks_8c_a0877a13d4c0be515f7334748f1e8b8fe}\index{HD44780\_callbacks.c@{HD44780\_callbacks.c}!disp\_weight\_p\_callback@{disp\_weight\_p\_callback}}
+\index{disp\_weight\_p\_callback@{disp\_weight\_p\_callback}!HD44780\_callbacks.c@{HD44780\_callbacks.c}}
+\doxysubsubsection{\texorpdfstring{disp\_weight\_p\_callback()}{disp\_weight\_p\_callback()}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8c_a0877a13d4c0be515f7334748f1e8b8fe} 
+void disp\+\_\+weight\+\_\+p\+\_\+callback (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{state}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_h_d44780__callbacks_8c_a1a17902b945598d6a5d16743f8c409f9}\index{HD44780\_callbacks.c@{HD44780\_callbacks.c}!disp\_weight\_p\_ok@{disp\_weight\_p\_ok}}
+\index{disp\_weight\_p\_ok@{disp\_weight\_p\_ok}!HD44780\_callbacks.c@{HD44780\_callbacks.c}}
+\doxysubsubsection{\texorpdfstring{disp\_weight\_p\_ok()}{disp\_weight\_p\_ok()}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8c_a1a17902b945598d6a5d16743f8c409f9} 
+void disp\+\_\+weight\+\_\+p\+\_\+ok (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{HD}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_h_d44780__callbacks_8c_a6fedbd07932d8bde10bd23aeb2bb38a8}\index{HD44780\_callbacks.c@{HD44780\_callbacks.c}!disp\_weight\_p\_refresh@{disp\_weight\_p\_refresh}}
+\index{disp\_weight\_p\_refresh@{disp\_weight\_p\_refresh}!HD44780\_callbacks.c@{HD44780\_callbacks.c}}
+\doxysubsubsection{\texorpdfstring{disp\_weight\_p\_refresh()}{disp\_weight\_p\_refresh()}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8c_a6fedbd07932d8bde10bd23aeb2bb38a8} 
+void disp\+\_\+weight\+\_\+p\+\_\+refresh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{HD}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_h_d44780__callbacks_8c_aec4153c1134716365a165fff4b321219}\index{HD44780\_callbacks.c@{HD44780\_callbacks.c}!disp\_weight\_refresh@{disp\_weight\_refresh}}
+\index{disp\_weight\_refresh@{disp\_weight\_refresh}!HD44780\_callbacks.c@{HD44780\_callbacks.c}}
+\doxysubsubsection{\texorpdfstring{disp\_weight\_refresh()}{disp\_weight\_refresh()}}
+{\footnotesize\ttfamily \label{_h_d44780__callbacks_8c_aec4153c1134716365a165fff4b321219} 
+void disp\+\_\+weight\+\_\+refresh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_h_d44780}{HD44780}} \texorpdfstring{$\ast$}{*}}]{HD}{}\end{DoxyParamCaption})}
+

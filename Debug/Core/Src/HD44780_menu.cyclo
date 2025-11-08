@@ -1,0 +1,9 @@
+../Core/Src/HD44780_menu.c:16:6:HD44780_init_menu	1
+../Core/Src/HD44780_menu.c:29:6:HD44780_next_m	4
+../Core/Src/HD44780_menu.c:50:6:HD44780_prev_m	5
+../Core/Src/HD44780_menu.c:70:6:HD44780_enter_m	3
+../Core/Src/HD44780_menu.c:91:6:HD44780_get_back_m	2
+../Core/Src/HD44780_menu.c:107:6:HD44780_on_m	2
+../Core/Src/HD44780_menu.c:116:9:HD44780_get_index_m	3
+../Core/Src/HD44780_menu.c:132:9:HD44780_get_lvl_m	3
+../Core/Src/HD44780_menu.c:148:6:HD44780_refresh_m	18

@@ -1,0 +1,17 @@
+../Core/Src/HD44780_callbacks.c:36:6:disp_weight_callback	16	static
+../Core/Src/HD44780_callbacks.c:40:6:disp_weight_p_callback	16	static
+../Core/Src/HD44780_callbacks.c:43:6:disp_set_custom_callback	16	static
+../Core/Src/HD44780_callbacks.c:48:6:disp_brightness_callback	16	static
+../Core/Src/HD44780_callbacks.c:53:13:clear_buffer	16	static
+../Core/Src/HD44780_callbacks.c:59:13:set_offset_by_keypad	24	static
+../Core/Src/HD44780_callbacks.c:65:13:set_read_estimation_by_keypad	16	static
+../Core/Src/HD44780_callbacks.c:79:13:set_automatic_offset	32	static
+../Core/Src/HD44780_callbacks.c:92:6:disp_brightness_back	24	static
+../Core/Src/HD44780_callbacks.c:99:6:disp_brightness_enter	24	static
+../Core/Src/HD44780_callbacks.c:107:6:disp_brightness_on	16	static
+../Core/Src/HD44780_callbacks.c:112:6:disp_brightness_refresh	24	static
+../Core/Src/HD44780_callbacks.c:132:6:disp_weight_refresh	48	static
+../Core/Src/HD44780_callbacks.c:147:6:disp_weight_p_refresh	24	static
+../Core/Src/HD44780_callbacks.c:161:6:disp_weight_p_ok	48	static
+../Core/Src/HD44780_callbacks.c:175:6:disp_set_custom_refresh	40	static
+../Core/Src/HD44780_callbacks.c:206:6:disp_menu_fun_callbacks_state_machine	16	static

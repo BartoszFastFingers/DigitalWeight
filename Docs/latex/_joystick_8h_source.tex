@@ -1,0 +1,54 @@
+\doxysection{Joystick.\+h}
+\hypertarget{_joystick_8h_source}{}\label{_joystick_8h_source}\mbox{\hyperlink{_joystick_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#ifndef\ INC\_JOYSTICK\_LIB\_H\_}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ INC\_JOYSTICK\_LIB\_H\_}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_gen__libary_8h}{Gen\_libary.h}}"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{structpin__t}{pin\_t}}\ \mbox{\hyperlink{struct_joystick_a19034cb4d4dbac611b16cd55a27eddfe}{up}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{structpin__t}{pin\_t}}\ \mbox{\hyperlink{struct_joystick_ab89e266080f56a8a8828970add16c3f3}{down}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{structpin__t}{pin\_t}}\ \mbox{\hyperlink{struct_joystick_a40726d32ba7be05ab8e703237b94eac4}{right}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{structpin__t}{pin\_t}}\ \mbox{\hyperlink{struct_joystick_a306297a93734ed37d2c3bc433961c838}{left}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{structpin__t}{pin\_t}}\ \mbox{\hyperlink{struct_joystick_a0c71ec7f95dfc9cc9214f52944f71e44}{click}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{struct_joystick_abb42ac6a7271f2300aef6b588cfa7753}{last\_debounce}}[5];\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_joystick_a86ef919643924ac59ac6f239bebd0e63}{last\_read}}[5];\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_joystick_a033f3752690eb4ee96a6017824cfbadb}{pressed}}[5];\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_joystick_a9573871c7cdef059a8833476b5ea76e3}{stable}}[5];\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00034\ \}\ \mbox{\hyperlink{struct_joystick}{Joystick}};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00050\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_joystick_8h_a747e9f9f2043a934b488c63651baf285}{JoystickInit}}(\mbox{\hyperlink{struct_joystick}{Joystick}}*\ J,\ GPIO\_TypeDef*\ up\_port,\ uint16\_t\ up\_pin,}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_TypeDef*\ right\_port,\ uint16\_t\ right\_pin,}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_TypeDef*\ down\_port,\ uint16\_t\ down\_pin,}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_TypeDef*\ left\_port,\ uint16\_t\ left\_pin,}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_TypeDef*\ click\_port,\ uint16\_t\ click\_pin);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00061\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_joystick_8h_ad94374537ad25b5fc4c8f1f4f64674e2}{is\_up\_pressed}}(\mbox{\hyperlink{struct_joystick}{Joystick}}*\ J);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00068\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_joystick_8h_a5444e66c3970ae7da03e0c0174c13b8b}{is\_right\_pressed}}(\mbox{\hyperlink{struct_joystick}{Joystick}}*\ J);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00075\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_joystick_8h_ae74cd60b6d3dc3714a940723cfe4cd17}{is\_down\_pressed}}(\mbox{\hyperlink{struct_joystick}{Joystick}}*\ J);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00082\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_joystick_8h_ab87b21457ecd00a677986ad4d6d6dc70}{is\_left\_pressed}}(\mbox{\hyperlink{struct_joystick}{Joystick}}*\ J);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00089\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_joystick_8h_a2fa9124accec0664c8980d167232755f}{is\_click\_pressed}}(\mbox{\hyperlink{struct_joystick}{Joystick}}*\ J);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00095\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_joystick_8h_a1af2c5480793c70f9ec543e63337cd64}{while\_up\_pressed}}(\mbox{\hyperlink{struct_joystick}{Joystick}}*\ J);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00101\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_joystick_8h_a5bd37aeb5dec57d54accbf22803d51a0}{while\_right\_pressed}}(\mbox{\hyperlink{struct_joystick}{Joystick}}*\ J);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00107\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_joystick_8h_ab98aa32ca1a126b53d2917bb962414b1}{while\_down\_pressed}}(\mbox{\hyperlink{struct_joystick}{Joystick}}*\ J);}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00113\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_joystick_8h_aa14f1fac33761314a052941320ff6cdc}{while\_left\_pressed}}(\mbox{\hyperlink{struct_joystick}{Joystick}}*\ J);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00119\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_joystick_8h_a937c91fe12170c5771903d92b9a71eff}{while\_click\_pressed}}(\mbox{\hyperlink{struct_joystick}{Joystick}}*\ J);}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00125\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_joystick_8h_a50bb9c30188354157cb4710b855243f5}{pool\_joystick}}(\mbox{\hyperlink{struct_joystick}{Joystick}}*\ J);}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_JOYSTICK\_LIB\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

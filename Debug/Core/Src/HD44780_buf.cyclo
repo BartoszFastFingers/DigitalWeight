@@ -1,0 +1,8 @@
+../Core/Src/HD44780_buf.c:15:6:HD44780_buf_set_location	1
+../Core/Src/HD44780_buf.c:21:6:HD44780_buf_char	5
+../Core/Src/HD44780_buf.c:36:6:HD44780_buf_clear	3
+../Core/Src/HD44780_buf.c:48:6:HD44780_buf_clear_m	3
+../Core/Src/HD44780_buf.c:61:6:HD44780_buf_clear_r	3
+../Core/Src/HD44780_buf.c:74:6:HD44780_buf_str	3
+../Core/Src/HD44780_buf.c:81:6:HD44780_refresh_async	6
+../Core/Src/HD44780_buf.c:116:6:HD44780_refresh_sync	5

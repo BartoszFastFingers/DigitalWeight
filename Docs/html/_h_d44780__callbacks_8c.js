@@ -1,0 +1,27 @@
+var _h_d44780__callbacks_8c =
+[
+    [ "BACK_TO_MENU", "_h_d44780__callbacks_8c.html#a0f25bcb0820c5526101086d10208210f", null ],
+    [ "CUSTOM_OFFSET_CALLBACK", "_h_d44780__callbacks_8c.html#a1cfde33908de5b3253971d528681f8e5", null ],
+    [ "DISP_BRIGHTNESS_CALLBACK", "_h_d44780__callbacks_8c.html#a1685ed9cddc665dd7d60ed0553a1fcdf", null ],
+    [ "DISP_WEIGHT_CALLBACK", "_h_d44780__callbacks_8c.html#a15bb608211a655212c2af56671ceecb4", null ],
+    [ "DISP_WEIGHT_P", "_h_d44780__callbacks_8c.html#a630c75b7f13dcb69595dfc6b38be9208", null ],
+    [ "DISP_WEIGHT_P_CALLBACK", "_h_d44780__callbacks_8c.html#a934562760613e7e561baa3d5149ad076", null ],
+    [ "DISPLAY_DELAY", "_h_d44780__callbacks_8c.html#a852c6eb7dfa299b86a7a46c53ab5affa", null ],
+    [ "DO_NOTHING", "_h_d44780__callbacks_8c.html#aaa67df6726d3707c387dec5d0355b1ee", null ],
+    [ "HD44780_COLS", "_h_d44780__callbacks_8c.html#a2bc3f0a9bf403fb5e6bd2fcce1c5f740", null ],
+    [ "PERCENT_MAX", "_h_d44780__callbacks_8c.html#a9a7b7ec7ca248563920c128470fe1c14", null ],
+    [ "PERCENT_MIN", "_h_d44780__callbacks_8c.html#a81c7a08b57d690fa3dce26ba8d6fa3ed", null ],
+    [ "disp_brightness_back", "_h_d44780__callbacks_8c.html#a62f6be1fa341f10047cd2765568c988a", null ],
+    [ "disp_brightness_callback", "_h_d44780__callbacks_8c.html#aae7c8f0c05c908a11fc5b2c4aab02bc4", null ],
+    [ "disp_brightness_enter", "_h_d44780__callbacks_8c.html#a21778d01299a1cf75a1dd7001507e1a4", null ],
+    [ "disp_brightness_on", "_h_d44780__callbacks_8c.html#ad6e4fb908d2b8d6ec9766cb3a35d53ba", null ],
+    [ "disp_brightness_refresh", "_h_d44780__callbacks_8c.html#a6bd9698f2021c5e4818998324ac8247f", null ],
+    [ "disp_menu_fun_callbacks_state_machine", "_h_d44780__callbacks_8c.html#a11b766677bdbf83f3e4c3585a993e931", null ],
+    [ "disp_set_custom_callback", "_h_d44780__callbacks_8c.html#a2cde31a5fa44c9e0d2b6bf576f32b63f", null ],
+    [ "disp_set_custom_refresh", "_h_d44780__callbacks_8c.html#a2cd1d8615e358c15a48dfad076d19a6c", null ],
+    [ "disp_weight_callback", "_h_d44780__callbacks_8c.html#ad0772bfa94f8737f1c5abfabfe9a50d2", null ],
+    [ "disp_weight_p_callback", "_h_d44780__callbacks_8c.html#a0877a13d4c0be515f7334748f1e8b8fe", null ],
+    [ "disp_weight_p_ok", "_h_d44780__callbacks_8c.html#a1a17902b945598d6a5d16743f8c409f9", null ],
+    [ "disp_weight_p_refresh", "_h_d44780__callbacks_8c.html#a6fedbd07932d8bde10bd23aeb2bb38a8", null ],
+    [ "disp_weight_refresh", "_h_d44780__callbacks_8c.html#aec4153c1134716365a165fff4b321219", null ]
+];

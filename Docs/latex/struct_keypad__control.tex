@@ -1,0 +1,60 @@
+\doxysection{Keypad\+\_\+control Struct Reference}
+\hypertarget{struct_keypad__control}{}\label{struct_keypad__control}\index{Keypad\_control@{Keypad\_control}}
+
+
+Structure for managing keypad input and string buffer.  
+
+
+
+
+{\ttfamily \#include $<$HD44780\+\_\+control.\+h$>$}
+
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_keypad}{Keypad}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_keypad__control_a8e2c74ec70f000275f18c93d33224193}{K}}
+\begin{DoxyCompactList}\small\item\em Pointer to the associated keypad. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{struct_keypad__control_a69d735cc45374e9ce926f54645638d62}{K\+\_\+offset}}
+\begin{DoxyCompactList}\small\item\em Offset for key processing. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_keypad__control_a2b4a6ab0993d3a398bbe079554611d75}{K\+\_\+str}}
+\begin{DoxyCompactList}\small\item\em Buffer to store key input as a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure for managing keypad input and string buffer. 
+
+This structure holds a pointer to the associated keypad, an offset to track the current input position, and a string buffer to store the entered keys. 
+
+\label{doc-variable-members}
+\Hypertarget{struct_keypad__control_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{struct_keypad__control_a8e2c74ec70f000275f18c93d33224193}\index{Keypad\_control@{Keypad\_control}!K@{K}}
+\index{K@{K}!Keypad\_control@{Keypad\_control}}
+\doxysubsubsection{\texorpdfstring{K}{K}}
+{\footnotesize\ttfamily \label{struct_keypad__control_a8e2c74ec70f000275f18c93d33224193} 
+\mbox{\hyperlink{struct_keypad}{Keypad}}\texorpdfstring{$\ast$}{*} K}
+
+
+
+Pointer to the associated keypad. 
+
+\Hypertarget{struct_keypad__control_a69d735cc45374e9ce926f54645638d62}\index{Keypad\_control@{Keypad\_control}!K\_offset@{K\_offset}}
+\index{K\_offset@{K\_offset}!Keypad\_control@{Keypad\_control}}
+\doxysubsubsection{\texorpdfstring{K\_offset}{K\_offset}}
+{\footnotesize\ttfamily \label{struct_keypad__control_a69d735cc45374e9ce926f54645638d62} 
+uint8\+\_\+t K\+\_\+offset}
+
+
+
+Offset for key processing. 
+
+\Hypertarget{struct_keypad__control_a2b4a6ab0993d3a398bbe079554611d75}\index{Keypad\_control@{Keypad\_control}!K\_str@{K\_str}}
+\index{K\_str@{K\_str}!Keypad\_control@{Keypad\_control}}
+\doxysubsubsection{\texorpdfstring{K\_str}{K\_str}}
+{\footnotesize\ttfamily \label{struct_keypad__control_a2b4a6ab0993d3a398bbe079554611d75} 
+char\texorpdfstring{$\ast$}{*} K\+\_\+str}
+
+
+
+Buffer to store key input as a string. 
+

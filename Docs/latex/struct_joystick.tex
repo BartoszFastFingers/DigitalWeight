@@ -1,0 +1,130 @@
+\doxysection{Joystick Struct Reference}
+\hypertarget{struct_joystick}{}\label{struct_joystick}\index{Joystick@{Joystick}}
+
+
+Structure representing a 5-\/way joystick.  
+
+
+
+
+{\ttfamily \#include $<$Joystick.\+h$>$}
+
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structpin__t}{pin\+\_\+t}} \mbox{\hyperlink{struct_joystick_a19034cb4d4dbac611b16cd55a27eddfe}{up}}
+\begin{DoxyCompactList}\small\item\em Pin for the UP direction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structpin__t}{pin\+\_\+t}} \mbox{\hyperlink{struct_joystick_ab89e266080f56a8a8828970add16c3f3}{down}}
+\begin{DoxyCompactList}\small\item\em Pin for the DOWN direction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structpin__t}{pin\+\_\+t}} \mbox{\hyperlink{struct_joystick_a40726d32ba7be05ab8e703237b94eac4}{right}}
+\begin{DoxyCompactList}\small\item\em Pin for the RIGHT direction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structpin__t}{pin\+\_\+t}} \mbox{\hyperlink{struct_joystick_a306297a93734ed37d2c3bc433961c838}{left}}
+\begin{DoxyCompactList}\small\item\em Pin for the LEFT direction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structpin__t}{pin\+\_\+t}} \mbox{\hyperlink{struct_joystick_a0c71ec7f95dfc9cc9214f52944f71e44}{click}}
+\begin{DoxyCompactList}\small\item\em Pin for the CLICK button. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_joystick_abb42ac6a7271f2300aef6b588cfa7753}{last\+\_\+debounce}} \mbox{[}5\mbox{]}
+\begin{DoxyCompactList}\small\item\em Timestamp of last state change for debounce logic. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_joystick_a86ef919643924ac59ac6f239bebd0e63}{last\+\_\+read}} \mbox{[}5\mbox{]}
+\begin{DoxyCompactList}\small\item\em Previous raw readings for each input. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_joystick_a033f3752690eb4ee96a6017824cfbadb}{pressed}} \mbox{[}5\mbox{]}
+\begin{DoxyCompactList}\small\item\em Flags indicating if each input was pressed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_joystick_a9573871c7cdef059a8833476b5ea76e3}{stable}} \mbox{[}5\mbox{]}
+\begin{DoxyCompactList}\small\item\em Debounced stable state of each input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure representing a 5-\/way joystick. 
+
+\label{doc-variable-members}
+\Hypertarget{struct_joystick_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{struct_joystick_a0c71ec7f95dfc9cc9214f52944f71e44}\index{Joystick@{Joystick}!click@{click}}
+\index{click@{click}!Joystick@{Joystick}}
+\doxysubsubsection{\texorpdfstring{click}{click}}
+{\footnotesize\ttfamily \label{struct_joystick_a0c71ec7f95dfc9cc9214f52944f71e44} 
+\mbox{\hyperlink{structpin__t}{pin\+\_\+t}} click}
+
+
+
+Pin for the CLICK button. 
+
+\Hypertarget{struct_joystick_ab89e266080f56a8a8828970add16c3f3}\index{Joystick@{Joystick}!down@{down}}
+\index{down@{down}!Joystick@{Joystick}}
+\doxysubsubsection{\texorpdfstring{down}{down}}
+{\footnotesize\ttfamily \label{struct_joystick_ab89e266080f56a8a8828970add16c3f3} 
+\mbox{\hyperlink{structpin__t}{pin\+\_\+t}} down}
+
+
+
+Pin for the DOWN direction. 
+
+\Hypertarget{struct_joystick_abb42ac6a7271f2300aef6b588cfa7753}\index{Joystick@{Joystick}!last\_debounce@{last\_debounce}}
+\index{last\_debounce@{last\_debounce}!Joystick@{Joystick}}
+\doxysubsubsection{\texorpdfstring{last\_debounce}{last\_debounce}}
+{\footnotesize\ttfamily \label{struct_joystick_abb42ac6a7271f2300aef6b588cfa7753} 
+uint32\+\_\+t last\+\_\+debounce\mbox{[}5\mbox{]}}
+
+
+
+Timestamp of last state change for debounce logic. 
+
+\Hypertarget{struct_joystick_a86ef919643924ac59ac6f239bebd0e63}\index{Joystick@{Joystick}!last\_read@{last\_read}}
+\index{last\_read@{last\_read}!Joystick@{Joystick}}
+\doxysubsubsection{\texorpdfstring{last\_read}{last\_read}}
+{\footnotesize\ttfamily \label{struct_joystick_a86ef919643924ac59ac6f239bebd0e63} 
+bool last\+\_\+read\mbox{[}5\mbox{]}}
+
+
+
+Previous raw readings for each input. 
+
+\Hypertarget{struct_joystick_a306297a93734ed37d2c3bc433961c838}\index{Joystick@{Joystick}!left@{left}}
+\index{left@{left}!Joystick@{Joystick}}
+\doxysubsubsection{\texorpdfstring{left}{left}}
+{\footnotesize\ttfamily \label{struct_joystick_a306297a93734ed37d2c3bc433961c838} 
+\mbox{\hyperlink{structpin__t}{pin\+\_\+t}} left}
+
+
+
+Pin for the LEFT direction. 
+
+\Hypertarget{struct_joystick_a033f3752690eb4ee96a6017824cfbadb}\index{Joystick@{Joystick}!pressed@{pressed}}
+\index{pressed@{pressed}!Joystick@{Joystick}}
+\doxysubsubsection{\texorpdfstring{pressed}{pressed}}
+{\footnotesize\ttfamily \label{struct_joystick_a033f3752690eb4ee96a6017824cfbadb} 
+bool pressed\mbox{[}5\mbox{]}}
+
+
+
+Flags indicating if each input was pressed. 
+
+\Hypertarget{struct_joystick_a40726d32ba7be05ab8e703237b94eac4}\index{Joystick@{Joystick}!right@{right}}
+\index{right@{right}!Joystick@{Joystick}}
+\doxysubsubsection{\texorpdfstring{right}{right}}
+{\footnotesize\ttfamily \label{struct_joystick_a40726d32ba7be05ab8e703237b94eac4} 
+\mbox{\hyperlink{structpin__t}{pin\+\_\+t}} right}
+
+
+
+Pin for the RIGHT direction. 
+
+\Hypertarget{struct_joystick_a9573871c7cdef059a8833476b5ea76e3}\index{Joystick@{Joystick}!stable@{stable}}
+\index{stable@{stable}!Joystick@{Joystick}}
+\doxysubsubsection{\texorpdfstring{stable}{stable}}
+{\footnotesize\ttfamily \label{struct_joystick_a9573871c7cdef059a8833476b5ea76e3} 
+bool stable\mbox{[}5\mbox{]}}
+
+
+
+Debounced stable state of each input. 
+
+\Hypertarget{struct_joystick_a19034cb4d4dbac611b16cd55a27eddfe}\index{Joystick@{Joystick}!up@{up}}
+\index{up@{up}!Joystick@{Joystick}}
+\doxysubsubsection{\texorpdfstring{up}{up}}
+{\footnotesize\ttfamily \label{struct_joystick_a19034cb4d4dbac611b16cd55a27eddfe} 
+\mbox{\hyperlink{structpin__t}{pin\+\_\+t}} up}
+
+
+
+Pin for the UP direction. 
+
